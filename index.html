@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Leo 工作台</title>
+  <meta name="theme-color" content="#1e2530">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Leo 工作台">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css?v=e16a4c7f">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo">L</div>
+      <div class="brand-text">Leo Workspace<span>工作台 3.0</span></div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <div class="nav-group">我的工作空间</div>
+      <button class="nav-item" data-view="ai"><span class="nav-ico ico-ai"></span>AI 工作区</button>
+      <button class="nav-item active" data-view="today"><span class="nav-ico ico-today"></span>今日工作<span class="nav-badge" id="badge-today"></span></button>
+      <button class="nav-item" data-view="mail"><span class="nav-ico ico-mail"></span>邮件与收件箱<span class="nav-badge" id="badge-mail"></span></button>
+      <button class="nav-item" data-view="regional"><span class="nav-ico ico-region"></span>区域经营</button>
+      <button class="nav-item" data-view="projects"><span class="nav-ico ico-project"></span>项目与待办<span class="nav-badge" id="badge-tasks"></span></button>
+      <button class="nav-item" data-view="meetings"><span class="nav-ico ico-calendar"></span>会议与日历</button>
+      <button class="nav-item" data-view="meeting-notes"><span class="nav-ico ico-notes"></span>会议纪要</button>
+      <button class="nav-item" data-view="key-attention"><span class="nav-ico ico-attention"></span>特别关注<span class="nav-badge" id="badge-key-attention"></span></button>
+      <button class="nav-item" data-view="product-initiatives"><span class="nav-ico ico-product"></span>产品专项</button>
+      <button class="nav-item" data-view="product-knowledge"><span class="nav-ico ico-knowledge"></span>产品知识库</button>
+      <button class="nav-item" data-view="inventory"><span class="nav-ico ico-inventory"></span>要货与产销存</button>
+      <button class="nav-item" data-view="insights"><span class="nav-ico ico-insight"></span>资讯与洞察</button>
+      <button class="nav-item" data-view="market"><span class="nav-ico ico-market"></span>市场分析</button>
+      <button class="nav-item" data-view="sync"><span class="nav-ico ico-sync"></span>Notion 同步中枢</button>
+
+      <div class="nav-group">负责区域</div>
+      <button class="nav-item sub" data-view="regional" data-region="东盟"><span class="nav-dot dot-asean"></span>东盟</button>
+      <button class="nav-item sub" data-view="regional" data-region="中东非"><span class="nav-dot dot-mea"></span>中东非</button>
+      <button class="nav-item sub" data-view="regional" data-region="印度"><span class="nav-dot dot-india"></span>印度</button>
+
+      <div class="nav-group">智能体</div>
+      <button class="nav-item" data-view="skills"><span class="nav-ico ico-agent"></span>Agent 与 Skill 管理</button>
+
+      <button class="nav-item personal-nav personal-gate" data-view="personal" data-section="__gate__">
+        <span class="nav-ico">🔒</span><span class="gate-label">Personal Space</span>
+      </button>
+      <div id="personal-nav-list" hidden>
+        <button class="nav-item personal-nav" data-view="personal" data-section="finance"><span class="nav-ico ico-p"></span>财务状况</button>
+        <button class="nav-item personal-nav" data-view="personal" data-section="stocks"><span class="nav-ico ico-p"></span>股票<span class="nav-badge" id="badge-personal-stocks"></span></button>
+        <button class="nav-item personal-nav" data-view="personal" data-section="career"><span class="nav-ico ico-p"></span>工作评估</button>
+        <button class="nav-item personal-nav" data-view="personal" data-section="reading"><span class="nav-ico ico-p"></span>阅读</button>
+        <button class="nav-item personal-nav" data-view="personal" data-section="health"><span class="nav-ico ico-p"></span>健康</button>
+        <button class="nav-item personal-nav" data-view="personal" data-section="growth"><span class="nav-ico ico-p"></span>个人提升</button>
+      </div>
+
+      <div class="nav-group">设置</div>
+      <button class="nav-item" data-view="settings"><span class="nav-ico ico-settings"></span>入口与偏好设置</button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="conn-status" id="conn-status"><span class="dot"></span><span class="conn-text">检测连接…</span></div>
+      <div class="footer-link" id="open-notion">↗ 打开 Notion</div>
+    </div>
+  </aside>
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile-nav-btn" id="mobile-nav-btn" aria-label="菜单">&#9776;</button>
+      <div class="topbar-left">
+        <div class="topbar-title" id="view-title">今日工作</div>
+        <div class="breadcrumbs" id="breadcrumbs">工作台 / 今日工作</div>
+      </div>
+      <div class="topbar-actions">
+        <span class="sync-hint" id="sync-hint">数据实时同步自 Notion</span>
+        <button class="btn btn-primary" id="btn-new" onclick="newWork()">+ 新增工作</button>
+      </div>
+    </header>
+
+    <section class="content" id="content">
+      <!-- AI 工作区 -->
+      <div class="view" id="view-ai" hidden>
+        <div class="ai-mode-tabs">
+          <button class="ai-mode-tab active" id="tab-ai-chat" onclick="setAiMode('chat')">💬 对话问答</button>
+          <button class="ai-mode-tab" id="tab-ai-report" onclick="setAiMode('report')">📄 报告生成</button>
+        </div>
+
+        <!-- 对话模式 -->
+        <div id="ai-chat-panel">
+          <div class="ai-chat card">
+            <div class="ai-chat-log" id="ai-chat-log">
+              <div class="chat-msg bot"><div class="chat-bubble">我是小雷欧 🦁 直接问我问题，比如：<br>· 今天的日程是什么？<br>· 泰国8月完成了多少？<br>· 中东非最近有什么要关注的？</div></div>
+            </div>
+            <div class="ai-chat-input">
+              <input id="ai-chat-text" type="text" placeholder="问点什么…（回车发送）" onkeydown="if(event.key==='Enter')sendChat()">
+              <button class="btn btn-primary" id="btn-send-chat" onclick="sendChat()">发送</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 报告模式（原表单） -->
+        <div id="ai-report-panel" hidden>
+        <div class="banner banner-ai">
+          <strong>告诉 Leo 经营助理，你要完成什么</strong>
+          <div class="sub">上传资料、执行分析、生成汇报，并把结论变成下一步工作。</div>
+        </div>
+        <div class="ai-workspace">
+          <div class="ai-form card">
+            <div class="form-row">
+              <label>任务需求</label>
+              <textarea id="ai-prompt" rows="4" placeholder="例如：生成本周周报；按国家整理进展、风险和下周计划；或上传资料并说明分析要求。"></textarea>
+            </div>
+            <div class="form-row-inline">
+              <div class="form-row">
+                <label>执行流程 / 自动匹配 Skill</label>
+                <select id="ai-skill"><option value="">自动匹配 Skill</option></select>
+              </div>
+              <div class="form-row">
+                <label>给谁看</label>
+                <select id="ai-audience">
+                  <option value="完整分析">完整分析</option>
+                  <option value="领导">给领导看 · 简洁结论</option>
+                  <option value="团队">给团队看 · 执行清单</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row-inline">
+              <div class="form-row">
+                <label>报告周期 / 项目范围</label>
+                <input id="ai-scope" type="text" placeholder="如：东盟 / 中东非 / 印度 / 全球">
+              </div>
+              <div class="form-row">
+                <label>时间周期</label>
+                <select id="ai-period">
+                  <option value="本周">本周</option>
+                  <option value="本月">本月</option>
+                  <option value="本季度">本季度</option>
+                  <option value="2026年">2026年</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <label>本次附件（可选；模型服务将读取所选文件）</label>
+              <div class="file-box" id="ai-attachments">
+                <input type="file" id="ai-file" multiple hidden onchange="onAiFiles(this)">
+                <button class="btn btn-sm" onclick="document.getElementById('ai-file').click()">+ 上传资料</button>
+                <span class="file-list" id="ai-file-list"></span>
+              </div>
+            </div>
+            <div class="form-row" style="text-align:right">
+              <button class="btn btn-primary" id="btn-run-ai" onclick="runAi()">开始执行 →</button>
+            </div>
+          </div>
+          <div class="ai-result card" id="ai-result" hidden>
+            <div class="card-head"><h3>执行结果</h3><button class="btn btn-sm" onclick="saveAiResult()">保存到 Notion</button></div>
+            <div class="markdown" id="ai-result-body"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>执行记录</h3></div>
+          <div id="ai-records"></div>
+        </div>
+        </div><!-- /ai-report-panel -->
+      </div>
+
+      <!-- 今日工作 -->
+      <div class="view" id="view-today" hidden>
+        <!-- 顶部常驻 AI 投料区 -->
+        <div class="intake-hero card" id="intake-hero">
+          <div class="intake-hero-head">
+            <div class="intake-hero-title">🦁 小雷欧 · 智能投放</div>
+            <div class="intake-hero-sub">把要做的、要记的、要分析的丢进来，我帮你拆到待办 / 日历 / 节点 / 邮件 / 市场</div>
+          </div>
+          <textarea id="intake-hero-text" rows="4" placeholder="支持复合意图与长文。例如：'明天 2 点前把客户海尔洗衣机支持需求拉一份文字说明 + 附件，发给我中东非团队。需要拆任务 + 起草邮件。'" oninput="autoresizeIntake(this)"></textarea>
+          <div class="intake-hero-bar">
+            <div class="intake-hero-files">
+              <input type="file" id="intake-hero-file" multiple hidden onchange="onIntakeFiles(this)">
+              <button class="btn btn-sm" onclick="document.getElementById('intake-hero-file').click()">📎 附件</button>
+              <span class="file-list" id="intake-hero-filelist"></span>
+            </div>
+            <div class="intake-hero-actions">
+              <span class="intake-hero-hint" id="intake-hero-hint">自动识别 区域 / 优先级 / 时间 / 目标库</span>
+              <button class="btn btn-primary btn-sm" id="intake-hero-submit" type="button" onclick="submitIntakeHero()">识别并投放 →</button>
+            </div>
+          </div>
+          <div class="task-parse-preview" id="intake-hero-preview"></div>
+        </div>
+
+        <div class="asean-alert-card" id="today-asean-alert" hidden>
+          <div class="asean-alert-head">
+            <h3>🌏 东盟项目 · 该关注了</h3>
+            <button class="btn btn-sm" onclick="switchView('projects'); setTimeout(()=>{ const el=document.querySelector('.asean-inline'); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); }, 500)">查看全部 →</button>
+          </div>
+          <div class="asean-alert-sub" id="today-asean-alert-sub"></div>
+          <div class="asean-alert-body" id="today-asean-alert-body"></div>
+        </div>
+
+        <div class="alarm-card" id="today-alarm">
+          <div class="alarm-title">报警与必须确认</div>
+          <div class="alarm-sub">按区域分组 · 总部/全球同一色 · 逾期未处理 = 红，未处理优先级可见 P0/P1 徽章</div>
+          <div class="alarm-body" id="alarm-body">加载中…</div>
+        </div>
+        <div class="summary-grid" id="today-stats"></div>
+
+        <!-- 今日工作：卡片式三列模块 -->
+        <div class="today-modules">
+          <!-- 左：今日日程 -->
+          <div class="card today-col today-col-schedule">
+            <div class="card-head">
+              <h3>📅 今日日程</h3>
+              <span class="today-col-sub" id="today-agenda-source"></span>
+            </div>
+            <div class="today-col-date" id="today-agenda-date"></div>
+            <div id="today-schedule"></div>
+          </div>
+
+          <!-- 中：项目 -->
+          <div class="card today-col today-col-project">
+            <div class="card-head">
+              <h3>🎯 项目</h3>
+              <button class="btn btn-sm" onclick="switchView('projects')">全部待办 →</button>
+            </div>
+            <div id="today-project"></div>
+          </div>
+
+          <!-- 右：邮件 -->
+          <div class="card today-col today-col-mail">
+            <div class="card-head">
+              <h3>✉️ 待回复邮件</h3>
+              <button class="btn btn-sm" onclick="switchView('mail')">邮件中心 →</button>
+            </div>
+            <div class="today-col-sub" id="today-mail-meta"></div>
+            <div id="today-mail"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3>资讯与洞察</h3><button class="btn btn-sm" onclick="switchView('insights')">查看全部 →</button></div>
+          <div class="insight-grid" id="today-insights"></div>
+        </div>
+      </div>
+
+      <!-- 邮件情报中心 -->
+      <div class="view" id="view-mail" hidden>
+        <div class="intel-toolbar">
+          <div>
+            <h3>邮件情报中心</h3>
+            <div class="intel-meta" id="intel-meta">按你的分类体系提炼关键邮件：领导关注 · 待办 · 草拟回复 · 经营透视 · 区域动态 · 会议待办</div>
+          </div>
+          <div class="intel-actions">
+            <button class="btn btn-sm" id="btn-raw-mail" onclick="toggleRawMail()">查看原始邮件</button>
+            <button class="btn btn-primary btn-sm" id="btn-gen-intel" onclick="generateIntel()">生成情报</button>
+          </div>
+        </div>
+
+        <div id="intel-content"></div>
+
+        <!-- 原始邮件（默认隐藏，用于钻取） -->
+        <div class="mail-layout hidden" id="mail-raw">
+          <div class="mail-sidebar card">
+            <div class="card-head"><h3>文件夹</h3><button class="btn btn-sm" onclick="loadMailFolders()">刷新</button></div>
+            <div class="mail-folders" id="mail-folders">加载中…</div>
+          </div>
+          <div class="mail-main">
+            <div class="card">
+              <div class="card-head">
+                <h3 id="mail-list-title">邮件列表</h3>
+                <div class="mail-search"><input id="mail-search" type="text" placeholder="搜索邮件主题 / 发件人" onkeydown="if(event.key==='Enter')searchMail()"><button class="btn btn-sm" onclick="searchMail()">搜索</button></div>
+              </div>
+              <div id="mail-list"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-mask hidden" id="mail-modal" onclick="if(event.target===this)closeMailModal()">
+          <div class="modal modal-wide" onclick="event.stopPropagation()">
+            <div class="modal-head"><div class="modal-title" id="mail-modal-title">邮件详情</div><button class="modal-close" onclick="closeMailModal()">×</button></div>
+            <div class="modal-body" id="mail-modal-body"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 区域经营 -->
+      <div class="view" id="view-regional" hidden>
+        <div class="banner">经营结果 → 重点项目（含节点）→ 待办：先看结果，再看事。</div>
+        <div class="region-tabs" id="region-tabs"></div>
+        <div class="summary-grid" id="region-stats"></div>
+        <div class="card">
+          <div class="card-head"><h3>重点项目</h3><span class="intel-meta">P0/P1/项目类型 · 逾期自动标红</span></div>
+          <div id="region-projects"></div>
+        </div>
+        <div class="dashboard-row">
+          <div class="card flex-1">
+            <div class="card-head"><h3>其他待办</h3></div>
+            <div id="region-todos"></div>
+          </div>
+          <div class="card flex-1">
+            <div class="card-head"><h3>经营数据明细</h3></div>
+            <div id="region-metrics-detail"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 东盟项目进度（已并入「项目与待办」，保留容器仅供兼容，导航不再暴露） -->
+      <div class="view" id="view-asean" hidden></div>
+
+      <!-- 项目与待办 -->
+      <div class="view" id="view-projects" hidden>
+        <div class="filters" id="filters-tasks"></div>
+        <div class="task-toolbar">
+          <div class="task-stats" id="task-stats"></div>
+          <div class="task-toolbar-btns">
+            <button class="btn btn-primary btn-sm" onclick="switchView('today'); setTimeout(()=>{ const t=document.getElementById('intake-hero-text'); if(t){ t.focus(); t.scrollIntoView({behavior:'smooth',block:'center'}); } }, 60)">📥 智能投放</button>
+            <button class="btn btn-sm" onclick="openTaskParse()">＋ 智能拆解待办</button>
+            <button class="btn btn-sm" onclick="openMilestoneParse()">＋ 智能拆解节点</button>
+            <button class="btn btn-sm" onclick="openCreateTasks()">＋ 新建待办</button>
+          </div>
+        </div>
+        <div class="task-section-label">🌐 全球 · 运营中心基础事务（按状态）</div>
+        <div class="task-card-grid" id="task-global-grid"></div>
+        <div class="task-section-label">区域 · 待办清单 + 项目节点</div>
+        <div class="task-region-list" id="task-region-list"></div>
+
+        <!-- 东盟项目进度（并入本页）：项目 → 国家 → 进展 -->
+        <div class="task-section-label">🌊 东盟大区 · 项目进度（按项目 → 国家 → 进展）</div>
+        <div class="asean-inline" id="asean-inline">
+          <div class="asean-inline-stats" id="asean-inline-stats"></div>
+          <div id="asean-inline-body"></div>
+        </div>
+
+        <div class="empty" id="empty-tasks" hidden>暂无数据</div>
+      </div>
+
+      <!-- 会议与日历 -->
+      <div class="view" id="view-meetings" hidden>
+        <div class="cal-col">
+          <div class="cal-col-head">
+            <div class="cal-col-title"><span class="cal-col-ico">🗓️</span>日程</div>
+            <div class="cal-col-sub">日程与会议 · 按日期排列</div>
+            <button class="cal-add-btn" data-add-type="schedule" type="button">＋ 新增</button>
+          </div>
+          <div id="meetings-list"></div>
+        </div>
+      </div>
+
+      <!-- 会议纪要 -->
+      <div class="view" id="view-meeting-notes" hidden>
+        <div class="notes-layout">
+          <aside class="notes-side">
+            <div class="notes-side-title">筛选</div>
+            <div class="notes-side-group">
+              <div class="notes-side-label">区域</div>
+              <button class="notes-chip active" data-filter-region="all" type="button">全部</button>
+              <button class="notes-chip" data-filter-region="东盟" type="button">东盟</button>
+              <button class="notes-chip" data-filter-region="中东非" type="button">中东非</button>
+              <button class="notes-chip" data-filter-region="印度" type="button">印度</button>
+              <button class="notes-chip" data-filter-region="全球" type="button">全球</button>
+            </div>
+            <div class="notes-side-group">
+              <div class="notes-side-label">状态</div>
+              <button class="notes-chip active" data-filter-status="all" type="button">全部</button>
+              <button class="notes-chip" data-filter-status="待跟进" type="button">待跟进</button>
+              <button class="notes-chip" data-filter-status="进行中" type="button">进行中</button>
+              <button class="notes-chip" data-filter-status="已闭环" type="button">已闭环</button>
+            </div>
+            <div class="notes-side-tip">
+              <div class="notes-side-tip-title">怎么录入</div>
+              <div class="notes-side-tip-body">跟小雷欧说一句，例如："把刚才跟海信的会议总结一下，写进会议纪要库"。</div>
+              <a class="notes-side-link" id="meeting-notes-notion-side" target="_blank" rel="noreferrer">打开 Notion 库 ↗</a>
+            </div>
+          </aside>
+          <div class="notes-main">
+            <div class="notes-header">
+              <div class="notes-header-title">会议纪要 · Word 式长文 + 关键决策</div>
+              <a class="notes-header-link" id="meeting-notes-notion" target="_blank" rel="noreferrer">打开 Notion ↗</a>
+            </div>
+            <!-- 会议素材投放箱：文字 / 图片 / 附件 → 自动拆出待办 -->
+            <div class="mn-intake card" id="mn-intake">
+              <div class="mn-intake-head">
+                <div class="mn-intake-title">📥 会议素材投放箱</div>
+                <div class="mn-intake-sub">把会议文字、图片、附件丢进来，自动拆成待办 → 同步写进「项目与待办」</div>
+              </div>
+              <textarea id="mn-text" rows="4" placeholder="把会议纪要/聊天记录/邮件正文粘进来，或直接点下面按钮加图片和附件…"></textarea>
+              <div class="mn-drop" id="mn-drop">
+                <input type="file" id="mn-file" multiple hidden onchange="onMnFiles(this)">
+                <input type="file" id="mn-img" accept="image/*" multiple hidden onchange="onMnFiles(this)">
+                <button class="btn btn-sm" type="button" onclick="document.getElementById('mn-file').click()">📎 加附件</button>
+                <button class="btn btn-sm" type="button" onclick="document.getElementById('mn-img').click()">🖼 加图片</button>
+                <span class="file-list" id="mn-filelist"></span>
+                <span class="mn-intake-hint" id="mn-hint">支持文字 / 图片 / 附件混合投放，自动拆分待办</span>
+              </div>
+              <div class="mn-intake-bar">
+                <input type="text" id="mn-title" placeholder="会议主题（可选，会自动识别）" />
+                <button class="btn btn-primary btn-sm" id="mn-submit" type="button" onclick="submitMnIntake()">拆解并落库 →</button>
+              </div>
+              <div class="task-parse-preview" id="mn-preview"></div>
+            </div>
+
+            <div class="notes-meta-bar"><span id="meeting-notes-count">0</span> 条记录</div>
+            <div id="meeting-notes-list" class="notes-list"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 特别关注 -->
+      <div class="view" id="view-key-attention" hidden>
+        <div class="notes-layout">
+          <aside class="notes-side">
+            <div class="notes-side-title">筛选</div>
+            <div class="notes-side-group">
+              <div class="notes-side-label">状态</div>
+              <button class="notes-chip active" data-ka-filter-status="all" type="button">全部</button>
+              <button class="notes-chip" data-ka-filter-status="待决策" type="button">待决策</button>
+              <button class="notes-chip" data-ka-filter-status="跟进中" type="button">跟进中</button>
+              <button class="notes-chip" data-ka-filter-status="已闭环" type="button">已闭环</button>
+            </div>
+            <div class="notes-side-group">
+              <div class="notes-side-label">来源</div>
+              <button class="notes-chip active" data-ka-filter-source="all" type="button">全部</button>
+              <button class="notes-chip" data-ka-filter-source="大领导" type="button">大领导</button>
+              <button class="notes-chip" data-ka-filter-source="总部" type="button">总部</button>
+              <button class="notes-chip" data-ka-filter-source="客户" type="button">客户</button>
+            </div>
+            <div class="notes-side-tip">
+              <div class="notes-side-tip-title">怎么录入</div>
+              <div class="notes-side-tip-body">大领导邮件、关键结论、待决策事项。跟小雷欧说"这个要特别关注"。</div>
+              <a class="notes-side-link" id="key-attention-notion-side" target="_blank" rel="noreferrer">打开 Notion 库 ↗</a>
+            </div>
+          </aside>
+          <div class="notes-main">
+            <div class="notes-header">
+              <div class="notes-header-title">特别关注 · 重要结论 + 指示</div>
+              <a class="notes-header-link" id="key-attention-notion" target="_blank" rel="noreferrer">打开 Notion ↗</a>
+            </div>
+            <div class="notes-meta-bar"><span id="key-attention-count">0</span> 条记录</div>
+            <div id="key-attention-list" class="notes-list"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 产品专项 -->
+      <div class="view" id="view-product-initiatives" hidden>
+        <div class="notes-layout">
+          <aside class="notes-side">
+            <div class="notes-side-title">筛选</div>
+            <div class="notes-side-group">
+              <div class="notes-side-label">区域</div>
+              <button class="notes-chip active" data-pi-filter-region="all" type="button">全部</button>
+              <button class="notes-chip" data-pi-filter-region="东盟" type="button">东盟</button>
+              <button class="notes-chip" data-pi-filter-region="中东非" type="button">中东非</button>
+              <button class="notes-chip" data-pi-filter-region="印度" type="button">印度</button>
+              <button class="notes-chip" data-pi-filter-region="全球" type="button">全球</button>
+            </div>
+            <div class="notes-side-group">
+              <div class="notes-side-label">状态</div>
+              <button class="notes-chip active" data-pi-filter-status="all" type="button">全部</button>
+              <button class="notes-chip" data-pi-filter-status="待跟进" type="button">待跟进</button>
+              <button class="notes-chip" data-pi-filter-status="进行中" type="button">进行中</button>
+              <button class="notes-chip" data-pi-filter-status="已闭环" type="button">已闭环</button>
+            </div>
+            <div class="notes-side-tip">
+              <div class="notes-side-tip-title">怎么录入</div>
+              <div class="notes-side-tip-body">产品议题、结论、Owner、Deadline 落到这里。</div>
+              <a class="notes-side-link" id="product-initiatives-notion-side" target="_blank" rel="noreferrer">打开 Notion 库 ↗</a>
+            </div>
+          </aside>
+          <div class="notes-main">
+            <div class="notes-header">
+              <div class="notes-header-title">产品专项 · 议题 + 结论 + 跟进</div>
+              <a class="notes-header-link" id="product-initiatives-notion" target="_blank" rel="noreferrer">打开 Notion ↗</a>
+            </div>
+            <div class="notes-meta-bar"><span id="product-initiatives-count">0</span> 条记录</div>
+            <div id="product-initiatives-list" class="notes-list"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 产品知识库 -->
+      <div class="view" id="view-product-knowledge" hidden>
+        <div class="notes-layout">
+          <aside class="notes-side">
+            <div class="notes-side-title">筛选</div>
+            <div class="notes-side-group">
+              <div class="notes-side-label">品类</div>
+              <button class="notes-chip active" data-pk-filter-cat="all" type="button">全部</button>
+              <button class="notes-chip" data-pk-filter-cat="洗衣机" type="button">洗衣机</button>
+              <button class="notes-chip" data-pk-filter-cat="干衣机" type="button">干衣机</button>
+              <button class="notes-chip" data-pk-filter-cat="洗烘一体" type="button">洗烘一体</button>
+              <button class="notes-chip" data-pk-filter-cat="其他" type="button">其他</button>
+            </div>
+            <div class="notes-side-tip">
+              <div class="notes-side-tip-title">怎么录入</div>
+              <div class="notes-side-tip-body">产品知识点、亮点、参数、对比。跟小雷欧说"把 XXX 记进产品知识库"。</div>
+              <a class="notes-side-link" id="product-knowledge-notion-side" target="_blank" rel="noreferrer">打开 Notion 库 ↗</a>
+            </div>
+          </aside>
+          <div class="notes-main">
+            <div class="notes-header">
+              <div class="notes-header-title">产品知识库 · 知识点 + 资料</div>
+              <a class="notes-header-link" id="product-knowledge-notion" target="_blank" rel="noreferrer">打开 Notion ↗</a>
+            </div>
+            <div class="notes-meta-bar"><span id="product-knowledge-count">0</span> 条记录</div>
+            <div id="product-knowledge-list" class="notes-list"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 项目待办：智能拆解 弹层 -->
+      <div class="cal-modal" id="task-parse-modal" hidden>
+        <div class="cal-modal-mask" data-task-close></div>
+        <div class="cal-modal-box cal-modal-box-wide">
+          <div class="cal-modal-head">
+            <div class="cal-modal-title">智能拆解 · 写入待办</div>
+            <button class="cal-modal-x" data-task-close type="button">✕</button>
+          </div>
+          <div class="cal-form">
+            <div class="cal-quick">
+              <textarea id="task-parse-text" rows="5" placeholder="贴一段话或项目进展，我会自动拆解成待办并识别优先级、区域、截止日期。例如：
+
+中东非150万领导版PPT下周三前要出，P0紧急；东盟要货数据口径今天锁定；印度渠道库存盘点本周完成"></textarea>
+              <div class="cal-quick-hint" id="task-parse-hint">支持用 换行 / 分号 / 句号 分隔多条；自动识别 东盟·中东非·印度·全球 和 紧急/重要/P0-P2/日期</div>
+            </div>
+            <div class="task-parse-preview" id="task-parse-preview"></div>
+            <div class="cal-field-row" style="justify-content:flex-end">
+              <button class="btn btn-sm" data-task-close type="button">取消</button>
+              <button class="btn btn-primary btn-sm" id="task-parse-submit" type="button">写入 Notion ✓</button>
+            </div>
+            <div class="cal-quick-hint" id="task-parse-msg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 项目节点：智能拆解 弹层 -->
+      <div class="cal-modal" id="milestone-parse-modal" hidden>
+        <div class="cal-modal-mask" data-milestone-close></div>
+        <div class="cal-modal-box cal-modal-box-wide">
+          <div class="cal-modal-head">
+            <div class="cal-modal-title">智能拆解 · 写入项目节点</div>
+            <button class="cal-modal-x" data-milestone-close type="button">✕</button>
+          </div>
+          <div class="cal-form">
+            <div class="cal-quick">
+              <textarea id="milestone-parse-text" rows="6" placeholder="贴一段项目进展或节点描述，例如：
+
+中东非150万领导版PPT：立项已完成，下次关键节点是9月20日PPT初稿评审，负责人Leo；东盟洗衣机印度渠道：立项中，下周完成渠道决策，9月25日交付截止；印度Q3预测更新：立项中，等待任总确认"></textarea>
+              <div class="cal-quick-hint" id="milestone-parse-hint">识别：节点名、状态（立项中/进行中/节点达成/交付完成/搁置）、优先级、区域、负责人、关键日期、卡点</div>
+            </div>
+            <div class="task-parse-preview" id="milestone-parse-preview"></div>
+            <div class="cal-field-row" style="justify-content:flex-end">
+              <button class="btn btn-sm" data-milestone-close type="button">取消</button>
+              <button class="btn btn-primary btn-sm" id="milestone-parse-submit" type="button">写入项目节点库 ✓</button>
+            </div>
+            <div class="cal-quick-hint" id="milestone-parse-msg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 智能投放：多目标复合投料 弹层 -->
+      <div class="cal-modal" id="intake-modal" hidden>
+        <div class="cal-modal-mask" data-intake-close></div>
+        <div class="cal-modal-box cal-modal-box-wide">
+          <div class="cal-modal-head">
+            <div class="cal-modal-title">📥 智能投放 · 自动拆解到待办 / 日历 / 节点</div>
+            <button class="cal-modal-x" data-intake-close type="button">✕</button>
+          </div>
+          <div class="cal-form">
+            <div class="cal-quick">
+              <textarea id="intake-text" rows="5" placeholder="贴一段话，AI 自动识别目标。支持复合意图：&#10;&#10;例如：提醒我明天下2:00 test，待办+日历&#10;例如：下周三前出中东非PPT P0&#10;例如：A项目下周一立项评审，节点"></textarea>
+              <div class="cal-quick-hint" id="intake-hint">自动识别 区域 / 优先级 / 截止日期 / 目标库（待办、日历、节点、邮件、市场）。可一句多目标，如「待办+日历」。</div>
+              <div class="intake-hero-files" style="margin-top:8px">
+                <input type="file" id="intake-file" multiple hidden onchange="onIntakeFiles(this)">
+                <button class="btn btn-sm" onclick="document.getElementById('intake-file').click()">📎 附件</button>
+                <span class="file-list" id="intake-filelist"></span>
+              </div>
+            </div>
+            <div class="task-parse-preview" id="intake-preview"></div>
+            <div class="cal-field-row" style="justify-content:flex-end">
+              <button class="btn btn-sm" data-intake-close type="button">取消</button>
+              <button class="btn btn-primary btn-sm" id="intake-submit" type="button">确认落库 ✓</button>
+            </div>
+            <div class="cal-quick-hint" id="intake-msg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 东盟项目：手写备注弹窗 -->
+      <div class="cal-modal" id="asean-note-modal" hidden>
+        <div class="cal-modal-mask" onclick="closeAseanNote()"></div>
+        <div class="cal-modal-box">
+          <div class="cal-modal-head">
+            <div class="cal-modal-title">✎ 项目备注</div>
+            <button class="cal-modal-x" type="button" onclick="closeAseanNote()">✕</button>
+          </div>
+          <div class="cal-form">
+            <div class="cal-quick">
+              <div style="font-size:12px;color:var(--text-sub)">项目：<b id="asean-note-title" style="color:var(--text-1)"></b></div>
+            </div>
+            <label class="cal-field">
+              <span class="cal-label">我的备注</span>
+              <textarea id="asean-note-text" rows="5" placeholder="现场情况、客户反馈、待协调事项…（只存在本地，不动飞书源数据）"></textarea>
+            </label>
+            <div class="cal-form-foot">
+              <button class="cal-cancel" type="button" onclick="closeAseanNote()">取消</button>
+              <button class="cal-submit" type="button" onclick="saveAseanNote()">保存备注 ✓</button>
+            </div>
+            <div class="cal-form-msg" id="asean-note-msg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 新增日程/会议 弹层 -->
+      <div class="cal-modal" id="cal-modal" hidden>
+        <div class="cal-modal-mask" data-cal-close></div>
+        <div class="cal-modal-box">
+          <div class="cal-modal-head">
+            <div class="cal-modal-title" id="cal-modal-title">新增日程</div>
+            <button class="cal-modal-x" data-cal-close type="button">✕</button>
+          </div>
+          <div class="cal-form">
+            <div class="cal-quick">
+              <textarea id="cal-f-quick" rows="2" placeholder="一句话快记：例如「明天下午3点和东盟团队开沟通会，线上」—— 自动识别时间、地点，回车即可保存"></textarea>
+              <div class="cal-quick-hint" id="cal-quick-hint"></div>
+            </div>
+            <label class="cal-field">
+              <span class="cal-label">标题 <i>*</i></span>
+              <input type="text" id="cal-f-title" placeholder="例如：健身 / 与东盟沟通会" />
+            </label>
+            <label class="cal-field">
+              <span class="cal-label">类型</span>
+              <div class="cal-seg" id="cal-f-kind">
+                <button type="button" class="cal-seg-item" data-kind="timed">定时</button>
+                <button type="button" class="cal-seg-item" data-kind="allday">全天</button>
+              </div>
+            </label>
+            <div class="cal-field-row">
+              <label class="cal-field">
+                <span class="cal-label">日期</span>
+                <input type="date" id="cal-f-date" />
+              </label>
+              <label class="cal-field cal-time-field">
+                <span class="cal-label">时间</span>
+                <input type="time" id="cal-f-time" />
+              </label>
+              <label class="cal-field cal-time-field">
+                <span class="cal-label">结束</span>
+                <input type="time" id="cal-f-endtime" />
+              </label>
+            </div>
+            <label class="cal-field">
+              <span class="cal-label">地点（可选）</span>
+              <input type="text" id="cal-f-location" placeholder="例如：线上 / 3楼会议室" />
+            </label>
+            <label class="cal-field" id="cal-f-meet-wrap" hidden>
+              <span class="cal-label">会议链接（可选）</span>
+              <input type="text" id="cal-f-meet" placeholder="粘贴 zoom / 腾讯会议 链接" />
+            </label>
+            <label class="cal-field">
+              <span class="cal-label">备注（可选）</span>
+              <input type="text" id="cal-f-desc" placeholder="补充说明" />
+            </label>
+            <div class="cal-form-foot">
+              <button class="cal-cancel" data-cal-close type="button">取消</button>
+              <button class="cal-submit" id="cal-f-submit" type="button">保存到 Google & Notion</button>
+            </div>
+            <div class="cal-form-msg" id="cal-f-msg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 今日日程：会议纪要草稿框 -->
+      <div class="cal-modal" id="note-modal" hidden>
+        <div class="cal-modal-mask" data-note-close></div>
+        <div class="cal-modal-box cal-modal-box-wide">
+          <div class="cal-modal-head">
+            <div class="cal-modal-title">📝 写这场会议的纪要</div>
+            <button class="cal-modal-x" data-note-close type="button">✕</button>
+          </div>
+          <div class="cal-form">
+            <div class="cal-quick" style="margin-bottom:10px">
+              <div style="font-size:12px;color:var(--text-sub)">会议：<b id="note-f-title" style="color:var(--text-1)"></b></div>
+              <div style="font-size:12px;color:var(--text-sub);margin-top:2px">日期：<span id="note-f-date"></span></div>
+            </div>
+            <label class="cal-field">
+              <span class="cal-label">会议主题</span>
+              <input type="text" id="note-f-theme" placeholder="一句话主题" />
+            </label>
+            <div class="cal-field-row">
+              <label class="cal-field">
+                <span class="cal-label">日期</span>
+                <input type="date" id="note-f-date2" />
+              </label>
+              <label class="cal-field">
+                <span class="cal-label">区域</span>
+                <select id="note-f-region">
+                  <option value="">-</option>
+                  <option value="东盟">东盟</option>
+                  <option value="中东非">中东非</option>
+                  <option value="印度">印度</option>
+                  <option value="全球">全球</option>
+                </select>
+              </label>
+              <label class="cal-field">
+                <span class="cal-label">状态</span>
+                <select id="note-f-status">
+                  <option value="待跟进">待跟进</option>
+                  <option value="进行中" selected>进行中</option>
+                  <option value="已闭环">已闭环</option>
+                </select>
+              </label>
+            </div>
+            <label class="cal-field">
+              <span class="cal-label">参与人</span>
+              <input type="text" id="note-f-participants" placeholder="用逗号分隔" />
+            </label>
+            <label class="cal-field">
+              <span class="cal-label">总结（多段）</span>
+              <textarea id="note-f-summary" rows="4" placeholder="Word 式长文：背景 / 主要讨论 / 决策逻辑 等"></textarea>
+            </label>
+            <label class="cal-field">
+              <span class="cal-label">关键决策 / 结论（逐条）</span>
+              <div id="note-f-concl-list"></div>
+              <button class="btn btn-sm" id="note-f-add-concl" type="button" style="margin-top:6px">+ 加一条</button>
+            </label>
+            <label class="cal-field">
+              <span class="cal-label">下一步</span>
+              <input type="text" id="note-f-next" />
+            </label>
+            <div class="cal-form-foot">
+              <button class="cal-cancel" data-note-close type="button">取消</button>
+              <button class="cal-submit" id="note-f-submit" type="button">保存到会议纪要 ✓</button>
+            </div>
+            <div class="cal-form-msg" id="note-f-msg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 要货与产销存 -->
+      <div class="view" id="view-inventory" hidden>
+        <div class="summary-grid" id="inventory-stats"></div>
+        <div class="filters" id="filters-inventory"></div>
+        <div class="table-wrap"><table class="data-table" id="table-inventory"><thead></thead><tbody></tbody></table><div class="empty" id="empty-inventory" hidden>暂无数据，请导入 CSV/Excel。</div></div>
+      </div>
+
+      <!-- 资讯与洞察 -->
+      <div class="view" id="view-insights" hidden>
+        <div class="banner">资讯来自 Notion 快照（你的自动化汇聚），AI 透视给出关注点与行动建议。点击资讯可「转为跟进」。</div>
+        <div class="insight-grid" id="insights-list"></div>
+      </div>
+
+      <!-- 市场分析（大区 → 点位/国家） -->
+      <div class="view" id="view-market" hidden>
+        <div class="banner">市场分析：选择大区（东盟 / 中东非…），再从下方点位进入具体国家/办事处档案。各国数据陆续接入中，数据源会标注（GfK / 欧睿 / 出口数据等）。</div>
+        <div class="region-tabs" id="market-region-tabs"></div>
+        <div class="market-slot-nav" id="market-slot-nav" hidden></div>
+        <div class="market-countries" id="market-countries"></div>
+        <div class="empty" id="market-empty" hidden>该大区暂无点位档案。市场数据接入后会自动出现。</div>
+      </div>
+
+      <!-- Notion 同步中枢 -->
+      <div class="view" id="view-sync" hidden>
+        <div class="dashboard-row">
+          <div class="card flex-1">
+            <div class="card-head"><h3>数据连接</h3></div>
+            <div id="sync-connections"></div>
+          </div>
+          <div class="card flex-1">
+            <div class="card-head"><h3>同步边界</h3></div>
+            <div class="sync-rules">
+              <p>任务、项目、会议记录、市场反馈和风险都写入统一待办；原始附件留在私有工作区。</p>
+              <p>邮件只提供建议和草稿，不直接发送；Google Calendar 需单独授权。</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>等待写回与冲突</h3></div>
+          <div id="sync-conflicts" class="empty">当前没有同步冲突</div>
+        </div>
+      </div>
+
+      <!-- Agent 与 Skill 管理 -->
+      <div class="view" id="view-skills" hidden>
+        <div class="dashboard-row">
+          <div class="card flex-2">
+            <div class="card-head"><h3>我的工作偏好与业务口径</h3><button class="btn btn-sm" onclick="openSkillForm()">+ 新建 Skill</button></div>
+            <div id="skill-list"></div>
+          </div>
+          <div class="card flex-1" id="skill-form-card" hidden>
+            <div class="card-head"><h3>新建 Skill</h3></div>
+            <div class="form-row"><label>Skill 名称</label><input id="skill-name" type="text" placeholder="如：周报生成"></div>
+            <div class="form-row"><label>触发词 / 调用命令</label><input id="skill-trigger" type="text" placeholder="如：/周报"></div>
+            <div class="form-row"><label>规则与指令（Markdown）</label><textarea id="skill-body" rows="8" placeholder="# 角色&#10;你是 Leo 的经营助理...&#10;&#10;## 输出要求&#10;..."></textarea></div>
+            <div class="form-row"><button class="btn btn-primary" onclick="saveSkill()">保存 Skill</button></div>
+          </div>
+          <div class="card flex-1" id="skill-detail-card" hidden>
+            <div class="card-head"><h3 id="skill-detail-title">Skill 详情</h3><button class="btn btn-sm" onclick="closeSkillDetail()">关闭</button></div>
+            <div id="skill-detail-body"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 入口与偏好设置 -->
+      <div class="view" id="view-settings" hidden>
+        <div class="card" style="max-width:560px">
+          <div class="card-head"><h3>访问与安全</h3></div>
+          <div class="form-row"><label>访问密钥</label><input id="settings-key" type="password" placeholder="当前密钥已隐藏"></div>
+          <div class="form-row"><button class="btn btn-primary" onclick="saveSettings()">保存密钥</button></div>
+          <div class="form-row" style="margin-top:12px"><label>Notion Token</label><input type="text" value="已配置" disabled></div>
+          <div class="form-row"><label>Graph Mail Token</label><input type="text" value="已配置" disabled></div>
+        </div>
+      </div>
+
+      <!-- 汇总分析（原） -->
+      <div class="view" id="view-summary" hidden>
+        <div class="summary-grid" id="summary-grid"></div>
+        <div class="chart-panel"><h3>区域 × 指标 分布</h3><div id="chart-box"></div></div>
+      </div>
+
+      <!-- 个人空间（二级密码） -->
+      <div class="view" id="view-personal" hidden>
+        <div class="personal-topbar">
+          <div>
+            <div class="view-subtitle" id="personal-view-subtitle">Personal Space</div>
+            <div class="intel-meta">界面直连展示各板块数据（财务/股票…）· 点「去 Notion」看明细 · 切走自动锁定</div>
+          </div>
+          <div class="personal-actions">
+            <span id="personal-lock-state" class="personal-lock-badge"></span>
+            <button class="btn btn-sm" id="btn-personal-refresh" onclick="loadPersonalCurrent()">刷新</button>
+            <button class="btn btn-sm" id="btn-personal-lock" onclick="personalLock()">🔒 锁定</button>
+          </div>
+        </div>
+
+        <!-- LIFE Dashboard 直达（顶部） -->
+        <a id="personal-dashboard-link" class="life-dash-card" href="#" target="_blank" rel="noopener" hidden>
+          <div class="life-dash-ico">🦁</div>
+          <div class="life-dash-text">
+            <div class="life-dash-title">Leo's LIFE Dashboard</div>
+            <div class="life-dash-sub">在 Notion 打开统一 dashboard（财务/股票/工作评估/阅读/健康/个人提升）</div>
+          </div>
+          <div class="life-dash-go">↗</div>
+        </a>
+
+        <!-- 6 个板块 tab 选择器（点选后工作台内展示数据） -->
+        <div class="psec-bar" id="personal-sections"></div>
+
+        <div id="personal-content">
+          <div class="empty">点击上方板块，在工作台内查看该板块数据。</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 新建/编辑弹窗 -->
+  <div class="modal-mask" id="modal" hidden>
+    <div class="modal">
+      <div class="modal-head"><div class="modal-title" id="modal-title">新建</div><button class="modal-close" onclick="closeModal()">×</button></div>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-foot">
+        <button class="btn" onclick="closeModal()">取消</button>
+        <button class="btn btn-primary" onclick="submitModal()">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 登录门（工作台主密钥 + 个人空间二级密码合并为一个门，只输入一次） -->
+  <div class="modal-mask hidden" id="login-mask" data-mask-scope="gate">
+    <div class="modal" style="width:380px">
+      <div class="modal-head">
+        <div class="modal-title" id="login-title">🔒 输入访问密钥</div>
+        <button class="modal-close" id="login-close" type="button" title="关闭" aria-label="关闭">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-row">
+          <label id="login-label">访问密钥</label>
+          <input type="password" id="login-key" placeholder="请输入工作台访问密钥" autocomplete="current-password"
+                 onkeydown="if(event.key==='Enter')doLogin();if(event.key==='Escape')closeLogin()">
+        </div>
+        <div class="intel-meta" id="login-hint" style="display:none"></div>
+        <div id="login-error" class="gate-error" role="alert"></div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn" id="login-cancel" type="button" onclick="closeLogin()">取消</button>
+        <button class="btn btn-primary" id="login-btn" type="button" onclick="doLogin()">进入</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 个人空间密码设置（首次） -->
+  <div class="modal-mask hidden" id="personal-setup-mask" data-mask-scope="gate">
+    <div class="modal" style="width:400px">
+      <div class="modal-head">
+        <div class="modal-title">设置 Personal Space 密码</div>
+        <button class="modal-close" type="button" onclick="closePersonalSetup()" title="关闭" aria-label="关闭">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="intel-meta" style="margin-bottom:12px">个人空间单独设一个密码，独立于工作台主密钥。验证一次后本会话内免重复输入。</div>
+        <div class="form-row">
+          <label>新密码</label>
+          <input type="password" id="personal-setup-key" placeholder="至少 4 位" autocomplete="new-password"
+                 onkeydown="if(event.key==='Enter')savePersonalSetup();if(event.key==='Escape')closePersonalSetup()">
+        </div>
+        <div id="personal-setup-error" class="gate-error" role="alert"></div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn" type="button" onclick="closePersonalSetup()">取消</button>
+        <button class="btn btn-primary" type="button" onclick="savePersonalSetup()">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=72bde23c"></script>
+</body>
+</html>
