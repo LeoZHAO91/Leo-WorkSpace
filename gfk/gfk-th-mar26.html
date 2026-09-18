@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GfK 泰国洗衣机市场分析 · Hisense 焦点 · Mar 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  :root{
+    --bg:#f4f6fb; --card:#ffffff; --ink:#1c2433; --sub:#5a6577; --line:#e3e8f0;
+    --blue:#2456d6; --blue2:#7ea0f0; --red:#d62728; --green:#2a9d4f; --amber:#d9822b;
+    --hisense:#e6212b; --hisense2:#1b3c8f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",-apple-system,sans-serif;line-height:1.55;padding:24px 16px 60px}
+  .wrap{max-width:1180px;margin:0 auto}
+  header{background:linear-gradient(120deg,#122a6b 0%,#2456d6 60%,#3f6ce0 100%);color:#fff;border-radius:14px;padding:26px 30px;margin-bottom:18px}
+  header h1{font-size:24px;font-weight:700;letter-spacing:.5px}
+  header .sub{opacity:.92;margin-top:6px;font-size:13.5px}
+  header .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:14px;font-size:12.5px;opacity:.9}
+  .badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:2px 10px;border-radius:20px}
+  .fxbar{background:linear-gradient(90deg,#fff7e6,#fff3d6);border:1px solid #f0d99a;border-left:4px solid var(--amber);border-radius:10px;padding:10px 18px;margin-bottom:18px;font-size:12.5px;color:#5b4a1a;display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center}
+  .fxbar b{color:#9a6b00}
+  .resume{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-bottom:18px}
+  .resume h2{font-size:15px;color:var(--blue);margin-bottom:10px}
+  .resume p{font-size:14px}
+  .kd{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:18px}
+  .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .k .t{font-size:11.5px;color:var(--sub)}
+  .k .v{font-size:20px;font-weight:700;margin-top:4px}
+  .k .u{font-size:11px;color:var(--sub);font-weight:600}
+  .k .d{font-size:12px;margin-top:3px}
+  .up{color:var(--red)} .dn{color:var(--green)} .flat{color:var(--sub)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+  @media(max-width:900px){.grid2,.grid3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:18px}
+  .card h3{font-size:15px;color:var(--ink);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+  .card .note{font-size:12px;color:var(--sub);margin-bottom:10px}
+  .chart{width:100%;height:320px}
+  .chartH{height:300px}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right}
+  th{background:#f0f3f9;color:var(--sub);font-weight:600;white-space:nowrap}
+  td:first-child,th:first-child{text-align:left}
+  tr.hi{background:#fff3f3}
+  .num{font-variant-numeric:tabular-nums}
+  .tag{display:inline-block;padding:1px 8px;border-radius:4px;font-size:11.5px;font-weight:600}
+  .t1{background:#e8edfc;color:var(--blue)} .t2{background:#fdeaea;color:var(--hisense)} .t3{background:#eaf7ee;color:var(--green)}
+  .find{display:flex;gap:12px;border-left:4px solid var(--hisense);background:#fdf4f4;border-radius:8px;padding:12px 16px;margin-bottom:10px}
+  .find .no{font-weight:800;color:var(--hisense);font-size:16px;min-width:22px}
+  .find p{font-size:13.5px}
+  .adv{display:flex;gap:12px;border-left:4px solid var(--blue);background:#f2f6ff;border-radius:8px;padding:12px 16px;margin-bottom:10px}
+  .adv .no{font-weight:800;color:var(--blue);font-size:16px;min-width:22px}
+  .adv p{font-size:13.5px}
+  .src{font-size:11.5px;color:var(--sub);margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
+  .pill{font-size:11px;background:#eef2f8;color:var(--sub);border-radius:4px;padding:1px 6px;margin-left:6px;font-weight:400}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>GfK 泰国洗衣机市场分析（Hisense 焦点视角）</h1>
+  <div class="sub">数据来源：GfK STAND CHARTSET · Washing Machines · Panelmarket Thailand (TH1) · 统计期 2026年3月（PRJ 80309）· 覆盖全市场 / 单缸 / 双缸 / 前开滚筒 / 洗烘一体</div>
+  <div class="meta">
+    <span class="badge">YTD26 量 45.6 万台</span>
+    <span class="badge">YTD26 额 39.4 亿 THB（≈1.21 亿美元）</span>
+    <span class="badge">YTD26 均价 8,651 THB（≈265 USD）</span>
+    <span class="badge">MAT26 量 175.0 万台（+3.7%）</span>
+  </div>
+</header>
+
+<div class="fxbar">
+  <span><b>汇率口径（美元折算）</b></span>
+  <span>1 USD = 32.66 THB</span>
+  <span>1 USD = 16.37 ZAR（南非）</span>
+  <span>基期：期末汇率 2026-03-31</span>
+  <span>展示：主币 THB + 美元并列，便于跨市场比较</span>
+</div>
+
+<!-- 核心结论 -->
+<div class="resume">
+  <h2>五句话结论</h2>
+  <p><b>1.</b> 泰国 WM 进入「量升额跌」阶段：YTD26 销量 +4.7%，但销额 -4.6%、均价大降 -8.8% 至 8,651 THB（约 265 USD）。增长不是靠需求，而是靠降价换量——美元口径下销额由 1.27 亿降至 1.21 亿美元，单台价值被拉低约 8.6%。<br>
+  <b>2.</b> 结构性看，洗烘一体是唯一「量额双增」品类：YTD 量 +32.3%、额 +12.8%，是泰国前装向高端/一体渗透的明确信号；前开滚筒额却 -12.1%（降价最狠），单缸额 -8.0%。<br>
+  <b>3.</b> 量盘仍由低价段支撑：双缸 19.1 万台（+3.6%）与单缸全自动 17.9 万台（+2.0%）合计占 YTD 量约 81%，均价分别仅 5,474 / 8,378 THB——低价量大是泰国市场底色。<br>
+  <b>4.</b> Hisense 的结构型锚点在单缸：Single Tub 的 Mar26 Hitlist 型号第 1 为 Hisense WT150F50（月销约 1,469 台、份额约 12.8%），领先 Toshiba / Samsung 主力；单缸全自动是 Hisense 可依托的份额阵地。<br>
+  <b>5.</b> 风险：全市场均价 -8.8% 正在压缩行业利润池；若泰国以价换量继续，Hisense 跟进降价将伤及自身均价（当前泰国的竞争集中在均价下探，而非总量扩张）。</p>
+</div>
+
+<!-- KPI -->
+<div class="kd">
+  <div class="k"><div class="t">YTD26 (1-3月) 销量</div><div class="v num">45.6 万台</div><div class="d up">同比 +4.7%</div></div>
+  <div class="k"><div class="t">YTD26 销额</div><div class="v num">39.4 亿 THB</div><div class="u">≈1.21 亿美元</div><div class="d dn">同比 -4.6%</div></div>
+  <div class="k"><div class="t">YTD26 均价</div><div class="v num">8,651 THB</div><div class="u">≈265 美元/台</div><div class="d dn">同比 -8.8%</div></div>
+  <div class="k"><div class="t">MAT26 销量</div><div class="v num">175.0 万台</div><div class="d up">同比 +3.7%</div></div>
+  <div class="k"><div class="t">MAT26 销额(折)</div><div class="v num">≈2.16 亿 USD</div><div class="d flat">YTD均价外推</div></div>
+  <div class="k"><div class="t">Mar26 单月销量</div><div class="v num">15.5 万台</div><div class="d up">同比 +23.0%</div></div>
+</div>
+
+<!-- 月度趋势 -->
+<div class="card">
+  <h3>泰国全市场月度销量（2025.02 – 2026.03）</h3>
+  <div class="note">柱 = 月销量（台，1k 千台）；泰国月度波动明显，1月(17.0万)与3月(15.5万, +23% YoY)为阶段高点，2月回落至13.0万；红柱=2026年</div>
+  <div id="c_month" class="chart"></div>
+</div>
+
+<!-- 量额价 两年对比 + 品类结构 -->
+<div class="grid2">
+  <div class="card">
+    <h3>YTD 量 / 额 / 均价：25 vs 26</h3>
+    <div class="note">量升 4.7%、额降 4.6%、均价降 8.8% —— 以价换量一目了然（量=万台，额=百万 USD，均价=USD）</div>
+    <div id="c_ytd" class="chartH" style="height:330px"></div>
+  </div>
+  <div class="card">
+    <h3>品类结构：YTD26 量份额</h3>
+    <div class="note">双缸 + 单缸合计约 81% 的量盘；洗烘一体最小但增速最快（量 +32%）</div>
+    <div id="c_type" class="chartH" style="height:330px"></div>
+  </div>
+</div>
+
+<!-- 品类量额均价总表 -->
+<div class="card">
+  <h3>品类明细：YTD 量 / 额 / 均价（THB & USD 双币）</h3>
+  <div class="note">Hisense 主力关注单缸全自动与前开滚筒；洗烘一体为量额双增的高价值窗口</div>
+  <table>
+    <tr><th>品类</th><th>YTD26量(台)</th><th>量增</th><th>YTD26额(亿THB)</th><th>额增</th><th>YTD26额(百万USD)</th><th>均价 THB</th><th>≈USD</th><th>均价同比</th></tr>
+    <tr><td>全市场 TOTAL</td><td class="num">455,653</td><td class="up">+4.7%</td><td class="num">39.4</td><td class="dn">-4.6%</td><td class="num">120.7</td><td class="num">8,651</td><td class="num">265</td><td class="dn">-8.8%</td></tr>
+    <tr><td>双缸半自动 Twin Tub</td><td class="num">191,068</td><td class="up">+3.6%</td><td class="num">10.5</td><td class="dn">-3.1%</td><td class="num">32.0</td><td class="num">5,474</td><td class="num">168</td><td class="dn">-6.5%</td></tr>
+    <tr class="hi"><td><b>单缸 Top Loader</b></td><td class="num"><b>178,672</b></td><td class="up">+2.0%</td><td class="num"><b>15.0</b></td><td class="dn">-8.0%</td><td class="num">45.8</td><td class="num">8,378</td><td class="num">257</td><td class="dn">-9.8%</td></tr>
+    <tr><td>滚筒 Front Loader</td><td class="num">45,002</td><td class="dn">-3.3%</td><td class="num">7.3</td><td class="dn">-12.1%</td><td class="num">22.3</td><td class="num">16,155</td><td class="num">495</td><td class="dn">-9.1%</td></tr>
+    <tr><td>洗烘 Washer Dryer</td><td class="num">31,790</td><td class="up">+32.3%</td><td class="num">6.6</td><td class="up">+12.8%</td><td class="num">20.3</td><td class="num">20,856</td><td class="num">639</td><td class="dn">-14.8%</td></tr>
+  </table>
+</div>
+
+<!-- 品类价值轨迹 -->
+<div class="card">
+  <h3>分品类 YTD 销额（百万 USD，25 vs 26）</h3>
+  <div class="note">洗烘一体是唯一美元口径额增长品类（18.0 → 20.3M）；单缸 / 滚筒 / 双缸美元销额均收缩，但单缸仍是泰国第一大价值品类</div>
+  <div id="c_catval" class="chartH" style="height:300px"></div>
+</div>
+
+<!-- Hitlist -->
+<div class="card">
+  <h3>Hisense 单缸锚点：Top Loader Mar26 头部型号</h3>
+  <div class="note">Hisense WT150F50 居泰国单缸全自动 Hitlist 首位；单缸是 Hisense 应稳守并上探的阵地（数据来自 Hitlist Units）</div>
+  <table>
+    <tr><th>排名</th><th>品牌 / 型号</th><th>参考月销(台)</th><th>份额(量)</th></tr>
+    <tr class="hi"><td>1</td><td><b>HISENSE · WT150F50</b></td><td class="num">≈1,469</td><td class="num">≈12.8%</td></tr>
+    <tr><td>2</td><td>TOSHIBA · AW-DUM1400LT(SG)</td><td class="num">≈741</td><td class="num">≈10.5%</td></tr>
+    <tr><td>3</td><td>SAMSUNG · WA12CG5441BYST</td><td class="num">≈554</td><td class="num">≈13.7%</td></tr>
+  </table>
+</div>
+
+<!-- 洞察 -->
+<div class="card" style="background:#fff">
+  <h3>关键发现（为什么）</h3>
+  <div class="find"><span class="no">1</span><p><b>泰国在「降价换量」，不是需求下行。</b>量 +4.7% 而额 -4.6%、均价 -8.8%：市场在主动下探价格以维持出货。美元口径下销额从 1.27 亿降到 1.21 亿，说明泰国对 Hisense 的价值池（美元收入）实际在缩。</p></div>
+  <div class="find"><span class="no">2</span><p><b>洗烘一体是唯一双增窗口。</b>YTD 量 +32.3%（24,025→31,790 台）、额 +12.8%，即便均价大跌 -14.8%，仍是量额齐升的唯一品类——泰国前装正在向「滚筒+烘干一体」高端结构迁移，窗口期明确。</p></div>
+  <div class="find"><span class="no">3</span><p><b>量盘被低价双缸/单缸主导。</b>双缸均价 5,474 THB、单缸 8,378 THB，两者合计占 YTD 量约 81%，是泰国市场的绝对基本盘；Hisense 的国产定位与之天然契合，但需警惕均价被同行拉低。</p></div>
+  <div class="find"><span class="no">4</span><p><b>Hisense 单缸已有爆款锚点。</b>WT150F50 是单缸 Hitlist 第 1（月销约 1,469 台）。这是 Hisense 把「单型号第一」复制成「品牌份额第一」的现实抓手，也是抵御 Toshiba/Samsung 的结构阵地。</p></div>
+  <div class="find"><span class="no">5</span><p><b>数据边界须透明。</b>规模、量额、均价、品类、单缸 Hitlist 均由源文本核对自洽；品牌×渠道/区域/价格段份额热图因源 EMF 抽取不完整，本版未做未经核实的品牌份额声明。</p></div>
+</div>
+
+<div class="card">
+  <h3>行动建议（下一步怎么办）</h3>
+  <div class="adv"><span class="no">1</span><p><b>守均价，别在泰国带头打价格战（P0）。</b>全市场均价 -8.8%、美元单台价值 -8.6%，跟跌将直接侵蚀美元收入。Hisense 单缸主力卡位 8–12k THB（245–370 USD）主流段，用产品组合与容量差异守住 ASP。</p></div>
+  <div class="adv"><span class="no">2</span><p><b>把单缸爆款 WT150F50 做成 OPP 并扩矩阵（P0）。</b>围绕该已居第 1 的型号做 8–9kg 单缸矩阵与铺货放量，把单型号优势固化为品牌单缸份额；单缸是 Hisense 当前最可靠的结构阵地。</p></div>
+  <div class="adv"><span class="no">3</span><p><b>提前卡位洗烘一体窗口（P1）。</b>该品类量额双增是泰国少有的增长点，Hisense 应评估中价位（10k–16k THB 带）洗烘一体与滚筒上探产品，抢在前开向高端迁移的红利期。</p></div>
+  <div class="adv"><span class="no">4</span><p><b>盯紧 3 月 +23% 反弹的真实性（P1）。</b>Mar26 同比 +23% 可能是大促/清库存驱动；需月频跟踪量额价三线，若反弹由降价驱动则非复苏信号。</p></div>
+  <div class="adv"><span class="no">5</span><p><b>补全渠道/区域份额后再做投放归因（P2）。</b>建议后续用支持完整抽取的源文件或人工补录，完善 Hisense 在 Online(约7%) 与曼谷大区的份额，再定资源投放优先级。</p></div>
+</div>
+
+<div class="src">
+  数据口径：全部规模、量额、均价、品类与 Hitlist 数据提取自输入 GfK STAND CHARTSET WASHERS TH1 HISENSE Mar26（73张）图表数据标签并做交叉自洽核对。统计期：YTD=2026年1–3月，MAT=2025年4月–2026年3月，14M=2025年2月–2026年3月。金额主币为泰铢 THB；USD 按期末汇率 1 USD = 32.66 THB（2026-03-31）折算并列展示，用于跨市场可比。品类：Top Loader=单缸顶开全自动，Twin Tub=半自动双缸，Front Loader=前开滚筒，Washer Dryer=洗烘一体。份额为品牌在对应品类 Hitlist 口径。部分品牌×渠道/区域/价格段份额因源文件图表文字抽取限制未纳入，本报告未包含未经核实的该类份额声明。
+</div>
+
+</div>
+
+<script>
+const FX=32.66;
+const BLUE='#2456d6',HIS='#e6212b',GRAY='#8a93a5',GREEN='#2a9d4f',GOLD='#d9822b';
+const axis={axisLine:{lineStyle:{color:'#c9d2e0'}},axisLabel:{color:'#5a6577',fontSize:11}};
+const tl={textStyle:{color:'#5a6577',fontSize:11}};
+function base(e){return Object.assign({textStyle:{color:'#1c2433',fontFamily:'inherit'},grid:{left:56,right:56,top:40,bottom:28}},e||{});}
+
+// 月度
+echarts.init(document.getElementById('c_month')).setOption(base({
+  tooltip:{trigger:'axis'},legend:tl,
+  xAxis:{type:'category',data:['Feb25','Mar25','Apr25','May25','Jun25','Jul25','Aug25','Sep25','Oct25','Nov25','Dec25','Jan26','Feb26','Mar26'],axisLabel:{color:'#5a6577',fontSize:10,interval:0,rotate:20}},
+  yAxis:{type:'value',name:'台',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}},axisLabel:{formatter:v=>(v/1000)+'k'}},
+  series:[{name:'月销量(台)',type:'bar',
+    data:[139030,126186,122944,162021,137378,153405,128675,137753,154937,137603,159496,169974,130406,155273],
+    itemStyle:{color:function(p){return p.dataIndex>=11?HIS:BLUE},opacity:.88},barWidth:'52%',
+    label:{show:true,position:'top',fontSize:9,color:'#5a6577',formatter:p=>(p.value/1000).toFixed(1)+'k'}}]
+}));
+
+// YTD 量额价
+echarts.init(document.getElementById('c_ytd')).setOption(base({
+  tooltip:{trigger:'axis'},legend:tl,
+  xAxis:{type:'category',data:['YTD25','YTD26'],axisLabel:{color:'#5a6577',fontSize:12}},
+  yAxis:[{type:'value',name:'万台 / 百万USD',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+         {type:'value',name:'均价 USD',min:200,max:320,axisLine:{show:false},splitLine:{show:false}}],
+  series:[
+    {name:'销量(万台)',type:'bar',data:[43.5,45.6],itemStyle:{color:BLUE,opacity:.85},barWidth:'22%',label:{show:true,position:'top',color:'#1c2433',fontSize:10}},
+    {name:'销额(百万USD)',type:'bar',data:[126.5,120.7],itemStyle:{color:'#9fb4f0'},barWidth:'22%',label:{show:true,position:'top',color:'#1c2433',fontSize:10}},
+    {name:'均价(USD)',type:'line',yAxisIndex:1,data:[290,265],smooth:true,lineStyle:{color:HIS,width:2.5},symbolSize:7,itemStyle:{color:HIS},label:{show:true,position:'top',color:HIS,fontSize:10}}
+  ]
+}));
+
+// 品类量份额 环形
+echarts.init(document.getElementById('c_type')).setOption(base({
+  tooltip:{trigger:'item',formatter:'{b}: {c}台 ({d}%)'},legend:{bottom:0,textStyle:{color:'#5a6577',fontSize:11}},
+  series:[{type:'pie',radius:['42%','68%'],center:['50%','45%'],
+    data:[
+      {name:'双缸 Twin Tub',value:191068,itemStyle:{color:BLUE}},
+      {name:'单缸 Top Loader',value:178672,itemStyle:{color:'#3f6ce0'}},
+      {name:'滚筒 Front Loader',value:45002,itemStyle:{color:GOLD}},
+      {name:'洗烘 Washer Dryer',value:31790,itemStyle:{color:HIS}},
+      {name:'其他',value:9121,itemStyle:{color:'#c9d4f5'}}
+    ],
+    label:{color:'#1c2433',fontSize:11,formatter:'{b}\n{d}%'},
+    labelLine:{length:10,length2:8}}]
+}));
+
+// 品类美元销额 25vs26
+echarts.init(document.getElementById('c_catval')).setOption(base({
+  tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},legend:tl,
+  xAxis:{type:'category',data:['单缸 Top Loader','双缸 Twin Tub','滚筒 Front Loader','洗烘 Washer Dryer'],axisLabel:{color:'#5a6577',fontSize:11}},
+  yAxis:{type:'value',name:'百万 USD',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+  series:[
+    {name:'YTD25',type:'bar',data:[49.8,33.1,25.3,18.0],itemStyle:{color:'#b9c6e8'},barWidth:'34%',label:{show:true,position:'top',fontSize:10,color:'#8a93a5'}},
+    {name:'YTD26',type:'bar',data:[45.8,32.0,22.3,20.3],itemStyle:{color:BLUE},barWidth:'34%',label:{show:true,position:'top',fontSize:10,color:'#5a6577'}}
+  ]
+}));
+</script>
+</body>
+</html>

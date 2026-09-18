@@ -1,0 +1,36 @@
+{
+  "region": "中东非",
+  "country": "南非",
+  "market": "洗衣机 Washers",
+  "sourceType": "GfK",
+  "source": "GfK STANDCHARTSET WASHERS ZA HISENSE Jun26, PRJ 143192",
+  "period": "2026-06",
+  "statWindow": "MAT=2025.07-2026.06；YTD=2026.01-06；主币 ZAR，USD 并列",
+  "fx": { "base": "USD", "note": "期末汇率折算口径", "fxDate": "2026-06-30", "usdPerLocal": 0.06109, "localPerUsd": 16.37, "currency": "ZAR", "currencyName": "南非兰特" },
+  "reportUrl": "/gfk/gfk-za-jun26.html",
+  "updated": "2026-09-09",
+  "headline": "Hisense MAT 量份额 24.2% 居第2（DEFY 41.0%），Jun26 单月跳升至 27.3%；市场量升价跌、以价换量。",
+  "kpis": [
+    { "label": "市场 MAT 量", "value": "71.4 万台", "usd": "", "change": "+12.2%" },
+    { "label": "市场 MAT 额", "value": "42.1 亿 ZAR", "usd": "≈2.57 亿美元", "change": "+4.8%" },
+    { "label": "市场均价", "value": "5,894 ZAR", "usd": "≈360 美元", "change": "-6.6%" },
+    { "label": "Hisense MAT 量份额", "value": "24.2% 第2", "usd": "", "change": "Jun 27.3%" },
+    { "label": "Hisense MAT 额份额", "value": "21.1%", "usd": "额 887.6Mio ZAR≈5,422万美元", "change": "" },
+    { "label": "Hisense D.WGT / TOS", "value": "82.7 / 25.6", "usd": "", "change": "DEFY 96.7 / 35.2" }
+  ],
+  "insights": [
+    { "n": 1, "title": "市场以价换量", "detail": "MAT 量 +12.2% 但均价 -6.6%，<4,000 ZAR 低价段扩张、≥10k 高端段收缩，行业利润池承压。" },
+    { "n": 2, "title": "Hisense 结构性占优", "detail": "强在波轮（FA TOP）与双缸两大量盘子；双缸是唯一价量齐升品类（量 +16.8% / 额 +19.7% / 价 +2.5%）。" },
+    { "n": 3, "title": "Hisense 相对弱点", "detail": "均价低于市场 757 ZAR；8k+ 高端由 SAMSUNG/LG/BOSCH/SQ 占据；滚筒 FA FRONT 与 DEFY 差 3.0pp 可攻。" },
+    { "n": 4, "title": "渠道红利偏 DEFY", "detail": "家具专营（+3.8pp）与大型量贩（+0.9pp）是扩张渠道，Hisense 需核对陈列与覆盖。" },
+    { "n": 5, "title": "分销已近满铺，下一步靠 TOS", "detail": "D.WGT 82.7 vs DEFY 96.7 接近满铺；下一步靠 TOS 货架份额（25.6 vs DEFY 35.2）提升。" }
+  ],
+  "suggestions": [
+    { "id": "za-2026-06-p0-1", "level": "P0", "title": "守牢波轮基本盘并上探", "detail": "FA TOP 已 YTD 第1（32.2%）/ Jun 39.1%；把 6-9kg 波轮爆品线做成年度 OPP，补 7kg+ / 变频波轮，均价 5,659 → 6,000+。" },
+    { "id": "za-2026-06-p0-2", "level": "P0", "title": "双缸提质提价打 DEFY", "detail": "双缸占市场量 37% 且价齐升，Hisense 占比 20.2%（DEFY 64.8%）、均价 3,825 vs DEFY 4,155；推对标 DTT151/DTL160 对位机型，目标份额 25%+。" },
+    { "id": "za-2026-06-p1-1", "level": "P1", "title": "滚筒 FA FRONT 只差 DEFY 3.0pp", "detail": "投入 8-9kg 洗烘分离滚筒（WSCF143 已验证月销 1.6k 台），防 SAMSUNG 反超。" },
+    { "id": "za-2026-06-p1-2", "level": "P1", "title": "洗烘一体（WD）中价位差异化", "detail": "LG 高价垄断（36.3% / 均价 1.04 万），Hisense 23.9% 第2；以 10k 内大容量洗烘卡位，守 20%+。" },
+    { "id": "za-2026-06-p1-3", "level": "P1", "title": "压 MM/FS 渠道货架、止损 ER", "detail": "在 Mass Merchandisers（48.7%）与 Furniture Specialists（35.1%↑）压货架位与主推型号；评估 ER（16.1%↓）止损。" },
+    { "id": "za-2026-06-p2-1", "level": "P2", "title": "月度跟踪四项指标", "detail": "Hisense 波轮 vs DEFY 双缸价差 / FA FRONT 三家份额差 / WD 库存周转 / 3-6k 段份额变动，按月跟踪并纳入下期战略复盘。" }
+  ]
+}

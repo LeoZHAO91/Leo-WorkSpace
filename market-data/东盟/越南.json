@@ -1,0 +1,53 @@
+{
+  "region": "东盟",
+  "country": "越南",
+  "market": "洗衣机 Washers",
+  "sourceType": "GfK",
+  "source": "GfK LOCALCHARTS WASHERS VN May26, PRJ 79311, RG 1963689, Vietnam VN - 13 Regions + IS",
+  "period": "2026-05",
+  "statWindow": "YTD=2026.01-05；MAT=2025.06-2026.05；月度=2025.05-2026.05",
+  "fx": { "base": "VND", "note": "主币 VND；USD 按参考汇率约 25,000 VND/USD 外推展示，非精确折算", "currency": "VND", "currencyName": "越南盾", "usdRef": 25000, "refDate": "2026-05 参考" },
+  "reportUrl": "/gfk/gfk-vn-may26.html",
+  "updated": "2026-09-09",
+  "headline": "越南 WM 是东盟少有的量额价齐升市场：YTD26(1-5月)销量 95.4万台、同比 +10.3%，销额约 7.92万亿VND、+14.2%，均价 830万VND/台(≈330美元)、+3.5%。但与泰国'以价换量'不同，越南是价随量升的健康结构；且市场高度集中，Hisense 全市场未进前9品牌，仅在洗烘一体细分有单列，是待深耕的低份额市场。",
+  "kpis": [
+    { "label": "YTD26(1-5月)销量", "value": "95.4 万台", "usd": "", "change": "同比 +10.3%" },
+    { "label": "YTD25 销量", "value": "86.5 万台", "usd": "", "change": "" },
+    { "label": "YTD26 销额", "value": "7.92 万亿 VND", "usd": "≈3.17 亿美元", "change": "同比 +14.2%" },
+    { "label": "YTD25 销额", "value": "6.94 万亿 VND", "usd": "≈2.78 亿美元", "change": "" },
+    { "label": "YTD26 均价", "value": "8.31M VND/台", "usd": "≈332 美元", "change": "同比 +3.5%" },
+    { "label": "YTD25 均价", "value": "8.03M VND/台", "usd": "≈321 美元", "change": "" },
+    { "label": "May26 单月销量", "value": "15.7 万台", "usd": "", "change": "同比 +0.5%" },
+    { "label": "洗烘一体 YTD26 量", "value": "4.5 万台", "usd": "", "change": "同比 +23.1%" }
+  ],
+  "monthly": {
+    "label": "2025.05–2026.05 全市场月度销量(千台)",
+    "units": [156.1, 147.9, 164.0, 159.1, 169.6, 194.0, 215.2, 198.6, 245.2, 230.1, 169.7, 152.3, 156.9],
+    "months": ["May25","Jun25","Jul25","Aug25","Sep25","Oct25","Nov25","Dec25","Jan26","Feb26","Mar26","Apr26","May26"],
+    "growth": [12.5, 6.2, 4.2, 7.1, -0.7, 14.1, 25.8, 3.2, 3.2, 39.7, 8.9, 1.0, 0.5]
+  },
+  "segment": [
+    { "type": "单缸(顶开全自动)", "ytd25Units": 429.2, "ytd26Units": 478.9, "unitGrow": 11.6, "ytd26ValMio": 3271150, "valGrow": 15.6, "priceK": 6831 },
+    { "type": "前开滚筒(无烘干)", "ytd25Units": 399.1, "ytd26Units": 430.2, "unitGrow": 7.8, "ytd26ValMio": 4027441, "valGrow": 12.4, "priceK": 9361 },
+    { "type": "洗烘一体 FL WD", "ytd25Units": 36.6, "ytd26Units": 45.0, "unitGrow": 23.1, "ytd26ValMio": 626107, "valGrow": 18.1, "priceK": 13913 }
+  ],
+  "insights": [
+    { "n": 1, "title": "越南是东盟少见量额价齐升市场，结构健康", "detail": "YTD26(1-5月)量95.4万台+10.3%、额7.92万亿VND+14.2%、均价830万VND/台+3.5%。与泰国'量升额跌、均价-8.8%'的以价换量相反，越南价随量升、单台价值上行，是健康的量价齐升结构。"
+      ,"evid": "slide2：YTD25→26 量864.84→954.11千台、额6.94→7.92万亿VND、均价8027→8306千VND" },
+    { "n": 2, "title": "增长主要由2月春节档拉动，动能在衰减", "detail": "全市场增长看似强劲，但Jan26(+3.2%)、Feb26(+39.7%)的高增速集中在年初大促/春节档；3月(+8.9%)起明显放缓，4月(+1.0%)、5月(+0.5%)单月已几乎走平。YTD的+10.3%掩盖了Q2起增长失速，需警惕下半年动能。"
+      ,"evid": "slide2月度增长序列：2月+39.7%后逐月回落" },
+    { "n": 3, "title": "市场结构告别双缸，单缸+前开滚筒主导", "detail": "越南已基本无半自动双缸量盘。YTD26结构：单缸(顶开全自动)占~50%(量47.9万台)、前开滚筒(无烘)占~45%(43万台)、洗烘一体~5%(4.5万台但增速最快+23.1%)。销量单缸略大、但销额前开滚筒更高(40.3亿 vs 32.7亿 Mio VND)，前开是高价值主体。"
+      ,"evid": "slide2全市场 + slide51单缸 + slide88前开 + slide125洗烘 四张总量页，量额交叉自洽" },
+    { "n": 4, "title": "品牌高度集中：LG/AQUA/PANASONIC/TOSHIBA 占头部，Hisense 全市场未单列", "detail": "全市场品牌份额(MAT25-May26，slide3)单列品牌仅 LG/AQUA/TOSHIBA/PANASONIC/SAMSUNG/ELECTROLUX/SHARP/BEKO/HITACHI，Hisense 落入 OTHERS(约5-7%)——越南 Hisense 全市场量份额未达单列门槛，市场话语权弱。全市场 Hitlist Top19 无 Hisense 型号。"
+      ,"evid": "slide3品牌份额无HISENSE行；slide49 Hitlist Top19无Hisense" },
+    { "n": 5, "title": "Hisense 唯一切入点是洗烘一体，靠半价爆款打开", "detail": "Hisense 在整个越南文件中仅在洗烘一体(FL WD)段被单列(该品类Hisense份额可单独呈现)。Hisense WD90N1Y 进入 FL WD Hitlist 第8(May26月销243台、量份额3.4%)，但价格 663万VND(≈价格指数49，约为LG/Toshiba同级一半)——以价换量的切入策略，可持续性需评估。"
+      ,"evid": "slide160 FL WD Hitlist：HISENSE WD90N1Y 第8，Price Index 49.3" }
+  ],
+  "suggestions": [
+    { "id": "vn-2026-05-p0-1", "level": "P0", "title": "先厘清越南市场进入策略：低份额、头部垄断、以价换量窗口收窄", "detail": "越南全市场 Hisense 未进前9、头部LG/AQUA/PANASONIC/TOSHIBA集中。本地品牌定位与渠道基础弱，需明确是'战略性投入建份额'还是'机会性进入'。若无坚定的渠道+品牌投入，仅靠洗烘单型号低价切入难以撬动大盘。" },
+    { "id": "vn-2026-05-p0-2", "level": "P0", "title": "洗烘一体爆款 WD90N1Y 需评估'半价'打法的盈利与升级", "detail": "该型号靠价格指数49(约半价)进 Hitlist 第8。越南洗烘一体是量额双增(+23%量/+18%额)的最高价值窗口，但半价策略侵蚀该窗口本应有的高端溢价。建议评估是否可上探中价位洗烘，而非停留在低价冲量。" },
+    { "id": "vn-2026-05-p1-1", "level": "P1", "title": "警惕Q2增长失速：5月单月已+0.5%走平", "detail": "增长集中2月春节档(+39.7%)，3-5月动能衰减明显。若下半年无新拉动，全年YTD增速难维持+10%。建议月频跟踪，区分'春节档一次性'与'真实需求复苏'。" },
+    { "id": "vn-2026-05-p1-2", "level": "P1", "title": "前开滚筒是价值制高点，评估 Hisense 是否有前开产品切入空间", "detail": "越南前开滚筒(无烘)占45%量且是高价值主体(销额40.3亿Mio)。Hisense 目前在前开段未单列份额，若要在越南站住脚，前开(而非仅单缸/洗烘)是绕不开的主战场。" },
+    { "id": "vn-2026-05-p2-1", "level": "P2", "title": "区域与渠道的Hisense精确份额待源补充后再定投放", "detail": "本版从GfK LOCALCHARTS 209页抽取总量/品类/品牌头部/Hitlist；Hisense在区域、渠道、价格段的细分份额因未单列且源图表文字分散，未做精确归因，建议结合海信内部出货数据交叉验证。" }
+  ]
+}

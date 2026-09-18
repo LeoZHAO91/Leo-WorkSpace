@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="IA9SPZ5AuuJaMi8P2GYOgW">
+<head data-page-node-id="npOL3nErtRCMATFg7mc8BZ">
+<meta charset="UTF-8" data-page-node-id="MoCEFjHRcqQzBRmiROi6AM">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="ihmnKwbgzNrtmTXUuzDnLZ">
+<title>GfK 越南洗衣机市场分析 · Hisense 焦点 · May 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  :root{
+    --bg:#f4f6fb; --card:#ffffff; --ink:#1c2433; --sub:#5a6577; --line:#e3e8f0;
+    --blue:#2456d6; --blue2:#7ea0f0; --red:#d62728; --green:#2a9d4f; --amber:#d9822b;
+    --hisense:#e6212b; --hisense2:#1b3c8f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",-apple-system,sans-serif;line-height:1.55;padding:24px 16px 60px}
+  .wrap{max-width:1180px;margin:0 auto}
+  header{background:linear-gradient(120deg,#123b1e 0%,#1f7a3d 55%,#2a9d4f 100%);color:#fff;border-radius:14px;padding:26px 30px;margin-bottom:18px}
+  header h1{font-size:24px;font-weight:700;letter-spacing:.5px}
+  header .sub{opacity:.92;margin-top:6px;font-size:13.5px}
+  header .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:14px;font-size:12.5px;opacity:.9}
+  .badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:2px 10px;border-radius:20px}
+  .warnbar{background:linear-gradient(90deg,#fff3e6,#ffefdb);border:1px solid #f2cf9f;border-left:4px solid var(--amber);border-radius:10px;padding:11px 18px;margin-bottom:18px;font-size:12.5px;color:#6b4a16}
+  .warnbar b{color:#b06a08}
+  .resume{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-bottom:18px}
+  .resume h2{font-size:15px;color:var(--green);margin-bottom:10px}
+  .resume p{font-size:14px}
+  .kd{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:18px}
+  .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .k .t{font-size:11.5px;color:var(--sub)}
+  .k .v{font-size:20px;font-weight:700;margin-top:4px}
+  .k .u{font-size:11px;color:var(--sub);font-weight:600}
+  .k .d{font-size:12px;margin-top:3px}
+  .up{color:var(--green)} .dn{color:var(--red)} .flat{color:var(--sub)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:900px){.grid2{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:18px}
+  .card h3{font-size:15px;color:var(--ink);margin-bottom:4px}
+  .card .note{font-size:12px;color:var(--sub);margin-bottom:10px}
+  .chart{width:100%;height:320px}
+  .chartH{height:300px}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right}
+  th{background:#f0f3f9;color:var(--sub);font-weight:600;white-space:nowrap}
+  td:first-child,th:first-child{text-align:left}
+  tr.hi{background:#eef6ef}
+  .num{font-variant-numeric:tabular-nums}
+  .find{display:flex;gap:12px;border-left:4px solid var(--green);background:#f0f8f2;border-radius:8px;padding:12px 16px;margin-bottom:10px}
+  .find .no{font-weight:800;color:var(--green);font-size:16px;min-width:22px}
+  .find p{font-size:13.5px}
+  .adv{display:flex;gap:12px;border-left:4px solid var(--blue);background:#f2f6ff;border-radius:8px;padding:12px 16px;margin-bottom:10px}
+  .adv .no{font-weight:800;color:var(--blue);font-size:16px;min-width:22px}
+  .adv p{font-size:13.5px}
+  .prio{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:4px;margin-right:6px}
+  .prio.p0{background:#fdeaea;color:var(--red)} .prio.p1{background:#fff3e0;color:var(--amber)} .prio.p2{background:#eef1f6;color:var(--sub)}
+  .src{font-size:11.5px;color:var(--sub);margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
+  /* KG 下钻交互区 */
+  .drill-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+  .drill-title{font-size:13.5px;color:var(--ink)}
+  .drill-title b{color:var(--red);font-size:14px}
+  .drill-switch{font-size:12px;color:var(--blue);font-weight:600;cursor:pointer;border:1px solid #c9d6f2;background:#eef3fe;padding:4px 12px;border-radius:20px;user-select:none;transition:.15s}
+  .drill-switch:hover{background:#dde8fc}
+  .drill-note{font-size:11.5px;color:var(--sub);margin-bottom:10px;line-height:1.65;background:#f7f9fc;border:1px solid #eef1f7;border-radius:8px;padding:8px 12px}
+  .drill-foot{font-size:11.5px;color:var(--sub);margin-top:8px;line-height:1.6;border-top:1px dashed var(--line);padding-top:8px}
+  .drill-foot b{color:var(--ink)}
+  .drill-foot .tag{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:4px;margin-right:4px}
+  .drill-foot .t-ok{background:#e7f6ec;color:#1e8e4a}
+  .drill-foot .t-est{background:#fff3e0;color:#b26a00}
+  .drill-foot .t-none{background:#f0f1f5;color:#8a93a5}
+</style>
+</head>
+<body data-page-node-id="3rnnfmyVK74kXl8AoQyXwu">
+<div class="wrap" data-page-node-id="fltAWKJf6N7ebojjVZn48t">
+
+<header data-page-node-id="7LAWltC2H3nP2yDWAkDsLD">
+  <h1 data-page-node-id="MAyU7F21rl4HdSVnNqh7vM">GfK 越南洗衣机市场分析（Hisense 焦点视角）</h1>
+  <div class="sub" data-page-node-id="7ZfwrzFPAycOE7eNbxUMzk">数据来源：GfK LOCALCHARTS · Washing Machines · Panelmarket Vietnam (VN - 13 Regions + IS) · 统计期 2026年5月（PRJ 79311）· 覆盖 单缸 / 前开滚筒 / 洗烘一体</div>
+  <div class="meta" data-page-node-id="Q2i9hnl6UedU0ZqN3ga0SN">
+    <span class="badge" data-page-node-id="kYwic7xSrzCgOYVWDZTydh">YTD26 量 95.4 万台 +10.3%</span>
+    <span class="badge" data-page-node-id="6dbo8mPDqqfzXacsxdrNAO">YTD26 额 7.92 万亿 VND +14.2%</span>
+    <span class="badge" data-page-node-id="ARC2NOTT1yq7g9PJ5yA7N3">YTD26 均价 8.31M VND +3.5%</span>
+    <span class="badge" data-page-node-id="oPEKoOWoWtQXtd6Vh19MBL">Hisense：仅洗烘单列</span>
+  </div>
+</header>
+
+<div class="warnbar" data-page-node-id="6zwlUp8d8JoHSCHFVmitia">
+  <b data-page-node-id="AT4b0oPJ6Z90N2sisxa85D">Hisense 卡位提示：</b>越南全市场品牌份额前9、Hitlist Top19 均无 Hisense 单列（落入 OTHERS ~5-7%），仅洗烘一体(FL WD)品类 Hisense 有独立份额呈现，且依靠半价型号切入。本报告 Hisense 视角以「低份额市场的切入机会与风险」为主，而非「守份额」。
+</div>
+
+<!-- 核心结论 -->
+<div class="resume" data-page-node-id="IHz5FnXAG4406eKkoGAfxZ">
+  <h2 data-page-node-id="1IOhuHHkfGvFXDw0r3UZbH">五句话结论</h2>
+  <p data-page-node-id="4voZLjaGpEZGVoes7Cn3vl"><b data-page-node-id="75E0CE70FaOMvJJFxaVv2E">1.</b> 越南是东盟少有的量额价齐升市场：YTD26(1-5月)量 95.4万台(+10.3%)、额 7.92万亿VND(+14.2%)、均价 830万VND/台(+3.5%)，价随量升、结构健康，与泰国「量升额跌、均价大降」的以价换量截然不同。<br data-page-node-id="H6xhrUSAClhzTNemL2ff1Y">
+  <b data-page-node-id="ZtvrHEFcLMMYdKDKk9TYbO">2.</b> 但增长动能在衰减：强增速主要由2月春节档(+39.7%)贡献，3月(+8.9%)起回落，5月单月已+0.5%几乎走平——YTD的+10.3%掩盖了Q2起失速。<br data-page-node-id="PVD1siGCDSiEbYCmopyhey">
+  <b data-page-node-id="K093ffDG9cPGLlbHfcYEgh">3.</b> 市场已告别双缸，单缸(顶开全自动)+前开滚筒主导：单缸占量~50%、前开滚筒占~45%(但销额更高、是高价值主体)，洗烘一体最小(~5%)却增速最快(+23.1%)。<br data-page-node-id="TZrXQRoRGjPtSlFCsApzMZ">
+  <b data-page-node-id="ldyLBOHUCq7C1dLamVE4sC">4.</b> 品牌高度集中：LG/AQUA/PANASONIC/TOSHIBA 占据头部；Hisense 全市场未进前9品牌、全市场型号榜无Hisense，越南是 Hisense 待深耕的低份额市场。<br data-page-node-id="LtH8RZVVvsZawSfn60NiGG">
+  <b data-page-node-id="toY2U7bsfNZAHFJVWhnItn">5.</b> Hisense 唯一切入点是洗烘一体：WD90N1Y 进入 FL WD Hitlist 第8(月销~243台、量份额3.4%)，但价格指数49(约半价)——以价换量打开，可持续性待评估。</p>
+</div>
+
+<!-- KPI -->
+<div class="kd" data-page-node-id="XeVJbwMcXYUmo3p0rSu37n">
+  <div class="k" data-page-node-id="o89GlMRLIS5YLQQlFZfqZw"><div class="t" data-page-node-id="BhDqDkZ2ZULZQKx4U7FCWz">YTD26 (1-5月) 销量</div><div class="v num" data-page-node-id="L5Rd2sz5F9ao39wxmJZLf3">95.4 万台</div><div class="d up" data-page-node-id="rCbdk8Pho3h0noFgDzlJ66">同比 +10.3%</div></div>
+  <div class="k" data-page-node-id="xl2pELfLyez7nq7hfgB6Tw"><div class="t" data-page-node-id="EeS8ZpJLUM7MMghM3PHZEF">YTD26 销额</div><div class="v num" data-page-node-id="mskBkgBlHdW5RdapJ3o3fn">7.92 万亿 VND</div><div class="u" data-page-node-id="0ygE73wQjLJroaPOoTNYHh">≈3.17 亿美元</div><div class="d up" data-page-node-id="auf6BZb2sApCBPuZBSTil0">同比 +14.2%</div></div>
+  <div class="k" data-page-node-id="vxm3dD2LVGnSRLM1KyIS2y"><div class="t" data-page-node-id="pBviD5FYiqm92MS9duULqf">YTD26 均价</div><div class="v num" data-page-node-id="yoAeDvwyQMGUpFAoGrwYB5">8.31M VND</div><div class="u" data-page-node-id="4WBpCNUeD9MTPNKO710rGX">≈332 美元/台</div><div class="d up" data-page-node-id="HlisCnhWREBweBGXQo8QRs">同比 +3.5%</div></div>
+  <div class="k" data-page-node-id="Aby0u582W8GTM6dCPqvv4J"><div class="t" data-page-node-id="Abz2xWT7gcWsDT4jQHCig7">May26 单月销量</div><div class="v num" data-page-node-id="HeROEm2vc01IOZ84Sj3HWQ">15.7 万台</div><div class="d flat" data-page-node-id="s0BRBzq8BeMI5hk9XJzA8S">同比 +0.5%</div></div>
+  <div class="k" data-page-node-id="dW2O57vFcEz5cNC8aiF9vU"><div class="t" data-page-node-id="HUti0ii3KWD0ygUPUGGx9U">洗烘一体 YTD26 量</div><div class="v num" data-page-node-id="h2So9jCaFHYa6DM2HtsJQs">4.5 万台</div><div class="d up" data-page-node-id="trB1CHxgTjz482kHcuQCub">同比 +23.1%</div></div>
+  <div class="k" data-page-node-id="GjPOA0XHgd8Ymut5x9wpG8"><div class="t" data-page-node-id="Laj6xF850kLZ1A4jG92Ola">前开滚筒 YTD26 额</div><div class="v num" data-page-node-id="DUQwqFm0Id2wTmnBl1cpa7">40.3亿 MioVND</div><div class="d up" data-page-node-id="CmAU6BvdpBYHKZcuM0sHcU">高价值主体</div></div>
+</div>
+
+<!-- 月度趋势 -->
+<div class="card" data-page-node-id="D2uoaDahIomood2uRTnO2p">
+  <h3 data-page-node-id="pj0OW2UI4r5xsmkssJF3pm">越南全市场月度销量（2025.05 – 2026.05）</h3>
+  <div class="note" data-page-node-id="BSQzx4U4Gs3COP68dzIA4H">柱 = 月销量（千台）；增长动能在Q2明显衰减。绿柱=2026年；年初1-2月为高峰(春节档/大促)，5月(+0.5%)几乎走平</div>
+  <div id="c_month" class="chart" data-page-node-id="T9iLN6KoTd3sn6xApuA4l5"></div>
+</div>
+
+<!-- 量额价两年对比 + 品类结构 -->
+<div class="grid2" data-page-node-id="wOHnINYXwZFL1OTxor98Yp">
+  <div class="card" data-page-node-id="jA0D2BN6HA2ZdBGq6K2pwT">
+    <h3 data-page-node-id="9hrpeHxQGftbWuBDOSBO2L">YTD 量 / 额 / 均价：25 vs 26</h3>
+    <div class="note" data-page-node-id="atQPFjTzxRuFBUz2wXSqDI">量+10.3%、额+14.2%、均价+3.5% —— 量额价齐升的健康结构（量=万台，额=十亿USD，均价=USD）</div>
+    <div id="c_ytd" class="chartH" style="height:330px" data-page-node-id="6EXutTprSdoJ0DSIRaRHdl"></div>
+  </div>
+  <div class="card" data-page-node-id="l9b8BQUeJFdJOVLao90xDZ">
+    <h3 data-page-node-id="3BMR106G3FxYOXdYSidXh5">品类结构：YTD26 量份额（点击下钻 KG 段）</h3>
+    <div class="note" data-page-node-id="RzRuJEZQQh4hGAhAZt9Q4F">单缸~50% + 前开滚筒~45% 主导，双缸已基本退出；洗烘一体最小但增速最快。点击任意扇区 → 下方显示该品类 KG 段分布。</div>
+    <div id="c_type" class="chartH" style="height:330px" data-page-node-id="KojedCviLpAEqGpyBn6flA"></div>
+  </div>
+</div>
+
+<!-- KG 段分布下钻：点击品类环形图 → 5 主体 KG 柱状/扇形 -->
+<div class="card" id="kg-drill" data-page-node-id="kgDrillVn">
+  <div class="drill-head">
+    <span class="drill-title">📊 KG 段分布 · <b id="kg-drill-cat">单缸 Top Loader</b>（点击上方环形图切换品类）</span>
+    <span class="drill-switch" id="kg-drill-mode" title="切换柱状图/扇形图">视图：柱状图 ⇄ 扇形图</span>
+  </div>
+  <div class="drill-note">5 个主体各自独立的 KG 段结构（分母各自=各主体品类内总量 100%）。柱高=该主体在该 KG 段的自家占比%，柱顶第二行=估算销量。<b>Market</b>=大盘结构；<b>Hisense</b>=仅洗烘一体有 Hit 型号(WD90N1Y 9kg)，其余品类未单列；<b>LG/AQUA/PANASONIC</b>=越南头部竞对（≈估算）。越南 kg 精确品牌份额源图为堆叠图，坐标归属有噪声，<b>品牌×kg 细数为估算、非精确</b>。</div>
+  <div id="kg-drill-chart" style="height:420px"></div>
+  <div class="drill-foot" id="kg-drill-foot"></div>
+</div>
+
+<!-- 品类量额均价总表 -->
+<div class="card" data-page-node-id="GGKlvZOpwmPyD0vrfqYtxQ">
+  <h3 data-page-node-id="0ocVgVaB4xHSwPT8vzkevF">品类明细：YTD 量 / 额 / 均价（VND）</h3>
+  <div class="note" data-page-node-id="7QL0KFNchnMYjITPUNzOAy">单缸量大但低价，前开滚筒销额更高是高价值主体，洗烘一体最高端(均价1391万VND)；Hisense 切入点=洗烘一体</div>
+  <table data-page-node-id="XaVSdk5FUrBnkAG0mIAMlb">
+    <tr data-page-node-id="SoR1fCaN7UtL5uAAI8oD9W"><th data-page-node-id="7gzjbH0zUW47oHPFz78EsB">品类</th><th data-page-node-id="v1fXyGUMOg3lQVcr5CkeiC">YTD26量(千台)</th><th data-page-node-id="qPIZxtNSSqnmO6LvTzxQqK">量增</th><th data-page-node-id="e1I4YDeEsL2LB97W8n94yH">YTD26额(Mio VND)</th><th data-page-node-id="Y7stlONSCQwopo0lSS32AZ">额增</th><th data-page-node-id="UUIgDC9BcIukFTHukBjB4J">均价(千VND/台)</th><th data-page-node-id="uxbuK0qSmSVaAeZ6gh0poG">≈USD</th></tr>
+    <tr data-page-node-id="N4qMR6qPsQOhyWr3WdtfY3"><td data-page-node-id="qlkSAd8rRGYZ4QMSAbMXIC">全市场 TOTAL</td><td class="num" data-page-node-id="n3YGFdEn17sW271SYLqdlN">954.1</td><td class="up" data-page-node-id="17wHFGBW3pdv98yQhFXiFO">+10.3%</td><td class="num" data-page-node-id="ffXWmZGZ0Fqrqg32FUDEJz">7,924,707</td><td class="up" data-page-node-id="9ACUnOmWkFzALbjruzxwUW">+14.2%</td><td class="num" data-page-node-id="0wGpUMJmYPy8vwm8YfO8cr">8,306</td><td class="num" data-page-node-id="BxiWqjZxPZis5s6Zg7DQdE">≈332</td></tr>
+    <tr data-page-node-id="35cbpDwgqxda2o9atfFaWD"><td data-page-node-id="CJR5ekxgtDgCm9sbwoIcUG">单缸（顶开全自动）</td><td class="num" data-page-node-id="ld6pKbCbl2bSZAd9HLoaWU">478.9</td><td class="up" data-page-node-id="TNkyEmo7uGlpHAFcgLCU4a">+11.6%</td><td class="num" data-page-node-id="xtma6b5ZALQW555s9awCQh">3,271,150</td><td class="up" data-page-node-id="V5avN1Gn3bCdeEaZAu5r87">+15.6%</td><td class="num" data-page-node-id="ayMn5TBwgc6iNaa5PDWMgo">6,831</td><td class="num" data-page-node-id="UwawVJn7nzBJzha2zQUWzu">≈273</td></tr>
+    <tr data-page-node-id="czmnvz7Yzky4PClA6OyjjY"><td data-page-node-id="KHSHLf5XqOyJD76ozvB0Om">前开滚筒（无烘干）</td><td class="num" data-page-node-id="ZrgJJAWBDQUdNN8mwok4c0">430.2</td><td class="up" data-page-node-id="iXMe0lnEHiRD1QSlpzGpH6">+7.8%</td><td class="num" data-page-node-id="BIWKieIEKJ8hzXgUkTJgJT">4,027,441</td><td class="up" data-page-node-id="eyZaiXdziLk3ELJ55RFSyf">+12.4%</td><td class="num" data-page-node-id="SpASxMHUk7AZ9yT61Xlqvt">9,361</td><td class="num" data-page-node-id="A76VZl3XHZXLDtawTIuCZh">≈374</td></tr>
+    <tr class="hi" data-page-node-id="rH2Xs5kvr2cjPMVimwZwQq"><td data-page-node-id="sb4geJLKUJOjaCf4K7THpw"><b data-page-node-id="VgWNtxaiHRl6JksthQr26B">洗烘一体 FL WD</b></td><td class="num" data-page-node-id="i2wwhysCAQi7UNYLGwAX9D"><b data-page-node-id="fkaXKjTEGlrbHocyKODedM">45.0</b></td><td class="up" data-page-node-id="aaxj1UxXQasphXnnFg3jeo"><b data-page-node-id="ee1LQXVc5rfuNkX7no1Sbx">+23.1%</b></td><td class="num" data-page-node-id="DEj1BK4pMcGdtGL98ru7qK"><b data-page-node-id="EcFec4cLeUbcqPB0SuF6qQ">626,107</b></td><td class="up" data-page-node-id="0ALB0SqYr14bnQz42wpAHt"><b data-page-node-id="7uqTgWXTHClN7cQvLr1unt">+18.1%</b></td><td class="num" data-page-node-id="xGFdmIZBClI09xkb56sI4q"><b data-page-node-id="uiIv6ds39V0YpcsytVhoYS">13,913</b></td><td class="num" data-page-node-id="SuZEoRghDMMIKnah9epELH"><b data-page-node-id="ZnygH67fQFe8ReQDU2IXod">≈556</b></td></tr>
+  </table>
+</div>
+
+<!-- Hisense 洗烘锚点 -->
+<div class="card" data-page-node-id="UQIBbVCc3LyIExTRjohccS">
+  <h3 data-page-node-id="MXIHHiNVxQ3C6iPmaXI3tm">Hisense 锚点：Washer Dryer 头部型号（Hisense WD90N1Y 第8）</h3>
+  <div class="note" data-page-node-id="lBP5XDNpDgiQZ2PEtf0PuT">Hisense 唯一单列品类=洗烘一体；WD90N1Y 靠低价(价格指数49，约半价)进前8，量份额3.4%</div>
+  <table data-page-node-id="HdrgulXFz8vOiUwyVgKgpk">
+    <tr data-page-node-id="qGgkwXqeNSQhXfXJQHz2Bk"><th data-page-node-id="XlKPjvElG0bWlVwAgTD7F7">排名</th><th data-page-node-id="vXOCqDKwlFFBGGbu3AFyQG">品牌 / 型号</th><th data-page-node-id="cnZz1lwQDd5ffi1lhxCSYp">May26销量(台)</th><th data-page-node-id="o4KJqXJM1ChT12zTv6H08u">量份额</th><th data-page-node-id="ycaSeCtPGKsdkAxgahrTg8">价格 VND</th><th data-page-node-id="VLRnVqlCf8UBzMs7yc3mnH">价格指数</th></tr>
+    <tr class="hi" data-page-node-id="l8e7ORU4dIaVqLmIawNePA"><td data-page-node-id="xBYghLjI0NOjQujCGPrqHT">8</td><td data-page-node-id="J6BQjWH0OZPtcaZ9UKEzqR"><b data-page-node-id="FqrZyXEiGXFQ6CdrEUbyHg">HISENSE · WD90N1Y</b></td><td class="num" data-page-node-id="pTmpOh4eHWqH1LdoXRhFUk">243</td><td class="num" data-page-node-id="Ggwd1nxaoEIn0g9W6rEBEO">3.4%</td><td class="num" data-page-node-id="k2Y2BVfFdDUoIUGMkycyFx">6,627,761</td><td class="num" data-page-node-id="s4Q5qjFUIqRVRwy5GN1J8Q">49.3</td></tr>
+    <tr data-page-node-id="kt966eTPVLd4IQKeJHeMu3"><td data-page-node-id="LK7o1LLHzP18AQBcpHO0GA">1</td><td data-page-node-id="qCe8HCGdyBEAk1iskCSECn">TOSHIBA · TWD-T25BZP140MWV(MG)</td><td class="num" data-page-node-id="6F2i1bzIDfCZgF3AbBb76W">664</td><td class="num" data-page-node-id="jB0YGDc6tbHQrrCtEHuRtG">9.3%</td><td class="num" data-page-node-id="Ad6H4smWmol6zF0B9zltZA">12,807,623</td><td class="num" data-page-node-id="aAgwKDlTVzKkoATpsNGK4y">95.2</td></tr>
+    <tr data-page-node-id="UmYOAdB0swX10NE4PBlb3l"><td data-page-node-id="uLPWVDdds0CrDvM3Dm779R">2</td><td data-page-node-id="EPFQxKy5yDpW7Q9QHChPZJ">PANASONIC · NA-V105FC1LV</td><td class="num" data-page-node-id="rztSICKNyXdOhWM3dQEvzk">505</td><td class="num" data-page-node-id="K1Lpzx0g8dsR0w6IQaERr7">7.1%</td><td class="num" data-page-node-id="RlYywEcgFF6Iwj4sIOeO12">8,934,591</td><td class="num" data-page-node-id="thAlKJ51FAGeYG4oUq9PZr">66.4</td></tr>
+    <tr data-page-node-id="lFB6DypM9esLZsTAjNf7UF"><td data-page-node-id="1L5XuVHsz6GZ5wRejsH2P4">3</td><td data-page-node-id="5zyfddoqtL2svAPVeKQ0OK">LG · FB1209D5M</td><td class="num" data-page-node-id="TN5FF0ePemjMdGr2gKIzcK">484</td><td class="num" data-page-node-id="6aKZl4ZTPdIcpJiqD05Qvt">6.8%</td><td class="num" data-page-node-id="qt5JHpT7m8XHaYgLZUNE2F">9,993,127</td><td class="num" data-page-node-id="wyRVSymW2xYYSAJFQKMXdu">74.3</td></tr>
+  </table>
+</div>
+
+<!-- 洞察 -->
+<div class="card" data-page-node-id="rFRCQBN6n6FA8FE8I6UOe4">
+  <h3 data-page-node-id="4oIojXh2sXgBad75NRA7Yt">关键发现（为什么）</h3>
+  <div class="find" data-page-node-id="ecXAwiJYo0mp2LwHszpcvJ"><span class="no" data-page-node-id="UZdwnuv9enaGGCPgcbia4b">1</span><p data-page-node-id="1whzRtLAenYGsW0b2ypC30"><b data-page-node-id="GlmsrPvAXmWEgZa44fEZbJ">量额价齐升、结构健康。</b>量+10.3%、额+14.2%、均价+3.5%，价随量升，单台价值(≈332USD)上行。这是东盟少见的健康增长，越南对 Hisense 的价值池在扩张（而非泰国式收缩）。</p></div>
+  <div class="find" data-page-node-id="BoBQrktVlASKD9XE1yXKo6"><span class="no" data-page-node-id="23IT4YMaYiFd5ZZbvyRmFk">2</span><p data-page-node-id="Az02cMhyGBkoHFH2cGagnT"><b data-page-node-id="gsTIRd7H6TsdO6iG9idssh">强增速被春节档拉动，Q2已失速。</b>Feb26单月+39.7%是绝对主因，3月(+8.9%)、4月(+1.0%)、5月(+0.5%)逐月走平。判断'越南高增长'需打折——需求复苏基础并不牢固，更像年初大促的一次性脉冲。</p></div>
+  <div class="find" data-page-node-id="v668LWtfXdZ2RyKGuR4oYE"><span class="no" data-page-node-id="RQtl6FXbqLtKjDWNFtLE2M">3</span><p data-page-node-id="rj7P3sCNaGEXM6RsChNYjO"><b data-page-node-id="L1T1y9C0FBpY35N1DOEJ0H">前开滚筒是价值制高点。</b>单缸量大但低价(683万VND)，前开滚筒虽量略小但销额更高(40.3亿 Mio VND vs 32.7亿)，是越南最值钱的品类。越南市场重心已从'量大'转向'价高'。</p></div>
+  <div class="find" data-page-node-id="vpI6NCvJReAexNLafwzsqb"><span class="no" data-page-node-id="MyOaMzwicI36aUGSGKL8ee">4</span><p data-page-node-id="evChkF7G6sFsVhoR3Ey1cL"><b data-page-node-id="HV5atltFJnDMgmJk8kDIYw">Hisense 越南话语权弱。</b>全市场前9品牌、Top19型号均无Hisense，落入OTHERS。这与泰国(单缸Hitlist第1)形成鲜明对比——越南对 Hisense 仍是需要从0建立认知与渠道的市场。</p></div>
+  <div class="find" data-page-node-id="d21EGvTcKcWUGLICpWK0mv"><span class="no" data-page-node-id="2liQAxfV628RUAfV84JeiB">5</span><p data-page-node-id="oaRV9MwWxlAubv9Fh8g83n"><b data-page-node-id="tozuBfnATjpEuSwncemVif">洗烘切入靠'半价'，盈利窗口存疑。</b>WD90N1Y 以价格指数49(约半价于LG/Toshiba同级)打进前8。虽然切入有效，但洗烘一体本应是高溢价窗口，半价策略与其'高端'定位矛盾，且无法规模化支撑品牌建设。</p></div>
+</div>
+
+<!-- 建议 -->
+<div class="card" data-page-node-id="HXBSULsCzxzaBQDlnrIOIG">
+  <h3 data-page-node-id="DkMwhQO4rnVBUhpXdcLyVc">行动建议（下一步怎么办）</h3>
+  <div class="adv" data-page-node-id="k6gtGaJOm9SRd1Wu1HZNuq"><span class="prio p0" data-page-node-id="cSjnJRtGGMmYGFcTbtpso8">P0</span><span class="no" data-page-node-id="wgelJZHuiLBcRJj3tXFGln">1</span><p data-page-node-id="XgtpRwztLzgrMR6FSAsHqC"><b data-page-node-id="iEROYDe5zjrG9Ly2anT4Nl">先定越南定位：战略投入 vs 机会进入。</b>头部LG/AQUA/PANASONIC/TOSHIBA垄断、Hisense本地渠道与认知弱。若无坚定的品牌+渠道投入计划，仅靠洗烘单型号低价难以撬动大盘——不要用战术勤奋掩盖战略缺位。</p></div>
+  <div class="adv" data-page-node-id="MPLoq2TbiHUJ2BvZDQIBWS"><span class="prio p0" data-page-node-id="xFdGCsGSOAK4cPI4MkVLmh">P0</span><span class="no" data-page-node-id="tHPOnNxeFy1GhbgGyZ1Tig">2</span><p data-page-node-id="bA0352bnp8HVwBhqFdBw66"><b data-page-node-id="qsF7C1QH79CAM6HqQZGxcF">重新评估洗烘 WD90N1Y 的'半价'策略。</b>越南洗烘一体是量额双增的最高价值窗口(均价1391万VND)，但Hisense以约半价(663万VND)进入，在侵蚀这个窗口应有的溢价。建议评估能否上探中价位洗烘(参考Panasonic 66/ LG 74的价位带)而非停在低价冲量。</p></div>
+  <div class="adv" data-page-node-id="TVeINjPK25PfNApgWl0rBD"><span class="prio p1" data-page-node-id="3mAUInoDpiHHaGshrm7MAD">P1</span><span class="no" data-page-node-id="TU6MbMZRPalDtQMVBCuGkl">3</span><p data-page-node-id="NKnjLNJqIO0noJFoLYosTk"><b data-page-node-id="W2WsEAHRcHBXJZAzcXwu6m">紧盯Q2增长失速，别把+10.3%当趋势。</b>增长集中2月，5月单月+0.5%走平。建议月频跟踪量额价三线，判断下半年是否有真实需求或仍靠脉冲。</p></div>
+  <div class="adv" data-page-node-id="NfwQ2bMceGchGyKjMkb2II"><span class="prio p1" data-page-node-id="F5GriqTXDQCoapxSeuz3K1">P1</span><span class="no" data-page-node-id="Uhs1f9rWX0OzeaHhx3bQiJ">4</span><p data-page-node-id="NpxYi1Poli5gBpwte8WMMW"><b data-page-node-id="d93kmEq6QR24jntC0BK1GT">前开滚筒是绕不开的主战场。</b>占45%量+最高销额。Hisense若要在越南立足，需要在(价值最高的)前开段有产品与份额，而非只押注洗烘利基。</p></div>
+  <div class="adv" data-page-node-id="TNza2WJU4b5GYq6XBQekqH"><span class="prio p2" data-page-node-id="jNVhX7b4QOiryho4DmrdyD">P2</span><span class="no" data-page-node-id="E79hq6cQAQTF8FMIkRqd2A">5</span><p data-page-node-id="YiP7BdIB8NKifHVB6hG9lX"><b data-page-node-id="sQafolV2OwBQGgpLgF4BBD">Hisense区域/渠道细分待海信内部数据补。</b>源文件Hisense未单列区域/渠道份额，建议结合海信越南出货数据交叉验证后再定投放。</p></div>
+</div>
+
+<div class="src" data-page-node-id="Pmr7up9woDblbSM5F9Z0Gq">
+  数据口径：全部规模/量额/均价/品类数据提取自 GfK LOCALCHARTS WASHERS VN May26（209页）并交叉自洽核对（全市场=单缸+前开+洗烘，量额对账一致）。统计期：YTD=2026年1-5月，MAT=2025年6月-2026年5月。金额主币越南盾 VND；USD 按参考汇率约 25,000 VND/USD 外推展示（非精确折算，用于量级参照）。品类：Top Loader=单缸顶开全自动，Front Loader(无烘干)=前开滚筒无烘干，Washer Dryer=洗烘一体；越南无双缸半自动主流量盘。品牌份额口径：源文件单列品牌为 LG/AQUA/PANASONIC/TOSHIBA/SAMSUNG/ELECTROLUX/SHARP/BEKO/HITACHI/OTHERS；Hisense 全市场未达单列门槛，仅洗烘一体(WD)品类有单列份额。Hisense 洗烘 Hitlist 型号 WD90N1Y 数据来自 slide160。
+</div>
+
+</div>
+
+<script>
+const FX=25000;
+const GREEN='#2a9d4f',DARKG='#1f7a3d',BLUE='#2456d6',GOLD='#d9822b',HIS='#e6212b',GRAY='#8a93a5';
+const axis={axisLine:{lineStyle:{color:'#c9d2e0'}},axisLabel:{color:'#5a6577',fontSize:11}};
+const tl={textStyle:{color:'#5a6577',fontSize:11}};
+function base(e){return Object.assign({textStyle:{color:'#1c2433',fontFamily:'inherit'},grid:{left:56,right:56,top:40,bottom:28}},e||{});}
+
+// 月度(量)
+echarts.init(document.getElementById('c_month')).setOption(base({
+  tooltip:{trigger:'axis'},legend:tl,
+  xAxis:{type:'category',data:['May25','Jun25','Jul25','Aug25','Sep25','Oct25','Nov25','Dec25','Jan26','Feb26','Mar26','Apr26','May26'],axisLabel:{color:'#5a6577',fontSize:10,interval:0,rotate:25}},
+  yAxis:{type:'value',name:'千台',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+  series:[{name:'月销量(千台)',type:'bar',
+    data:[156.1,147.9,164.0,159.1,169.6,194.0,215.2,198.6,245.2,230.1,169.7,152.3,156.9],
+    itemStyle:{color:function(p){return p.dataIndex>=8?DARKG:BLUE},opacity:.9},barWidth:'55%',
+    label:{show:true,position:'top',fontSize:9,color:'#5a6577',formatter:p=>p.value.toFixed(0)}}]
+}));
+
+// YTD 量额价
+echarts.init(document.getElementById('c_ytd')).setOption(base({
+  tooltip:{trigger:'axis'},legend:tl,
+  xAxis:{type:'category',data:['YTD25','YTD26'],axisLabel:{color:'#5a6577',fontSize:12}},
+  yAxis:[{type:'value',name:'万台 / 亿美元',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+         {type:'value',name:'均价 USD',min:300,max:350,axisLine:{show:false},splitLine:{show:false}}],
+  series:[
+    {name:'销量(万台)',type:'bar',data:[86.5,95.4],itemStyle:{color:BLUE,opacity:.85},barWidth:'22%',label:{show:true,position:'top',color:'#1c2433',fontSize:10}},
+    {name:'销额(亿美元)',type:'bar',data:[2.78,3.17],itemStyle:{color:'#9fc7b2'},barWidth:'22%',label:{show:true,position:'top',color:'#1c2433',fontSize:10}},
+    {name:'均价(USD)',type:'line',yAxisIndex:1,data:[321,332],smooth:true,lineStyle:{color:HIS,width:2.5},symbolSize:7,itemStyle:{color:HIS},label:{show:true,position:'top',color:HIS,fontSize:10}}
+  ]
+}));
+
+// ============ KG 段下钻数据（越南 3 品类 × 5 主体 × kg 段，PNG 精确版） ============
+// 数据源：GfK 越南 LOCALCHARTS PNG 已读图精确取值
+//   - Market 各段%：GfK Capacity Share slide25/68/105/142 YTD26 真实（PNG 直读）
+//   - 品牌×kg%：GfK Brand Share by Capacity slide27/70/107/144 YTD26 真实（PNG 直读）
+//   - Hisense 越南全市场未单列（单缸/前开，落入 OTHERS）；仅洗烘 FL WD 有精确列
+// 越南 kg 段 14 档（<5.0 到 >=17.0 KG）
+const VN_KG_LABELS = ['<5KG','5-6','6-7','7-8','8-9','9-10','10-11','11-12','12-13','13-14','14-15','15-16','16-17','≥17'];
+
+const KG = {
+  'SINGLE': {
+    name:'单缸 Top Loader', total:479,
+    totHis:null, totLg:146, totAqua:148, totTos:117,
+    kgs: [
+      {label:'<5KG',   mkt:0,    lg:0,    aqua:0,    tos:0},
+      {label:'5-6',    mkt:0,    lg:0,    aqua:0,    tos:0},
+      {label:'6-7',    mkt:0,    lg:0,    aqua:0,    tos:0},
+      {label:'7-8',    mkt:0,    lg:0,    aqua:0,    tos:0},
+      {label:'8-9',    mkt:7.5,  lg:18.5, aqua:46.5, tos:0},
+      {label:'9-10',   mkt:13.3, lg:27.1, aqua:24.9, tos:0},
+      {label:'10-11',  mkt:17.3, lg:28.3, aqua:35.6, tos:24.6},
+      {label:'11-12',  mkt:13.8, lg:24.8, aqua:21.3, tos:33.6},
+      {label:'12-13',  mkt:17.9, lg:18.4, aqua:27.4, tos:39.0},
+      {label:'13-14',  mkt:0,    lg:32.8, aqua:11.3, tos:20.0},
+      {label:'14-15',  mkt:15.0, lg:18.4, aqua:36.3, tos:33.0},
+      {label:'15-16',  mkt:0,    lg:19.5, aqua:32.6, tos:52.2},
+      {label:'16-17',  mkt:0,    lg:54.1, aqua:0,    tos:31.9},
+      {label:'≥17',    mkt:0,    lg:40.2, aqua:0,    tos:0}
+    ]
+  },
+  'FRONT': {
+    name:'前开滚筒 Front Loader', total:430,
+    totHis:null, totLg:154, totAqua:67, totTos:70,
+    kgs: [
+      {label:'<5KG',   mkt:0,    lg:0,    aqua:0,    tos:0},
+      {label:'5-6',    mkt:0,    lg:0,    aqua:0,    tos:0},
+      {label:'6-7',    mkt:0,    lg:0,    aqua:0,    tos:0},
+      {label:'7-8',    mkt:2.4,  lg:0,    aqua:50.4, tos:0},
+      {label:'8-9',    mkt:4.6,  lg:66.7, aqua:9.5,  tos:100.0},
+      {label:'9-10',   mkt:0,    lg:31.3, aqua:19.5, tos:0},
+      {label:'10-11',  mkt:21.1, lg:26.8, aqua:19.2, tos:0},
+      {label:'11-12',  mkt:32.3, lg:40.4, aqua:3.6,  tos:0},
+      {label:'12-13',  mkt:0,    lg:45.7, aqua:7.2,  tos:50.6},
+      {label:'13-14',  mkt:16.1, lg:60.6, aqua:18.4, tos:0},
+      {label:'14-15',  mkt:19.4, lg:29.2, aqua:4.7,  tos:39.9},
+      {label:'15-16',  mkt:0,    lg:46.5, aqua:0,    tos:83.9},
+      {label:'16-17',  mkt:0,    lg:97.2, aqua:0,    tos:0},
+      {label:'≥17',    mkt:0,    lg:35.0, aqua:0,    tos:92.5}
+    ]
+  },
+  'WD': {
+    name:'洗烘 Washer Dryer', total:45,
+    totHis:3.6, totLg:13.4, totAqua:10.5, totTos:6.5,
+    kgs: [
+      {label:'<5KG',   mkt:0,    lg:0,    aqua:0,    tos:0,    his:0},
+      {label:'5-6',    mkt:0,    lg:0,    aqua:0,    tos:0,    his:0},
+      {label:'6-7',    mkt:0,    lg:0,    aqua:0,    tos:0,    his:0},
+      {label:'7-8',    mkt:13.3, lg:0,    aqua:0,    tos:0,    his:15.7},
+      {label:'8-9',    mkt:31.1, lg:0,    aqua:0,    tos:0,    his:14.4},
+      {label:'9-10',   mkt:33.3, lg:0,    aqua:27.9, tos:0,    his:17.6},
+      {label:'10-11',  mkt:11.1, lg:13.0, aqua:27.3, tos:0,    his:0},
+      {label:'11-12',  mkt:0,    lg:50.5, aqua:0,    tos:0,    his:0},
+      {label:'12-13',  mkt:0,    lg:40.4, aqua:0,    tos:0,    his:0},
+      {label:'13-14',  mkt:0,    lg:49.6, aqua:0,    tos:7.9,  his:0},
+      {label:'14-15',  mkt:0,    lg:51.5, aqua:0,    tos:76.6, his:0},
+      {label:'15-16',  mkt:0,    lg:0,    aqua:0,    tos:0,    his:0},
+      {label:'16-17',  mkt:0,    lg:0,    aqua:0,    tos:77.4, his:0},
+      {label:'≥17',    mkt:0,    lg:56.2, aqua:0,    tos:0,    his:0}
+    ]
+  }
+};
+
+// 主体配置（越南：Market / Hisense / LG / AQUA / TOSHIBA）
+const KG_ACTORS = [
+  {key:'mkt',  name:'Market 大盘', color:'#8a93a5', totKey:'total', acc:'ok',  note:'YTD26 KGS 真实（PNG 已读图）'},
+  {key:'his',  name:'Hisense',     color:'#e6212b', totKey:'totHis',acc:'partial',note:'单缸/前开未列（OTHERS）；洗烘有精确%（slide144）'},
+  {key:'lg',   name:'LG',          color:'#1f8a3d', totKey:'totLg',  acc:'ok', note:'PNG Brand Share by Capacity YTD26 精确'},
+  {key:'aqua', name:'AQUA',        color:'#2456d6', totKey:'totAqua',acc:'ok', note:'PNG Brand Share by Capacity YTD26 精确'},
+  {key:'tos',  name:'TOSHIBA',     color:'#d9822b', totKey:'totTos', acc:'ok', note:'PNG Brand Share by Capacity YTD26 精确'}
+];
+
+let kgDrillChart = null, kgDrillMode = 'bar', kgDrillCat = 'SINGLE';
+const catKeyMap = {'单缸 Top Loader':'SINGLE','前开滚筒 Front Loader':'FRONT','洗烘 Washer Dryer':'WD'};
+
+function renderKgDrill(){
+  const d = KG[kgDrillCat];
+  if(!d) return;
+  const catLabel = kgDrillCat==='SINGLE'?'单缸 Top Loader':kgDrillCat==='FRONT'?'前开滚筒 Front Loader':'洗烘 Washer Dryer';
+  document.getElementById('kg-drill-cat').textContent = catLabel;
+  const cats = d.kgs.map(k=>k.label);
+  const actorSeries = KG_ACTORS.map(a=>({actor:a, vals:d.kgs.map(k=>k[a.key]), total:d[a.totKey]}));
+
+  if(kgDrillMode==='bar'){
+    const series = actorSeries.map(as=>{
+      const total = as.total;
+      return {
+        name:as.actor.name, type:'bar', barWidth:'14%',
+        data:as.vals.map(v=>{
+          if(v==null) return {value:null,itemStyle:{color:'transparent',borderColor:'#dde2ec',borderWidth:1,borderType:'dashed'}};
+          const units = total!=null ? +(v*total/100).toFixed(1) : null;
+          return {value:v, units:units};
+        }),
+        itemStyle:{color:as.actor.color, opacity:.88},
+        label:{show:true,position:'top',color:as.actor.color,fontSize:8,lineHeight:11,
+          formatter:function(p){ if(p.value==null) return '—'; const u=p.data.units; return p.value+'%'+(u!=null?'\n'+u+'k':''); }},
+        tooltip:{valueFormatter:function(v,p){ if(v==null) return '未量化'; const u=p.data&&p.data.units; return v+'%'+(u!=null?'  ≈'+u+'k台':''); }}
+      };
+    });
+    kgDrillChart.setOption({
+      tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+      legend:{top:0,data:KG_ACTORS.map(a=>a.name),textStyle:{color:'#5a6577',fontSize:11}},
+      grid:{left:44,right:16,top:40,bottom:48},
+      xAxis:{type:'category',data:cats,axisLabel:{color:'#5a6577',fontSize:9,interval:0,rotate:0}},
+      yAxis:{type:'value',name:'占比%',max:100,axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+      series:series
+    });
+    document.getElementById('kg-drill-foot').innerHTML = KG_ACTORS.map(a=>{
+      const tot = d[a.totKey];
+      const cls = a.acc==='ok'?'t-ok':(a.acc==='est'?'t-est':'t-none');
+      const txt = a.acc==='ok'?'✅ 可信':'≈ 估算';
+      return '<span class="tag '+cls+'">'+txt+'</span><b style="color:'+a.color+'">'+a.name+'</b> 总量 '+(tot==null?'—':tot+'k')+' · '+a.note;
+    }).join('<br>');
+  } else {
+    const pies = actorSeries.map((as,idx)=>{
+      const pieData = cats.map((c,i)=>({name:c, value:as.vals[i]==null?0:as.vals[i]}));
+      return {type:'pie',radius:['40%','62%'],center:[(idx*2+1)*10+'%','52%'],data:pieData,label:{show:false},emphasis:{label:{show:true,formatter:'{b}\n{d}%',fontSize:8,color:'#333'}},itemStyle:{opacity:.9}};
+    });
+    kgDrillChart.setOption({
+      tooltip:{trigger:'item',formatter:function(p){return p.name+'<br>'+p.seriesName+': '+p.value+'%';}},
+      legend:{bottom:0,data:cats,textStyle:{color:'#5a6577',fontSize:9}},
+      title:KG_ACTORS.map((a,i)=>({text:a.name,left:(i*2+1)*10+'%',top:6,textAlign:'center',textStyle:{fontSize:10,color:a.color}})),
+      series:pies
+    });
+    document.getElementById('kg-drill-foot').innerHTML = KG_ACTORS.map(a=>{
+      const tot = d[a.totKey];
+      return '<b style="color:'+a.color+'">'+a.name+'</b> '+(tot==null?'—':tot+'k');
+    }).join('　');
+  }
+  kgDrillChart.resize();
+}
+function switchKgDrillMode(){
+  kgDrillMode = kgDrillMode==='bar'?'pie':'bar';
+  document.getElementById('kg-drill-mode').textContent = kgDrillMode==='bar'?'视图：柱状图 ⇄ 扇形图':'视图：扇形图 ⇄ 柱状图';
+  renderKgDrill();
+}
+function initKgDrill(){
+  kgDrillChart = echarts.init(document.getElementById('kg-drill-chart'));
+  document.getElementById('kg-drill-mode').addEventListener('click', switchKgDrillMode);
+  renderKgDrill();
+}
+
+// 品类量份额 环形（可点击下钻）
+const typePieChart = echarts.init(document.getElementById('c_type'));
+typePieChart.setOption(base({
+  tooltip:{trigger:'item',formatter:'{b}: {c}千台 ({d}%)\n<i>点击查看该品类 KG 段分布</i>'},legend:{bottom:0,textStyle:{color:'#5a6577',fontSize:11}},
+  series:[{type:'pie',radius:['42%','68%'],center:['50%','45%'],
+    data:[
+      {name:'单缸(顶开全自动)',value:478.9,itemStyle:{color:BLUE}},
+      {name:'前开滚筒(无烘)',value:430.2,itemStyle:{color:DARKG}},
+      {name:'洗烘 Washer Dryer',value:45.0,itemStyle:{color:HIS}}
+    ],
+    label:{color:'#1c2433',fontSize:11,formatter:'{b}\n{d}%'},
+    labelLine:{length:10,length2:8},emphasis:{scale:true,scaleSize:6}}]
+}));
+typePieChart.on('click', function(p){
+  const k = catKeyMap[p.name];
+  if(k && KG[k]){ kgDrillCat = k; renderKgDrill(); typePieChart.dispatchAction({type:'highlight',seriesIndex:0,dataIndex:p.dataIndex}); }
+});
+typePieChart.dispatchAction({type:'highlight',seriesIndex:0,dataIndex:0});
+initKgDrill();
+</script>
+</body>
+</html>
