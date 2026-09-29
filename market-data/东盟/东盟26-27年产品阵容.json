@@ -1,0 +1,3024 @@
+{
+ "region": "东盟",
+ "country": "东盟26-27年产品阵容",
+ "market": "洗衣机 Washers（东盟产品阵容规划）",
+ "sourceType": "内部规划",
+ "source": "东盟洗衣机规划.pptx（2026-09-18）",
+ "period": "2026 / 2027-2028",
+ "updated": "2026-09-18",
+ "headline": "东盟 6 国 26/27 年洗衣机阵容：滚筒 173 格 + 波轮 97 格，共 270 个规格格；27 年退市 66 项、新增 80 项，容量段覆盖 20 档（8/9/6/9/10…）；线上专供 10 项，全部集中在马来。",
+ "kpis": [
+  {
+   "label": "规格格总数",
+   "value": "270",
+   "change": "滚筒 173 / 波轮 97"
+  },
+  {
+   "label": "退市项（26有27无）",
+   "value": "66",
+   "change": "需启动退市与渠道切换"
+  },
+  {
+   "label": "新增项（27 年上市）",
+   "value": "80",
+   "change": "含线上专供"
+  },
+  {
+   "label": "线上专供",
+   "value": "10",
+   "change": "全部在马来"
+  },
+  {
+   "label": "容量段覆盖",
+   "value": "20 档",
+   "change": "8 / 9/6 / 9 / 10 / 10.5 / 10.5/7 / 11/7 / 12 / 12/8 / 13/9 / 13 / 14/9 / 14 / 15 / 16/10 / 17 / 18 / 19 / 20 / 22"
+  },
+  {
+   "label": "覆盖国家",
+   "value": "6 国",
+   "change": "泰国/马来/越南/印尼/菲律宾/新加坡"
+  }
+ ],
+ "insights": [
+  {
+   "n": 173,
+   "title": "滚筒：7 系列 / 173 规格格（26年 77 → 27年 96）",
+   "detail": "3.1 到国家产品策略-泰国滚筒整体。26 年容量段：8、9/6、9、10.5、10.5/7、12、12/8、13/9、14/9、14；27 年容量段：8、9/6、9、10、10.5、10.5/7、11/7、12、12/8、13/9、14、14/9、16/10。退市 44 项、新增 57 项。线上专供 10 项：马来(10项)。",
+   "evid": "M3 / R5 / 5i / M5 / 1i / N1 / 多桶"
+  },
+  {
+   "n": 97,
+   "title": "波轮：8 系列 / 97 规格格（26年 48 → 27年 49）",
+   "detail": "3.1 到国家产品策略-泰国波轮。26 年容量段：8、9、10.5、13、14、15、17、18、19、20、22；27 年容量段：8、9、10、10.5、13、15、17、18、20、22。退市 22 项、新增 23 项。",
+   "evid": "5i / 3i / 5K / JH / 3K / GE30 / P10 / AG/AR"
+  }
+ ],
+ "suggestions": [
+  {
+   "id": "P0",
+   "level": "P0",
+   "title": "确认 66 项退市型号的收尾安排",
+   "detail": "26 年有、27 年未列入的型号按退市处理，需明确清库节奏、渠道切换时点与替代型号，避免与新品并行拉长战线。"
+  },
+  {
+   "id": "P0",
+   "level": "P0",
+   "title": "马来线上专供的边界要锁死",
+   "detail": "线上专供标记仅出现在马来列（10 项）。需确认这是马来专属试点，还是其他国家的线上款未在图中标注；若为后者，图中信息不完整。"
+  },
+  {
+   "id": "P1",
+   "level": "P1",
+   "title": "I3T 作为 I3 低价替代的上下市衔接",
+   "detail": "I3T 是独立产品、定位 I3 的低价替代。需明确 I3 是否同步退出、还是两者并行覆盖不同价位段。"
+  },
+  {
+   "id": "P1",
+   "level": "P1",
+   "title": "按国家核对容量段缺口",
+   "detail": "26→27 年容量段整体上移（滚筒转向 12/14/16kg、波轮转向 13-19kg），需确认各国主销容量段是否与渠道实际需求匹配。"
+  }
+ ],
+ "categories": [
+  {
+   "category": "滚筒",
+   "title": "3.1 到国家产品策略-泰国滚筒整体",
+   "series": [
+    "M3",
+    "R5",
+    "5i",
+    "M5",
+    "1i",
+    "N1",
+    "多桶"
+   ],
+   "countries": [
+    "泰国",
+    "马来",
+    "越南",
+    "印尼",
+    "菲律宾",
+    "新加坡"
+   ],
+   "counts": {
+    "total": 173,
+    "y2026": 77,
+    "y2027": 96,
+    "online": 10
+   },
+   "caps26": [
+    "8",
+    "9/6",
+    "9",
+    "10.5",
+    "10.5/7",
+    "12",
+    "12/8",
+    "13/9",
+    "14/9",
+    "14"
+   ],
+   "caps27": [
+    "8",
+    "9/6",
+    "9",
+    "10",
+    "10.5",
+    "10.5/7",
+    "11/7",
+    "12",
+    "12/8",
+    "13/9",
+    "14",
+    "14/9",
+    "16/10"
+   ],
+   "changes": [
+    {
+     "series": "M3",
+     "country": "泰国",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": [
+      "14/9kg",
+      "14kg",
+      "16/10kg",
+      "12/8kg"
+     ]
+    },
+    {
+     "series": "R5",
+     "country": "泰国",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "5i",
+     "country": "泰国",
+     "retired": [
+      "13/9kg"
+     ],
+     "added": [
+      "12kg",
+      "12kg-H"
+     ]
+    },
+    {
+     "series": "M5",
+     "country": "泰国",
+     "retired": [
+      "12kg",
+      "12/8kg"
+     ],
+     "added": [
+      "10.5kg-H"
+     ]
+    },
+    {
+     "series": "1i",
+     "country": "泰国",
+     "retired": [
+      "9/6kg"
+     ],
+     "added": [
+      "11/7kg",
+      "14/9kg"
+     ]
+    },
+    {
+     "series": "N1",
+     "country": "泰国",
+     "retired": [
+      "12kg",
+      "9kg"
+     ],
+     "added": [
+      "10kg-V"
+     ]
+    },
+    {
+     "series": "M3",
+     "country": "马来",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": [
+      "14/9kg",
+      "14kg",
+      "16/10kg",
+      "12/8kg"
+     ]
+    },
+    {
+     "series": "R5",
+     "country": "马来",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "5i",
+     "country": "马来",
+     "retired": [
+      "13/9kg"
+     ],
+     "added": [
+      "12kg",
+      "12kg-H"
+     ]
+    },
+    {
+     "series": "M5",
+     "country": "马来",
+     "retired": [
+      "12/8kg"
+     ],
+     "added": [
+      "14/9kg"
+     ]
+    },
+    {
+     "series": "1i",
+     "country": "马来",
+     "retired": [
+      "9kg",
+      "9/6kg"
+     ],
+     "added": [
+      "14kg O(线上)",
+      "11/7kg",
+      "14/9kg O(线上)"
+     ]
+    },
+    {
+     "series": "N1",
+     "country": "马来",
+     "retired": [],
+     "added": [
+      "10.5/7kg O(线上)",
+      "10kg-V O(线上)"
+     ]
+    },
+    {
+     "series": "M3",
+     "country": "越南",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": [
+      "16/10kg",
+      "12/8kg"
+     ]
+    },
+    {
+     "series": "R5",
+     "country": "越南",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "5i",
+     "country": "越南",
+     "retired": [
+      "13/9kg"
+     ],
+     "added": [
+      "12kg",
+      "12kg-H"
+     ]
+    },
+    {
+     "series": "M5",
+     "country": "越南",
+     "retired": [
+      "12/8kg"
+     ],
+     "added": [
+      "10.5kg-H"
+     ]
+    },
+    {
+     "series": "1i",
+     "country": "越南",
+     "retired": [
+      "9kg",
+      "9/6kg"
+     ],
+     "added": [
+      "14kg",
+      "11/7kg",
+      "14/9kg"
+     ]
+    },
+    {
+     "series": "N1",
+     "country": "越南",
+     "retired": [],
+     "added": [
+      "10kg-V"
+     ]
+    },
+    {
+     "series": "R5",
+     "country": "印尼",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "M3",
+     "country": "印尼",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": [
+      "12/8kg"
+     ]
+    },
+    {
+     "series": "N1",
+     "country": "印尼",
+     "retired": [],
+     "added": [
+      "9/6kg",
+      "10kg-V"
+     ]
+    },
+    {
+     "series": "R5",
+     "country": "菲律宾",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "M3",
+     "country": "菲律宾",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": [
+      "14kg"
+     ]
+    },
+    {
+     "series": "N1",
+     "country": "菲律宾",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": [
+      "8kg"
+     ]
+    },
+    {
+     "series": "M3",
+     "country": "新加坡",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": [
+      "12/8kg",
+      "16/10kg"
+     ]
+    },
+    {
+     "series": "R5",
+     "country": "新加坡",
+     "retired": [
+      "10.5kg",
+      "10.5/7kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "5i",
+     "country": "新加坡",
+     "retired": [
+      "13/9kg"
+     ],
+     "added": [
+      "12kg",
+      "12kg-H"
+     ]
+    },
+    {
+     "series": "M5",
+     "country": "新加坡",
+     "retired": [
+      "12/8kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "1i",
+     "country": "新加坡",
+     "retired": [
+      "9kg",
+      "9/6kg"
+     ],
+     "added": [
+      "12/8kg",
+      "11/7kg",
+      "14/9kg"
+     ]
+    },
+    {
+     "series": "N1",
+     "country": "新加坡",
+     "retired": [],
+     "added": [
+      "10.5kg"
+     ]
+    },
+    {
+     "series": "多桶",
+     "country": "泰国",
+     "retired": [],
+     "added": [
+      "13/9kg"
+     ]
+    },
+    {
+     "series": "多桶",
+     "country": "马来",
+     "retired": [],
+     "added": [
+      "13/9kg"
+     ]
+    },
+    {
+     "series": "多桶",
+     "country": "越南",
+     "retired": [],
+     "added": [
+      "13/9kg"
+     ]
+    },
+    {
+     "series": "1i",
+     "country": "印尼",
+     "retired": [],
+     "added": [
+      "12kg",
+      "12/8kg",
+      "14kg",
+      "11/7kg",
+      "14/9kg"
+     ]
+    },
+    {
+     "series": "1i",
+     "country": "菲律宾",
+     "retired": [],
+     "added": [
+      "12kg",
+      "12/8kg",
+      "11/7kg"
+     ]
+    },
+    {
+     "series": "多桶",
+     "country": "新加坡",
+     "retired": [],
+     "added": [
+      "13/9kg"
+     ]
+    },
+    {
+     "series": "M5",
+     "country": "印尼",
+     "retired": [],
+     "added": [
+      "12kg"
+     ]
+    }
+   ],
+   "feats": [
+    "外观：TFT+一体前板洗净：Power Jet Wash+内循环健康：Jet Wash+离子除菌+抗菌皂盒窗垫+新风智能：AI Agent+自动投放节能：DDM变频",
+    "外观：复古+旋钮+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放",
+    "外观：触摸按键+双层门+一体板洗净：DD电机健康：分区洗智能：自动投放",
+    "外观：触摸按键+双层门+一体板洗净：DD电机健康：分区洗智能：自动投放",
+    "外观：TFT+旋钮+触摸按键+双层门洗净：i Bubble+内循环+DD电机健康：Jet Wash+99.99%智能：Connect Life+自动投放节能：热泵",
+    "外观：TFT+旋钮+触摸按键+双层门洗净：i Bubble+内循环+DD电机健康：Jet Wash +99.99%智能：Connect Life+自动投放节能：热泵",
+    "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放",
+    "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放",
+    "外观：LED+丝印+触摸按键+双层门洗净：i Bubble智能：Connect Life健康：Jet Wash+活水2.0 +99.99%",
+    "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放",
+    "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life",
+    "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life",
+    "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%",
+    "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%",
+    "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+   ],
+   "rows": [
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：复古+旋钮+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：触摸按键+双层门+一体板洗净：DD电机健康：分区洗智能：自动投放"
+    },
+    {
+     "series": "5i",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "13/9kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M5",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "14/9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble智能：Connect Life健康：Jet Wash+活水2.0 +99.99%"
+    },
+    {
+     "series": "M5",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble智能：Connect Life健康：Jet Wash+活水2.0 +99.99%"
+    },
+    {
+     "series": "M5",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "14kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "14kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "多桶",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "13/9kg",
+     "online": false,
+     "feat": "外观：TFT+旋钮+触摸按键+双层门洗净：i Bubble+内循环+DD电机健康：Jet Wash+99.99%智能：Connect Life+自动投放节能：热泵"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "12kg-H",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "14/9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "14kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "11/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "14/9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "8kg-H",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "10kg-V",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "马来",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "马来",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：复古+旋钮+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "马来",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：触摸按键+双层门+一体板洗净：DD电机健康：分区洗智能：自动投放"
+    },
+    {
+     "series": "5i",
+     "year": "2026",
+     "country": "马来",
+     "spec": "13/9kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M5",
+     "year": "2026",
+     "country": "马来",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble智能：Connect Life健康：Jet Wash+活水2.0 +99.99%"
+    },
+    {
+     "series": "M5",
+     "year": "2026",
+     "country": "马来",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "马来",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "马来",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "马来",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "马来",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "马来",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "马来",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "马来",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "马来",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "马来",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "越南",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "越南",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：复古+旋钮+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "越南",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：触摸按键+双层门+一体板洗净：DD电机健康：分区洗智能：自动投放"
+    },
+    {
+     "series": "5i",
+     "year": "2026",
+     "country": "越南",
+     "spec": "13/9kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M5",
+     "year": "2026",
+     "country": "越南",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble智能：Connect Life健康：Jet Wash+活水2.0 +99.99%"
+    },
+    {
+     "series": "M5",
+     "year": "2026",
+     "country": "越南",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "越南",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "越南",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "越南",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "越南",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "越南",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "越南",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "越南",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "越南",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "越南",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "越南",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：复古+旋钮+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：触摸按键+双层门+一体板洗净：DD电机健康：分区洗智能：自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：复古+旋钮+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：触摸按键+双层门+一体板洗净：DD电机健康：分区洗智能：自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：复古+旋钮+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "R5",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：触摸按键+双层门+一体板洗净：DD电机健康：分区洗智能：自动投放"
+    },
+    {
+     "series": "5i",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "13/9kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M5",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble智能：Connect Life健康：Jet Wash+活水2.0 +99.99%"
+    },
+    {
+     "series": "M5",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "12kg O",
+     "online": true,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "12/8kg O",
+     "online": true,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "14kg O",
+     "online": true,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "10.5kg O",
+     "online": true,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "10.5/7kg O",
+     "online": true,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "9kg O",
+     "online": true,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "9/6kg O",
+     "online": true,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "8kg O",
+     "online": true,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "多桶",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "13/9kg",
+     "online": false,
+     "feat": "外观：TFT+旋钮+触摸按键+双层门洗净：i Bubble+内循环+DD电机健康：Jet Wash+99.99%智能：Connect Life+自动投放节能：热泵"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "12kg-H",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "14/9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "14kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "11/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "14/9kg O",
+     "online": true,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "10kg-V O",
+     "online": true,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "14kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "多桶",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "13/9kg",
+     "online": false,
+     "feat": "外观：TFT+旋钮+触摸按键+双层门洗净：i Bubble+内循环+DD电机健康：Jet Wash+99.99%智能：Connect Life+自动投放节能：热泵"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "12kg-H",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "11/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "14/9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "8kg-H",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "10kg-V",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "14kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "11/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "14/9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "8kg-H",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "10kg-V",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "14kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "11/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "多桶",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "13/9kg",
+     "online": false,
+     "feat": "外观：TFT+旋钮+触摸按键+双层门洗净：i Bubble+内循环+DD电机健康：Jet Wash+99.99%智能：Connect Life+自动投放节能：热泵"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "12kg-H",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0+99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "11/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bublle健康：Jet Wash +99.99%"
+    },
+    {
+     "series": "1i",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "14/9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双/单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "8kg-H",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "16/10kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "16/10kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "16/10kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M5",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "14/9kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M5",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "14/9kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M5",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M5",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M5",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M5",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "12kg",
+     "online": false,
+     "feat": "外观：彩膜+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life+自动投放"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "12/8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "M3",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "16/10kg",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble健康：Jet Wash+活水2.0 +99.99%智能：Connect Life"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "9/6kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "M5",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "10.5kg-H",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble智能：Connect Life健康：Jet Wash+活水2.0 +99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "10.5/7kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "N1",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+丝印+物理按键+单层门洗净：i Bublle健康：Jet Wash+99.99%"
+    },
+    {
+     "series": "M5",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "10.5kg-H",
+     "online": false,
+     "feat": "外观：LED+丝印+触摸按键+双层门洗净：i Bubble智能：Connect Life健康：Jet Wash+活水2.0 +99.99%"
+    }
+   ]
+  },
+  {
+   "category": "波轮",
+   "title": "3.1 到国家产品策略-泰国波轮",
+   "series": [
+    "5i",
+    "3i",
+    "5K",
+    "JH",
+    "3K",
+    "GE30",
+    "P10",
+    "AG/AR"
+   ],
+   "countries": [
+    "泰国",
+    "马来",
+    "越南",
+    "印尼",
+    "菲律宾",
+    "新加坡"
+   ],
+   "counts": {
+    "total": 97,
+    "y2026": 48,
+    "y2027": 49,
+    "online": 0
+   },
+   "caps26": [
+    "8",
+    "9",
+    "10.5",
+    "13",
+    "14",
+    "15",
+    "17",
+    "18",
+    "19",
+    "20",
+    "22"
+   ],
+   "caps27": [
+    "8",
+    "9",
+    "10",
+    "10.5",
+    "13",
+    "15",
+    "17",
+    "18",
+    "20",
+    "22"
+   ],
+   "changes": [
+    {
+     "series": "5i",
+     "country": "泰国",
+     "retired": [],
+     "added": [
+      "18kg-580"
+     ]
+    },
+    {
+     "series": "3i",
+     "country": "泰国",
+     "retired": [
+      "19kg",
+      "18kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "JH",
+     "country": "泰国",
+     "retired": [
+      "14kg",
+      "13kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "3K",
+     "country": "泰国",
+     "retired": [],
+     "added": [
+      "10kg"
+     ]
+    },
+    {
+     "series": "GE30",
+     "country": "泰国",
+     "retired": [
+      "10.5kg"
+     ],
+     "added": [
+      "15kg",
+      "13kg",
+      "17kg"
+     ]
+    },
+    {
+     "series": "P10",
+     "country": "泰国",
+     "retired": [
+      "8kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "5i",
+     "country": "马来",
+     "retired": [],
+     "added": [
+      "17kg"
+     ]
+    },
+    {
+     "series": "3K",
+     "country": "马来",
+     "retired": [],
+     "added": [
+      "10kg"
+     ]
+    },
+    {
+     "series": "JH",
+     "country": "马来",
+     "retired": [
+      "14kg",
+      "13kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "GE30",
+     "country": "马来",
+     "retired": [
+      "10.5kg"
+     ],
+     "added": [
+      "15kg",
+      "13kg",
+      "17kg"
+     ]
+    },
+    {
+     "series": "AG/AR",
+     "country": "马来",
+     "retired": [
+      "8kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "3K",
+     "country": "越南",
+     "retired": [],
+     "added": [
+      "10kg"
+     ]
+    },
+    {
+     "series": "JH",
+     "country": "越南",
+     "retired": [
+      "13kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "GE30",
+     "country": "越南",
+     "retired": [
+      "10.5kg"
+     ],
+     "added": [
+      "17kg",
+      "15kg",
+      "13kg"
+     ]
+    },
+    {
+     "series": "AG/AR",
+     "country": "越南",
+     "retired": [
+      "8kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "5K",
+     "country": "印尼",
+     "retired": [
+      "15kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "JH",
+     "country": "印尼",
+     "retired": [
+      "13kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "GE30",
+     "country": "印尼",
+     "retired": [
+      "10.5kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "AG/AR",
+     "country": "印尼",
+     "retired": [
+      "8kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "JH",
+     "country": "菲律宾",
+     "retired": [
+      "13kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "AG/AR",
+     "country": "菲律宾",
+     "retired": [
+      "8kg"
+     ],
+     "added": []
+    },
+    {
+     "series": "3K",
+     "country": "新加坡",
+     "retired": [
+      "8kg"
+     ],
+     "added": [
+      "10kg"
+     ]
+    },
+    {
+     "series": "JH",
+     "country": "新加坡",
+     "retired": [
+      "13kg"
+     ],
+     "added": [
+      "9kg",
+      "8kg"
+     ]
+    },
+    {
+     "series": "GE30",
+     "country": "新加坡",
+     "retired": [
+      "10.5kg"
+     ],
+     "added": [
+      "13kg"
+     ]
+    },
+    {
+     "series": "5i",
+     "country": "印尼",
+     "retired": [],
+     "added": [
+      "22kg",
+      "18kg"
+     ]
+    },
+    {
+     "series": "GE30",
+     "country": "菲律宾",
+     "retired": [],
+     "added": [
+      "13kg"
+     ]
+    },
+    {
+     "series": "5i",
+     "country": "越南",
+     "retired": [],
+     "added": [
+      "18kg-580"
+     ]
+    },
+    {
+     "series": "5i",
+     "country": "新加坡",
+     "retired": [],
+     "added": [
+      "18kg-580"
+     ]
+    }
+   ],
+   "feats": [
+    "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频",
+    "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频",
+    "外观：LED+后控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +i Filter智能：一键智洗",
+    "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频",
+    "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频",
+    "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗",
+    "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗",
+    "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗",
+    "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗",
+    "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗",
+    "外观：LED+前控+4按键节能：Aqua preserve",
+    "外观：LED+前控+4按键节能：Aqua preserve",
+    "外观：LED+前控+4按键节能：Aqua preserve"
+   ],
+   "rows": [
+    {
+     "series": "5i",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "22kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "20kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "17kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3i",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "19kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +i Filter智能：一键智洗"
+    },
+    {
+     "series": "3i",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "18kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +i Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "JH",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "14kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "JH",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "3K",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "P10",
+     "year": "2026",
+     "country": "泰国",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键节能：Aqua preserve"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "22kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "20kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "17kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5K",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "18kg-580",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "10kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5i",
+     "year": "2026",
+     "country": "马来",
+     "spec": "22kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2026",
+     "country": "马来",
+     "spec": "20kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2026",
+     "country": "马来",
+     "spec": "18kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "马来",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2026",
+     "country": "马来",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "3K",
+     "year": "2026",
+     "country": "马来",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "JH",
+     "year": "2026",
+     "country": "马来",
+     "spec": "14kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "JH",
+     "year": "2026",
+     "country": "马来",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2026",
+     "country": "马来",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "P10",
+     "year": "2026",
+     "country": "马来",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键节能：Aqua preserve"
+    },
+    {
+     "series": "AG/AR",
+     "year": "2026",
+     "country": "马来",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键节能：Aqua preserve"
+    },
+    {
+     "series": "5K",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "10kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "17kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "越南",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2026",
+     "country": "越南",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "3K",
+     "year": "2026",
+     "country": "越南",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "JH",
+     "year": "2026",
+     "country": "越南",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2026",
+     "country": "越南",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "AG/AR",
+     "year": "2026",
+     "country": "越南",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键节能：Aqua preserve"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "马来",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "越南",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5K",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "10kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "3K",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "JH",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "AG/AR",
+     "year": "2026",
+     "country": "印尼",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键节能：Aqua preserve"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "22kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "印尼",
+     "spec": "18kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "JH",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "AG/AR",
+     "year": "2026",
+     "country": "菲律宾",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键节能：Aqua preserve"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "3K",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "JH",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2026",
+     "country": "新加坡",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "菲律宾",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "JH",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "9kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "JH",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "3K",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "10kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5K",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "10.5kg",
+     "online": false,
+     "feat": "外观：LED+前控+大玻璃+6按键洗净：i Bubble+Turbo+Soak健康：活水2.0 +Magic Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "22kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "20kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "17kg",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "18kg-580",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "P10",
+     "year": "2027-28",
+     "country": "马来",
+     "spec": "8kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键节能：Aqua preserve"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "17kg",
+     "online": false,
+     "feat": "外观：LED+前控+4按键洗净： Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "15kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "13kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "GE30",
+     "year": "2027-28",
+     "country": "泰国",
+     "spec": "17kg",
+     "online": false,
+     "feat": "外观：高箱体LED+前控+大玻璃+4按键洗净：Bubble clean+Magic Filter智能：一键智洗"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "越南",
+     "spec": "18kg-580",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    },
+    {
+     "series": "5i",
+     "year": "2027-28",
+     "country": "新加坡",
+     "spec": "18kg-580",
+     "online": false,
+     "feat": "外观：LED+后控+大玻璃+10按键洗净：i Bubble+Turbo+Soak+Spray健康：活水2.0 +i Filter智能：一键智洗节能：DDM变频"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "数据来源：东盟洗衣机规划.pptx 两页矩阵（泰国波轮 / 泰国滚筒整体），经 PPT 文本框坐标解析还原。",
+  "退市判定规则：26 年有、27 年无即视为退市（Leo 2026-09-18 确认）。",
+  "I3T 与 I3 是两个独立产品，I3T 定位 I3 的低价替代。",
+  "线上专供：图中以「O」标记（原文档绿色），仅出现在马来 2027 列。",
+  "容量段写法保留原样（如 10.5/7kg 表示洗衣/脱水双容量）。"
+ ]
+}

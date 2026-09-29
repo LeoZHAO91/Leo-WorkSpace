@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>27年中东非区域产品规划 · 市场情况看板</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  :root{
+    --blue:#2456d6; --hisense:#e6212b; --teal:#0e9488; --sub:#5a6577;
+    --bg:#f4f6fa; --card:#ffffff; --line:#e5e9f2; --dark:#1c2433;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:var(--bg);color:var(--dark);font-size:14px;line-height:1.55}
+  .wrap{max-width:1280px;margin:0 auto;padding:18px 20px 60px}
+  h1{font-size:21px;margin-bottom:4px}
+  .meta{font-size:12px;color:var(--sub);margin-bottom:14px}
+  .meta b{color:var(--dark)}
+  .note{background:#eef3ff;border-left:3px solid var(--blue);padding:8px 12px;font-size:12.5px;color:var(--sub);border-radius:0 6px 6px 0;margin-bottom:14px}
+  .tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+  .tabs button{border:1px solid var(--line);background:#fff;color:var(--sub);padding:7px 18px;border-radius:18px;cursor:pointer;font-size:13.5px}
+  .tabs button.on{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+  .panel{display:none}
+  .panel.on{display:block}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:14px}
+  .card h2{font-size:16px;margin-bottom:10px;color:var(--dark)}
+  .card h3{font-size:14px;margin:12px 0 8px;color:var(--blue)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .imgblock{margin:10px 0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+  .imgblock img{display:block;width:100%;height:auto}
+  .cap{font-size:11.5px;color:var(--sub);padding:6px 10px;background:#f8faff;border-top:1px solid var(--line)}
+  .cap b{color:var(--blue)}
+  .kpi .v{font-size:22px;font-weight:700;color:var(--blue)}
+  .kpi .v.red{color:var(--hisense)} .kpi .v.teal{color:var(--teal)}
+  .kpi .l{font-size:12px;color:var(--sub);margin-top:2px}
+  .kpi .c{font-size:12px;margin-top:2px;font-weight:600}
+  .up{color:#c0392b}.down{color:#1e8e4a}
+  .chart{width:100%;height:300px}
+  .chart.sm{height:250px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;margin:8px 0}
+  th{background:#f0f4fb;color:var(--sub);font-weight:600;padding:6px 8px;border:1px solid var(--line);text-align:left;white-space:nowrap}
+  td{padding:6px 8px;border:1px solid var(--line);vertical-align:top}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  tr.hi td{background:#fff5f5}
+  tr.hl td{background:#eef7ff}
+  .tag{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600;margin-right:4px}
+  .t-new{background:#e7f6ec;color:#1e8e4a}
+  .t-del{background:#fdeaea;color:#c0392b}
+  .t-main{background:#e8f0ff;color:var(--blue)}
+  .t-warn{background:#fff6e5;color:#b26a00}
+  ul.plain{padding-left:18px;font-size:13px;color:var(--dark)}
+  ul.plain li{margin:4px 0}
+  .small{font-size:11.5px;color:var(--sub)}
+  .src{font-size:11px;color:#8a93a5;margin-top:6px}
+  a{color:var(--blue)}
+  .flag{display:inline-block;padding:0 6px;border-radius:4px;font-size:11px;font-weight:700;color:#fff;margin-right:6px}
+  .f-za{background:#0e9488}.f-sa{background:#2456d6}.f-in{background:#e6212b}
+  @media (max-width:900px){.grid2,.grid3,.grid4{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>27年中东非区域产品规划 · 市场情况看板</h1>
+  <div class="meta">来源：《27年中东非区域产品规划》（2026-09 解压归档 + 2026-09-14 PDF 全图增强版，50 图全读）· 数据引用：欧睿 2025 / GfK Panelmarket South Africa（Jan-May25 vs Jan-May26、MAT25-May26）/ Saudi Extra 7月 sell-out / 内部规划 · 整理：2026-09-14</div>
+  <div class="note"><b>口径说明：</b>大盘容量为欧睿口径（中东非不含印度）；南非份额为 GfK 零售监测（Jan-May26 同比）；沙特为 Extra 渠道 sell-out + 内部估计；印度为欧睿/内部整理（2027 为预测）。价格分别为当地币（ZAR / SR / INR）。规划内容（阵容/新品/路线）为 27 年内部规划口径，非承诺。</div>
+
+  <div class="tabs">
+    <button class="on" data-t="ov">总览</button>
+    <button data-t="za">南非</button>
+    <button data-t="sa">沙特</button>
+    <button data-t="in">印度</button>
+    <button data-t="np">新品大纲</button>
+  </div>
+
+  <!-- ================= 总览 ================= -->
+  <div class="panel on" id="p-ov">
+    <div class="grid4">
+      <div class="kpi"><div class="v">854 万台</div><div class="l">中东非市场容量（欧睿2025，不含印度）</div></div>
+      <div class="kpi"><div class="v teal">100 → 150 万台</div><div class="l">区域 sell-in：26年预测 → 27年挑战目标</div><div class="c up">Top3 → Top1</div></div>
+      <div class="kpi"><div class="v red">98 项</div><div class="l">27年新品规划（含印度+迪拜转口 40 项）</div><div class="c">9月17日前立项完成</div></div>
+      <div class="kpi"><div class="v">3+1 市场</div><div class="l">南非 72万 · 沙特 100万 · 印度 1078万</div></div>
+    </div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="card"><h2>中东非品类结构（欧睿 2025）</h2><div id="c_ov_mix" class="chart"></div><div class="src">注：各品类占比相加约101%，系原文四舍五入。</div></div>
+      <div class="card"><h2>三大市场 27 年容量（万台）</h2><div id="c_ov_size" class="chart"></div><div class="src">南非/沙特为市场容量估计；印度为欧睿预测（含双缸/波轮/滚筒）。</div></div>
+    </div>
+
+    <div class="card">
+      <h2>27 年三条产品主线</h2>
+      <table>
+        <tr><th style="width:90px">品类</th><th>策略主线</th><th style="width:38%">关键动作</th></tr>
+        <tr><td><b>滚筒</b></td><td>聚焦分区大容量，强化腰部阵容，系统性降本；干衣机升容升级（110L→10kg、100L→9kg）以大打小</td><td>补美式22kg / 欧式15kg / Tower 高端旗舰；1i、3i 1400转当地化降本约15~20元</td></tr>
+        <tr><td><b>波轮</b></td><td>平台升容+降本，外观迭代与卖点升级；攻坚变频整机成本</td><td>打造高竞争力低成本变频，补齐定频+变频全维度梯队</td></tr>
+        <tr><td><b>双缸</b></td><td>规模降本、供方拓展，强化性价比；应对尼日利亚 LG 供应链转移</td><td>布局下排水产品（9/14/16kg）巩固西非；全球一体化外观；南非16kg切换韩电</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>中东非 16 国市场全景（万台）</h2>
+      <table>
+        <tr><th>区组</th><th>国家</th><th class="num">容量</th><th>品牌集中度</th><th>标杆品牌</th><th>Hisense 地位</th><th class="num">洗烘</th><th class="num">滚筒</th><th class="num">波轮</th><th class="num">双缸</th><th class="num">单缸</th><th class="num">干衣机</th></tr>
+        <tr><td>印度</td><td>印度</td><td class="num"><b>1000</b></td><td>较高，前三约 63%</td><td>LG</td><td>—</td><td class="num">15</td><td class="num"><b>165</b></td><td class="num"><b>420</b></td><td class="num"><b>650</b></td><td class="num">15</td><td class="num">2</td></tr>
+        <tr><td>北非</td><td>埃及</td><td class="num">170</td><td>前三约 58%</td><td>Fresh、LG</td><td>—</td><td class="num">3.4</td><td class="num">44.2</td><td class="num">64.6</td><td class="num">57.8</td><td class="num">1.7</td><td class="num">—</td></tr>
+        <tr><td>海湾</td><td>沙特</td><td class="num">100</td><td>低，前三约 28%</td><td>LG</td><td>—</td><td class="num">12</td><td class="num">14</td><td class="num">16</td><td class="num"><b>45</b></td><td class="num">5</td><td class="num">8</td></tr>
+        <tr><td>北非</td><td>阿尔及利亚</td><td class="num">70</td><td>前三约 55%</td><td>LG、Condor</td><td>Top 3</td><td class="num">—</td><td class="num">31.5</td><td class="num">7</td><td class="num">31.5</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="hi"><td>南非内销</td><td>南非</td><td class="num">64</td><td>高，前三约 76%</td><td>Defy</td><td>Top 2</td><td class="num">2.8</td><td class="num">15.2</td><td class="num">26.4</td><td class="num">18.6</td><td class="num">1</td><td class="num">4.78</td></tr>
+        <tr><td>迪拜</td><td>迪拜 DE（转口）</td><td class="num">90</td><td>—</td><td>—</td><td>—</td><td class="num">—</td><td class="num">54.9</td><td class="num">9.9</td><td class="num">4.5</td><td class="num">—</td><td class="num">20.7</td></tr>
+        <tr><td>迪拜</td><td>伊拉克</td><td class="num">45</td><td>多品牌竞争</td><td>LG</td><td>—</td><td class="num">—</td><td class="num">15.3</td><td class="num">7.65</td><td class="num">21.6</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>迪拜</td><td>阿联酋</td><td class="num">43</td><td>前三约 40%</td><td>LG</td><td>Top 5</td><td class="num">3.9</td><td class="num">23.65</td><td class="num">5.59</td><td class="num">9.46</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="hi"><td>西非</td><td>尼日利亚</td><td class="num">37</td><td>高，前三约 70%</td><td>Hisense</td><td><b>Top 1</b></td><td class="num">—</td><td class="num">8.51</td><td class="num">6.66</td><td class="num">21.46</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>西非</td><td>加纳</td><td class="num">20</td><td>前三约 55%（海信/韩电/美的）</td><td>Hisense</td><td><b>Top 1</b></td><td class="num">—</td><td class="num">2.6</td><td class="num">3.8</td><td class="num">12</td><td class="num">0.6</td><td class="num">—</td></tr>
+        <tr><td>海湾</td><td>科威特</td><td class="num">15</td><td>/</td><td>LG</td><td>—</td><td class="num">—</td><td class="num">5.25</td><td class="num">1.2</td><td class="num">5.1</td><td class="num">0.75</td><td class="num">—</td></tr>
+        <tr><td>海湾</td><td>阿曼</td><td class="num">15</td><td>多品牌竞争</td><td>/</td><td>—</td><td class="num">—</td><td class="num">1.8</td><td class="num">1.8</td><td class="num">11.25</td><td class="num">0.3</td><td class="num">—</td></tr>
+        <tr><td>海湾</td><td>约旦</td><td class="num">15</td><td>/</td><td>LG</td><td>—</td><td class="num">—</td><td class="num">12.6</td><td class="num">0.45</td><td class="num">1.5</td><td class="num">0.3</td><td class="num">—</td></tr>
+        <tr><td>东非</td><td>肯尼亚</td><td class="num">10</td><td>前三约 50%</td><td>LG</td><td>Top 2</td><td class="num">—</td><td class="num">4.5</td><td class="num">1</td><td class="num">3.4</td><td class="num">1</td><td class="num">—</td></tr>
+        <tr><td>南非出口</td><td>安哥拉</td><td class="num">13</td><td>较高，前三 60%+</td><td>MD</td><td>—</td><td class="num">—</td><td class="num">0.65</td><td class="num">0.26</td><td class="num">1.95</td><td class="num">9.88</td><td class="num">—</td></tr>
+        <tr class="hi"><td>南非出口</td><td>坦桑尼亚</td><td class="num">9.5</td><td>前三约 47%</td><td>Hisense</td><td><b>Top 1</b></td><td class="num">—</td><td class="num">3.325</td><td class="num">2.565</td><td class="num">2.85</td><td class="num">0.57</td><td class="num">—</td></tr>
+      </table>
+      <div class="small">红底 = Hisense 已居 Top1/Top2 的国家（尼日利亚、加纳、坦桑尼亚、南非）。<b>印度 1000 万为最大单一市场</b>（双缸 650 + 波轮 420）；滚筒大市场：印度 165、迪拜DE 54.9、埃及 44.2、阿联酋 23.7、阿尔及利亚 31.5；干衣机集中：迪拜DE 20.7、沙特 8、南非 4.78。</div>
+      <div class="imgblock"><img src="/gfk/mea27-img/mea16-countries.png" loading="lazy" alt="16国市场全景原图"><div class="cap"><b>原文图表</b> · 16 国市场全景（区组/容量/集中度/标杆/品类分布）</div></div>
+    </div>
+
+    <div class="card">
+      <h2>中东非品类容量结构（万台）</h2>
+      <table>
+        <tr><th>品类</th><th class="num">滚筒</th><th class="num">洗烘</th><th class="num">波轮</th><th class="num">双缸</th><th class="num">单缸</th></tr>
+        <tr><td class="num">占比</td><td class="num">35%</td><td class="num">3%</td><td class="num">23%</td><td class="num">34%</td><td class="num">6%</td></tr>
+        <tr><td class="num">市场容量</td><td class="num">299</td><td class="num">26</td><td class="num">196</td><td class="num"><b>290</b></td><td class="num">51</td></tr>
+      </table>
+      <div class="small">合计约 862 万台（与欧睿 854 口径相近）。<b>双缸 290 万台 = 中东非第一大品类</b>，滚筒 299 万台紧随其后；洗烘仅 26 万台但单价高。</div>
+    </div>
+
+    <div class="card">
+      <h2>重点新品时间线（2026H2 → 2027H2，全品类）</h2>
+      <div class="imgblock"><img src="/gfk/mea27-img/timeline-products.png" loading="lazy" alt="重点新品时间线原图"><div class="cap"><b>原文图表</b> · 上方三框 = 滚筒技术路线节奏（2026~27Q1 基础阵容 Ready → 27Q2~Q4 美式/88L/Tower → 2028 一体前板+全新E系列）；下方时间轴 = 各品类新品上市节点（波轮泰国转产 26.11 → i3t爆款 27.03 → Tower 27.04 → 美式 27.06 → 88L 27.08 → 580P泰国转产 27.11）</div></div>
+    </div>
+
+    <div class="card">
+      <h2>生产基地布局（型号 × 产地 × 25/26 年量）</h2>
+      <details>
+        <summary style="cursor:pointer;color:var(--blue);font-size:13px">展开 30+ 型号明细（肯尼亚/南非/加纳/尼日利亚/阿联酋/沙特/伊拉克/乌干达）</summary>
+        <table style="margin-top:8px">
+          <tr><th>生产版本</th><th>规划生产基地</th><th>国家</th><th>外形尺寸 W×D×H</th><th class="num">25年量</th><th class="num">26年量</th></tr>
+          <tr><td>WS100CE1-CEGA00(01)</td><td>宁波新乐</td><td>肯尼亚</td><td class="num">854×490×995</td><td class="num">0</td><td class="num">1,937</td></tr>
+          <tr><td>WS120CE1-BEGA00(01)</td><td>宁波新乐</td><td>肯尼亚</td><td class="num">890×535×1042</td><td class="num">0</td><td class="num">715</td></tr>
+          <tr><td>WS070BE1-MEGA00(01)</td><td>宁波新乐</td><td>肯尼亚</td><td class="num">759×440×941</td><td class="num">0</td><td class="num">3,604</td></tr>
+          <tr><td>WS140DE1-NEGA00(01)</td><td>宁波新乐</td><td>肯尼亚</td><td class="num">957×549×1045</td><td class="num">0</td><td class="num">720</td></tr>
+          <tr><td>WS240DE3-PEGA00(01)</td><td>新乐电器（江苏）</td><td>南非</td><td class="num">1015×600×1120</td><td class="num">0</td><td class="num">5,084</td></tr>
+          <tr><td>WS140RB3-DEGA00(01)</td><td>江苏皓峰</td><td>南非</td><td class="num">850×510×993</td><td class="num">0</td><td class="num">9,226</td></tr>
+          <tr><td>WSRB113-CEW101(02)</td><td>江苏皓峰</td><td>加纳</td><td class="num">807×476×997</td><td class="num">0</td><td class="num">6,216</td></tr>
+          <tr><td>WSRB143-DEW001(02)</td><td>江苏皓峰</td><td>加纳</td><td class="num">876×515×994</td><td class="num">0</td><td class="num">5,330</td></tr>
+          <tr><td>WSQB753-BEW101(02)</td><td>江苏皓峰</td><td>肯尼亚</td><td class="num">723×406×819</td><td class="num">0</td><td class="num">14,579</td></tr>
+          <tr class="hi"><td>WSRB113-CEW001(02)</td><td>江苏皓峰</td><td>尼日利亚</td><td class="num">807×476×997</td><td class="num">19,215</td><td class="num"><b>47,360</b></td></tr>
+          <tr class="hi"><td>WSQB753-BEW001(02)</td><td>江苏皓峰</td><td>尼日利亚</td><td class="num">723×406×819</td><td class="num">79,826</td><td class="num"><b>78,870</b></td></tr>
+          <tr class="hi"><td>WSPA503-AEW002(02)</td><td>江苏皓峰</td><td>尼日利亚</td><td class="num">602×373×730</td><td class="num">40,996</td><td class="num">28,350</td></tr>
+          <tr><td>WSTA161-EEW002-000(01)</td><td>滁州韩上</td><td>阿联酋</td><td class="num">950×555×1060</td><td class="num">0</td><td class="num">240</td></tr>
+          <tr><td>WSTF201-FEW001-000(01)</td><td>滁州韩上</td><td>阿联酋</td><td class="num">1027×615×1120</td><td class="num">0</td><td class="num">72</td></tr>
+          <tr><td>WSSA101-CEW002-000(01)</td><td>滁州韩上</td><td>阿联酋</td><td class="num">820×465×995</td><td class="num">0</td><td class="num">320</td></tr>
+          <tr><td>WSHA801-BEW001-000(01)</td><td>滁州韩上</td><td>沙特</td><td class="num">770×430×880</td><td class="num">0</td><td class="num">1,720</td></tr>
+          <tr><td>WSSA101-CEW001-002(01)</td><td>滁州韩上</td><td>沙特</td><td class="num">820×465×995</td><td class="num">0</td><td class="num">1,440</td></tr>
+          <tr><td>WSDE141-NEW202-003(01)</td><td>宁波新乐</td><td>沙特</td><td class="num">957×549×1040</td><td class="num">0</td><td class="num">1,680</td></tr>
+          <tr><td>WSCE121-BEW302-003(01)</td><td>宁波新乐</td><td>沙特</td><td class="num">890×535×1030</td><td class="num">0</td><td class="num">1,560</td></tr>
+          <tr><td>WS075HA3-AEWA00(01)</td><td>滁州韩上</td><td>尼日利亚</td><td class="num">—×716×820</td><td class="num">0</td><td class="num">5,280</td></tr>
+          <tr><td>WSTA163-EEB001-002</td><td>滁州韩上</td><td>伊拉克</td><td class="num">555×950×1060</td><td class="num">0</td><td class="num">1,320</td></tr>
+          <tr><td>WSSA113-CEW002-003</td><td>滁州韩上</td><td>尼日利亚</td><td class="num">820×465×995</td><td class="num">0</td><td class="num">3,840</td></tr>
+          <tr class="hi"><td>WSTF203-FEW001-003</td><td>滁州韩上</td><td>南非</td><td class="num">1027×615×1120</td><td class="num">12,024</td><td class="num"><b>17,850</b></td></tr>
+          <tr class="hi"><td>WSDE163-AEG101-001</td><td>新乐电器（江苏）</td><td>南非</td><td class="num">930×549×1045</td><td class="num">14,819</td><td class="num"><b>19,260</b></td></tr>
+          <tr><td>WSDE163-AEW002-000</td><td>新乐电器（江苏）</td><td>南非</td><td class="num">930×549×1045</td><td class="num">7,250</td><td class="num">7,320</td></tr>
+          <tr><td>WSQB753-BEW101</td><td>韩电集团宁波洗衣机</td><td>加纳</td><td class="num">723×406×819</td><td class="num">9,465</td><td class="num">6,453</td></tr>
+          <tr><td>WSRB143-DEW001</td><td>韩电集团宁波洗衣机</td><td>加纳</td><td class="num">876×515×994</td><td class="num">7,890</td><td class="num">4,548</td></tr>
+          <tr><td>WSRB113-CEW101</td><td>韩电集团宁波洗衣机</td><td>加纳</td><td class="num">807×476×997</td><td class="num">6,600</td><td class="num">2,220</td></tr>
+          <tr><td>WSCE101-CEW002</td><td>宁波新乐</td><td>乌干达</td><td class="num">854×490×995</td><td class="num">7,096</td><td class="num">5,634</td></tr>
+          <tr><td>WSBE701-MEW102</td><td>宁波新乐</td><td>乌干达</td><td class="num">754×440×932</td><td class="num">7,237</td><td class="num">6,410</td></tr>
+          <tr><td>WSCE121-BEW202</td><td>宁波新乐</td><td>乌干达</td><td class="num">890×535×1040</td><td class="num">1,950</td><td class="num">2,210</td></tr>
+          <tr class="hi"><td>WSDE141-NEW002</td><td>宁波新乐</td><td>乌干达</td><td class="num">957×549×1045</td><td class="num">9,759</td><td class="num">4,160</td></tr>
+        </table>
+        <div class="small">红底 = 上量主力。生产版本含 (01)/(02) 时期的为新切供方型号；供方：新乐（宁波/江苏）、江苏皓峰、滁州韩上、韩电宁波。尼日利亚 WSQB753 双缸 7.9万台/年为最大单品，26年 WSRB113 翻倍至 4.7万。</div>
+      </details>
+    </div>
+
+    <div class="card">
+      <h2>立项与决策里程碑</h2>
+      <table>
+        <tr><th>时间</th><th>事项</th></tr>
+        <tr class="hl"><td>2026-09-17 前</td><td>明确需求的 98 个项目全部完成立项</td></tr>
+        <tr><td>2026-09 底</td><td>迪拜转口 M 客户结论</td></tr>
+        <tr><td>2026-10</td><td>沙特 OEM ME / MT 系列结论</td></tr>
+        <tr><td>2026-10 底</td><td>迪拜转口 Z 客户结论</td></tr>
+        <tr><td>2026-11</td><td>印度滚筒进一步进展</td></tr>
+        <tr><td>2026-12</td><td>双缸进一步进展</td></tr>
+      </table>
+      <div class="small">关联外链：<a href="https://hisense.feishu.cn/wiki/EakwwO6Bwi40s4k8xegcv7AgnWf?from=from_copylink" target="_blank">2027年中东非规划大纲（飞书）</a> · <a href="https://hisense.feishu.cn/wiki/Dn9Nwm2FgiV8vYk2TRoclwZXnLg?from=from_copylink&sheet=U3nj6o" target="_blank">中东非大区核心国家上下市表（飞书）</a></div>
+    </div>
+  </div>
+
+  <!-- ================= 南非 ================= -->
+  <div class="panel" id="p-za">
+    <div class="grid4">
+      <div class="kpi"><div class="v">≈72 万台</div><div class="l">市场容量 · 同比 +14.6%</div></div>
+      <div class="kpi"><div class="v teal">23.1%</div><div class="l">Hisense 整体量份额（Jan-May26）</div><div class="c up">+2.6pp（20.5%）· 第2</div></div>
+      <div class="kpi"><div class="v">29.9%</div><div class="l">波轮 FA TOP 份额 · 升至第1</div><div class="c up">+5.1pp，反超 DEFY</div></div>
+      <div class="kpi"><div class="v red">19.1%</div><div class="l">双缸份额（DEFY 60.2%）</div><div class="c up">+4.0pp · 差距最大品类</div></div>
+    </div>
+
+    <div class="card">
+      <h2>市场概况与目标</h2>
+      <ul class="plain">
+        <li>品类结构：<b>波轮 37% · 双缸 37% · 单洗（滚筒）22.6% · 洗烘 3.8%</b>；双缸同比提升超过整体。</li>
+        <li>我司：波轮 Top1；滚筒和洗烘同比下滑；双缸同比增长但距 Defy 差距大。</li>
+        <li>27年目标：<b>稳固波轮量占，重点突破单洗和洗烘，冲量 Top1；双缸突破大容量、大容量冲 Top1。</b></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>品牌份额：Jan-May25 vs Jan-May26（GfK 销量%）</h2>
+      <div class="grid2">
+        <div id="c_za_total" class="chart sm"></div>
+        <div id="c_za_cat" class="chart sm"></div>
+      </div>
+      <table>
+        <tr><th>品类</th><th>市场量（千台）</th><th>DEFY</th><th>HISENSE</th><th>SAMSUNG</th><th>LG</th><th>MIDEA</th><th>其他要点</th></tr>
+        <tr><td>整体 TOTAL</td><td class="num">247.4 → 292.1</td><td class="num">43.2 → 40.3</td><td class="num hi"><b>20.5 → 23.1</b></td><td class="num">15.3 → 11.8</td><td class="num">6.3 → 5.9</td><td class="num">6.2 → 6.4</td><td>BENNETT READ 2.8→4.1</td></tr>
+        <tr><td>波轮 FA TOP</td><td class="num">94.1 → 105.9</td><td class="num">33.2 → 30.0</td><td class="num hi"><b>24.8 → 29.9</b></td><td class="num">24.0 → 15.1</td><td class="num">—</td><td class="num">8.7 → 10.9</td><td>我司升至第1</td></tr>
+        <tr><td>滚筒 FA FRONT</td><td class="num">57.3 → 67.4</td><td class="num">23.8 → 28.9</td><td class="num">19.8 → 18.8</td><td class="num">19.7 → 20.3</td><td class="num">6.9 → 6.2</td><td class="num">7.4 → 6.6</td><td>我司同比下滑</td></tr>
+        <tr><td>洗烘 WD</td><td class="num">10.6 → 10.3</td><td class="num">7.5 → 10.5</td><td class="num">29.9 → 23.7</td><td class="num">27.7 → 11.2</td><td class="num">28.1 → 37.1</td><td class="num">≈2.4 → 2.6</td><td>LG 大涨领跑</td></tr>
+        <tr><td>双缸 TWIN TUB</td><td class="num">85.4 → 108.5</td><td class="num">71.6 → 60.2</td><td class="num hi"><b>15.1 → 19.1</b></td><td class="num">3.9 → 3.4</td><td class="num">5.7 → 5.3</td><td class="num">≈4.8</td><td>唯一我司与龙头同步增长的品类</td></tr>
+      </table>
+      <div class="src">数据源：GfK Panelmarket South Africa, Jan-May25 vs Jan-May26, Sales Units%。MAT25→MAT26 双缸：DEFY 74→64.6、Hisense 14.9→19.9（千台 218.5→264.6）。</div>
+      <div class="imgblock"><img src="/gfk/mea27-img/za-brandshare-type.png" loading="lazy" alt="GfK品牌份额原图"><div class="cap"><b>原文图表</b> · GfK Brand Share by Type（Jan-May25 vs Jan-May26，TOTAL / FA TOP / FA FRONT / WASHER DRYER / TWIN TUB 五视图）</div></div>
+    </div>
+
+    <div class="card">
+      <h2>双缸专题：差距与渠道</h2>
+      <div class="grid2">
+        <div id="c_za_tt" class="chart"></div>
+        <div>
+          <h3>渠道结构（Jan-May26）</h3>
+          <table>
+            <tr><th>渠道</th><th>占双缸市场</th><th>DEFY</th><th>HISENSE</th><th>要点</th></tr>
+            <tr class="hl"><td>家具专营 FS</td><td class="num"><b>76.3%</b></td><td class="num">75.6 → 64.1</td><td class="num">14.6 → 17.4</td><td>核心上量渠道，我司未进 Lewis</td></tr>
+            <tr><td>量贩 Mass</td><td class="num">17.4%</td><td class="num">63.7 → 53.6</td><td class="num">22.9 → 31.5</td><td>18.9千台，我司强势</td></tr>
+            <tr><td>电器连锁 ER</td><td class="num">6.3%</td><td class="num">52.0 → 30.7</td><td class="num">4.1</td><td>LG 36.0%、Tradebrand 24.5%</td></tr>
+          </table>
+          <h3>差距量化</h3>
+          <ul class="plain">
+            <li>Defy 布局 9kg：26年1~5月销 2万台、占其 30.9%；<b>剔除 9kg 后 Defy 行业占比 41.8%，我司仍差 22.7pp</b>。</li>
+            <li>差距主因：Lewis（家具专营）未进入、Game 线上未进入（线下批量单次约40~50台）、OK 渠道出样差异。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="src">数据源：GfK TWIN TUB Brand Share MAT25-May26 / Brand Share by Channel Jan-May25 vs 26。</div>
+      <div class="imgblock"><img src="/gfk/mea27-img/za-tt-share-mat.png" loading="lazy" alt="双缸份额原图"><div class="cap"><b>原文图表</b> · 双缸 Brand Share：MAT25 vs MAT26 + YTD + 逐月（May25→May26，DEFY 由 66.2% 一路降至 60.8%，Hisense 20.3%→22.7%，1月 Hisense 曾达 20/Defy 56.3 低点）</div></div>
+      <div class="imgblock"><img src="/gfk/mea27-img/za-tt-channel.png" loading="lazy" alt="双缸渠道原图"><div class="cap"><b>原文图表</b> · 双缸 Brand Share by Channel（ER/量贩/家具专营，Defy 52.0→30.7 ER、Tradebrand ER 7.9→24.5% 崛起）</div></div>
+      <h3>双缸 KG 销量结构（GfK MAT 口径，台 / %）</h3>
+      <table>
+        <tr><th>容量段</th><th class="num">≥7&lt;11kg</th><th class="num">≥11&lt;13kg</th><th class="num">≥13&lt;15kg</th><th class="num">≥15&lt;17kg</th><th class="num">≥17&lt;19kg</th><th class="num">≥19&lt;21kg</th><th class="num">≥21kg</th></tr>
+        <tr><td class="num">销量（台）</td><td class="num">6,412</td><td class="num">9,935</td><td class="num"><b>45,200</b></td><td class="num">8,908</td><td class="num">18,875</td><td class="num">7,063</td><td class="num">9,409</td></tr>
+        <tr><td class="num">占比</td><td class="num">6.1%</td><td class="num">9.4%</td><td class="num"><b>42.7%</b></td><td class="num">8.4%</td><td class="num">17.8%</td><td class="num">6.7%</td><td class="num">8.9%</td></tr>
+      </table>
+      <div class="small">规划版官方 KG 结构与 7 月 Hitlist 聚合一致：<b>13-15kg 为绝对主力（42.7%）</b>，17-19kg 次之（17.8%）；≥19kg 合计 15.6% 为大容量增长带（对应 20/24kg 新品卡位）。</div>
+    </div>
+
+    <div class="card">
+      <h2>双缸渠道 × 价格对标（ZAR）</h2>
+      <table>
+        <tr><th>容量段</th><th>品牌</th><th>渠道</th><th>价格 原/促</th><th>产品尺寸</th><th>供方/状态</th><th class="num">销量（台）</th></tr>
+        <tr><td>9kg</td><td>Defy</td><td>Game/Hifigorp</td><td class="num">3499 / 3099</td><td>790×450×960</td><td>—</td><td class="num">20,250</td></tr>
+        <tr class="hi"><td rowspan="2">14kg</td><td>Hisense</td><td>Makro/OK/Hifigorp</td><td class="num">4199 / 3799</td><td>850×510×993</td><td>韩电·新品，5月首单已生产</td><td class="num">8,273</td></tr>
+        <tr class="hi"><td>Hisense</td><td>Makro/OK</td><td class="num">4199 / 3699</td><td>890×535×1042</td><td>新乐·老品</td><td class="num">同上合计</td></tr>
+        <tr><td>14kg</td><td>Samsung</td><td>Game</td><td class="num">3999</td><td>930×553×931</td><td>—</td><td class="num">8,273</td></tr>
+        <tr><td>15kg</td><td>Defy</td><td>Game/Makro</td><td class="num">4299 / 3999</td><td>940×550×1030</td><td>—</td><td class="num"><b>37,415</b></td></tr>
+        <tr><td>15kg</td><td>LG</td><td>Hifigorp/Incredible</td><td class="num">6999</td><td>905×1025×545</td><td>—</td><td class="num">2,985</td></tr>
+        <tr class="hi"><td rowspan="2">16kg</td><td>Hisense</td><td>Hifigorp/OK</td><td class="num">4499 / 3999</td><td>957×549×104?</td><td>新乐·老品</td><td class="num">5,958</td></tr>
+        <tr class="hi"><td>Hisense</td><td>OK/TRD</td><td class="num">4499 / 3999 / 3499</td><td>945×535×104?</td><td>韩电·新品，议价中</td><td class="num">—</td></tr>
+        <tr><td>18kg</td><td>Defy</td><td>Game/OK</td><td class="num">4999 / 4699</td><td>1040×590×1120</td><td>—</td><td class="num">11,665</td></tr>
+        <tr><td>18kg</td><td>LG</td><td>Hifigorp/Incredible</td><td class="num">6999</td><td>980×540×1035</td><td>—</td><td class="num">2,171</td></tr>
+        <tr class="hi"><td>20kg</td><td>Hisense</td><td>OK</td><td class="num">5299 / 4999</td><td>1027×615×1120</td><td>—</td><td class="num">5,779</td></tr>
+        <tr class="hi"><td>24kg</td><td>Hisense</td><td>OK</td><td class="num">5999 / 4999</td><td>1015×600×1120</td><td>5月首单已生产</td><td class="num">—</td></tr>
+      </table>
+      <div class="small">红色底纹 = Hisense 在售/新布局。<b>Defy 15kg（Game/Makro 37,415 台）为双缸最大单一走量段</b>；我司 26年5月迭代 14kg + 补 24kg，26年11月 16kg 切换韩电供方，OK 渠道 4 出样（14/16/20/24）。</div>
+    </div>
+
+    <div class="card">
+      <h2>平台对标</h2>
+      <div class="grid2">
+        <div>
+          <h3>滚筒（门高宽代号: kg）</h3>
+          <table>
+            <tr><th>品牌</th><th>平台分布</th></tr>
+            <tr class="hi"><td>Hisense</td><td>38:6kg · 43:7kg · 54:8-9kg · 60:10kg · 66:11kg · 76:13kg · <span class="tag t-new">新 88:15kg</span> <span class="tag t-new">新 130:22kg</span></td></tr>
+            <tr><td>Samsung</td><td>46:7 · 56:8 · 61:8-9 · 67:10.1 · 72:11 · 78:12 · 86:16(686宽) · 141:20(686宽)</td></tr>
+            <tr><td>LG</td><td>42:7 · 55:8/9 · 64:10.5 · 77:13(600×615×850) · 74:15(650×645×950) · 94:21(700宽)</td></tr>
+            <tr><td>Defy</td><td>39:6 · 49:7 · 55:8 · 65:9-10 · 75:12</td></tr>
+          </table>
+          <div class="small">结论：海信 6-13kg 平台完整，<b>13kg 以上断层（缺 15-22kg）</b>；27年规划 88L 填补欧式 15kg + 美式 22kg，标靶三星美式平台，实现 6-22kg 全容量。</div>
+        </div>
+        <div>
+          <h3>波轮（平台: 标称kg）</h3>
+          <table>
+            <tr><th>品牌</th><th>平台分布</th></tr>
+            <tr class="hi"><td>Hisense</td><td>530升容/550:8-9 · 550升容:11 · 580:12 · 590:14 · 610:16 · 650:18</td></tr>
+            <tr><td>Samsung</td><td>610:9-15 · 637:16-21 · 700:27</td></tr>
+            <tr><td>LG</td><td>590:13 · 632:17-18 · 651:19-23 · 686:24-26</td></tr>
+            <tr><td>Defy</td><td>545:7 · 595:14 · 665:17 · 686:20</td></tr>
+            <tr><td>Midea</td><td>550-70L:8 · 580-147L:13-14 · 601-95L:15-16 · 686-116L:22</td></tr>
+          </table>
+          <div class="small">关税限制 ≤10kg（30%关税）未布局；对标缺大容量 686 平台（24kg+）。530 升容后 11kg 对标美的 550（尺寸劣势）；550 升容 13kg 对标 LG 590（略劣势）。</div>
+        </div>
+      </div>
+      <div class="imgblock"><img src="/gfk/mea27-img/za-front-platform.png" loading="lazy" alt="滚筒平台分布原图"><div class="cap"><b>原文图表</b> · 南非滚筒平台分布（Hisense 38:6kg→130:22kg，绿色=27年新增 88:15kg / 130:22kg；Samsung 46→141、LG 42→94、Defy 39→75）</div></div>
+      <div class="imgblock"><img src="/gfk/mea27-img/za-tl-competitor.png" loading="lazy" alt="波轮竞品平台原图"><div class="cap"><b>原文图表</b> · 南非波轮竞品平台+外观（Samsung 610/637/700 · LG 590/632/651/686 · Defy 545/595/665/686 · Midea 550/580/601/686 · Hisense 530/550/580/590/610/650，含各竞品产品外观照）</div></div>
+      <h3>波轮平台容积对照（升容规划）</h3>
+      <table>
+        <tr><th>平台</th><th class="num">500P</th><th class="num">530</th><th class="num">550</th><th class="num">530升容</th><th class="num">550升容</th><th class="num">580</th><th class="num">610</th><th class="num">650</th><th class="num">650</th></tr>
+        <tr><td class="num">容积</td><td class="num">51.4L</td><td class="num">57.7L</td><td class="num">66L</td><td class="num">65L</td><td class="num">75L</td><td class="num">90L</td><td class="num">94L</td><td class="num">105L</td><td class="num">110L</td></tr>
+        <tr><td class="num">26年标称</td><td class="num">—</td><td class="num">8kg</td><td class="num">10kg</td><td class="num">—</td><td class="num">—</td><td class="num">12kg</td><td class="num">14</td><td class="num">16kg</td><td class="num">18kg</td></tr>
+        <tr><td class="num">27年标称</td><td class="num">—</td><td class="num">8kg</td><td class="num">—</td><td class="num" style="color:#c0392b"><b>10kg</b></td><td class="num" style="color:#c0392b"><b>12kg</b></td><td class="num" style="color:#c0392b"><b>13kg</b></td><td class="num" style="color:#c0392b"><b>14kg</b></td><td class="num">17kg</td><td class="num">19kg</td></tr>
+      </table>
+      <div class="small">红字 = 27 年升容标称。530 升容 65L→10kg、550 升容 75L→12kg 是波轮腰部主力升容关键（对标美的 550/13kg、LG 590/13kg）。</div>
+    </div>
+
+    <div class="card">
+      <h2>价格地图</h2>
+      <div class="grid2">
+        <div>
+          <h3>滚筒（ZAR，价格段占比 × 品牌份额）</h3>
+          <div id="c_za_wfprice" class="chart sm"></div>
+          <table>
+            <tr><th>品牌（图内占比）</th><th>代表型号 · kg · 价格原(促)</th></tr>
+            <tr><td>DEFY 28.9%</td><td>DAW338 12kg 10999(8499) · DAW287 10kg 7499(6499) · DAW384-Top1 8kg 5999(5499) · DAW394 7kg 5499(4999)</td></tr>
+            <tr><td>SAMSUNG 20.3%</td><td>WW90F20ADFSFA 20kg 26759(24299) · WW11BB6400KV 16kg 22599(17499) · WW12BB944DGB 12kg 13999 · 9kg 7499-11999 · 8kg 5499-8499</td></tr>
+            <tr class="hi"><td>Hisense 18.8%</td><td>WF3i22 20kg 20999(18999) · WF3i13 13kg 10999(8499) · WF3i11 11kg 7499(6999) · WF3i10 6999(6499) · WF190/WF1180 8kg 6499 · WF1170 7kg 4999 · WF1160 6kg 4299</td></tr>
+            <tr><td>LG 6.6%</td><td>F0B2CVT2E 21kg 24999(19999) · F4V9VSP2ZB 13kg 19999(16999) · F2V3FRPVJ 9kg 11999(7999) · F2Y1HYPF6J 7kg 5999</td></tr>
+            <tr><td>Midea 5.2%</td><td>MF200D120WB 12kg 7599(7499) · MF100W70 7kg 4999(4499) · MF100W60T 6kg 4299(3999)</td></tr>
+          </table>
+          <div class="small">结构：7-8kg 与 9-10kg 占比下滑，<b>8-9kg 为核心容量，10-11kg 稳步提升</b>；布局 1i-6/7kg 入门 + 54L 平台 1i-8/9kg 标靶 Defy 抢核心量 + i3t 10/11/13kg 腰部改善结构利润 + 美式 22kg 破价格天花板。</div>
+        </div>
+        <div>
+          <h3>波轮（ZAR）</h3>
+          <table>
+            <tr><th>价格段</th><th>占比（同期）</th></tr>
+            <tr class="hl"><td>4000~5000</td><td class="num">30.8%（同期32.0%）</td></tr>
+            <tr class="hl"><td>3000~4000</td><td class="num">20.7%（同期15.9%）</td></tr>
+            <tr><td>品牌占比</td><td>DEFY 30.0% · <b>Hisense 29.9%</b> · Samsung 15.1% · LG 3.7%</td></tr>
+          </table>
+          <table>
+            <tr><th>品牌</th><th>代表型号 · kg · 价格原(促)</th></tr>
+            <tr class="hi"><td>Hisense</td><td>WT7T21225DB 22kg 9999(8499) · WT3T21213 21kg 8999 · WT3T1923UB 19kg 7999 · WT3T172UB 17kg 6999 · <b>WT3K152UB 15kg 5499</b> · <b>WTJA1112T 11kg 4399</b> · A3外壳-550升容 12kg 4399(3899) · A3外壳-530升容 11kg 4399(3899)</td></tr>
+            <tr><td>DEFY 30.0%</td><td>DTL200 16kg 9999(7999) · DTL155 15kg 9999(7999) · DTL165 14kg 5499(4999) · DTL161 8kg 5499(3499)</td></tr>
+            <tr><td>SAMSUNG 15.1%</td><td>T24B19FHSTP 19kg 20999(15999) · T19H35DH12 11kg 11999 · T23B1NEHLZ 13kg 6999(5499)</td></tr>
+            <tr><td>LG 3.7%</td><td>P4500W210 16kg 8999(8499) · MA512W160 16kg · MA200W140 14kg 6799(5999) · MA200W110 11kg 550平台 4215</td></tr>
+          </table>
+          <div class="small">27年：530 升容做 11kg 标靶美的（定位 4399）、550 升容做 13kg 标靶 Defy 14kg（定位 4999），补齐畅销价格段阵容。</div>
+        </div>
+      </div>
+      <h3>滚筒 KG 结构（GfK MAT25 vs MAT26）</h3>
+      <div id="c_za_wfkg" class="chart sm"></div>
+      <div class="small">MAT26（163.3千台）：9-10kg 仍最大 23.8% 但份额下滑；6-7kg 升至 18.9%、8-9kg 升至 19.2%、≥11kg 升至 13.8% —— 大容量化+入门两端扩张。</div>
+      <div class="imgblock"><img src="/gfk/mea27-img/za-front-kg.png" loading="lazy" alt="滚筒KG月度原图"><div class="cap"><b>原文图表</b> · 滚筒 Loading KG Share 逐月（May25→May26，6 段结构含 &lt;6KG；8-9KG 红框=主力段）</div></div>
+      <div class="imgblock"><img src="/gfk/mea27-img/za-wd-price.png" loading="lazy" alt="洗烘价格地图原图"><div class="cap"><b>原文图表</b> · 洗烘价格地图（Defy 28.9% / Samsung 20.3% / LG 6.6% / Midea 5.2% / Hisense 18.8%，含各型号外观+价格原(促)，LG 高端 F4V 系列 12999~24999 独占顶部）</div></div>
+      <div class="imgblock"><img src="/gfk/mea27-img/za-tl-price.png" loading="lazy" alt="波轮价格地图原图"><div class="cap"><b>原文图表</b> · 波轮价格地图（Defy 30.0% / Samsung 15.1% / LG 3.7% / Midea 10.9% / Hisense 29.9%；红框 = A3 外壳 550升容/530升容 新品，4399(3899) 切入 4000-5000 主力价格带）</div></div>
+    </div>
+
+    <div class="card">
+      <h2>27年规划阵容（南非）</h2>
+      <table>
+        <tr><th style="width:100px">品类</th><th>2026 现行</th><th>2027 规划</th></tr>
+        <tr><td>洗烘 WD</td><td>1i 9kg(54) · 3S 10kg(60) · 5S 12kg(75)</td><td>1i 9kg · i3t 10kg(60) · i3t 13kg(76) · 5i 12/8kg(75) · <span class="tag t-new">Tower 12/10kg 欧式</span></td></tr>
+        <tr><td>滚筒 WF</td><td>1i 6/7/8/9kg(38,43,54,54) · 3S 10kg(60) · 3i 11kg(66) · 5S 12kg(75) · 7i 12kg(75)</td><td>1i 6-9kg · i3t 10kg(60) · i3t 11kg(66) · 3i 11kg(66) · i3t 13kg(76) · <span class="tag t-new">US-WF 22kg（27.7上市）</span></td></tr>
+        <tr><td>干衣机 TD</td><td>1W 8kg(88) · 3S 9kg(110) · 5S 10kg(125)</td><td>1i 8kg(直排) · 3S 9kg(110) · i3t 10kg(110)（110L→10kg 升容）</td></tr>
+        <tr><td>波轮 TL</td><td>JA 11kg(550) · 3K 15kg(580) · 3i 17kg(580) · 3i 19kg(610) · 3i 21kg(650) · 7i 22kg(650)</td><td><span class="tag t-main">小R 11kg(530)</span> <span class="tag t-main">小R 13kg(550)</span> · 3K 15kg(580) · 3i 17kg(580) · 3i 19kg(610) · 3i 21kg(650) · 7i 22kg(650) · <span class="tag t-new">5T 27kg(686)</span></td></tr>
+        <tr><td>双缸 TT</td><td>WST.韩电 14kg · WST.韩上 20kg · WST.新乐 14/16/16/24kg</td><td>WST.韩电 14kg · WST.韩上 20kg · <span class="tag t-new">韩电 16kg×2（26.11切换）</span> · 新乐 24kg</td></tr>
+      </table>
+      <div class="imgblock"><img src="/gfk/mea27-img/za-lineup-2627.png" loading="lazy" alt="南非阵容对比原图"><div class="cap"><b>原文图表</b> · 南非 2026 vs 2027 全品类阵容对比（含产品外观照：WD/WF/TD/TL/TT 五行，绿字=容量段份额，Tower 12kg/10kg 欧式 27.4、US-WF/WD 27.6-27.7 为年度重磅）</div></div>
+    </div>
+
+    <div class="card">
+      <h2>产品路线与核心新品</h2>
+      <div class="grid2">
+        <div>
+          <h3>滚筒路线</h3>
+          <ul class="plain">
+            <li><b>2026~27Q1</b>：1i / 5i / 7i Ready，i3t 27.03，3i 11/13kg 27.02</li>
+            <li><b>27Q2~Q4</b>：导入美式+88L大容量，Tower 27.04，3i 15kg 27.06，U5/U7 27.06</li>
+            <li><b>2028</b>：一体前板 + 全新E系列（U系列 28.6 / E系列 28.10）</li>
+          </ul>
+          <h3>波轮路线</h3>
+          <ul class="plain">
+            <li>650 平台泰国转产 26.11</li>
+            <li>530/550 升容降本 + 小R角新外观：530 A1/A3 27.09 · 550 A3 27.07 · 580 A3/E3 27.12</li>
+            <li>2028 全平台小R角 + 650 升容（28.12）</li>
+          </ul>
+        </div>
+        <div>
+          <h3>核心新品时间表</h3>
+          <table>
+            <tr><th>节点</th><th>项目</th></tr>
+            <tr><td>2026.11</td><td>波轮泰国转产</td></tr>
+            <tr class="hl"><td>2027.02~03</td><td>3i 11/13kg · <b>i3t 爆款</b></td></tr>
+            <tr class="hl"><td>2027.04</td><td><b>Tower 高端旗舰</b></td></tr>
+            <tr><td>2027.05</td><td>波轮 OEM 新外观</td></tr>
+            <tr class="hl"><td>2027.06</td><td><b>美式 22kg · 88L(8T)(MT)</b></td></tr>
+            <tr><td>2027.07</td><td>A1/A3 · E3</td></tr>
+            <tr><td>2027.11</td><td>580P 前后控泰国转产</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="imgblock"><img src="/gfk/mea27-img/za-roadmap.png" loading="lazy" alt="南非产品路线原图"><div class="cap"><b>原文图表</b> · 南非产品路线（爆款 i3T 产品 WM 10/11/13kg 27.03 · TD 110L-10kg 27.04 · WD 27.03；欧式88L平台 WM/WD 15kg 27.06；美式大容量 WM 22kg / WD 22/15kg 27.06 Hygiene Guard；当地化专项降本 1i 8014/9014 · 3i 显示 · 1400转 · 干衣机以大打小 —— 全部带产品外观照）<br><b>策略注：</b>新品=布局腰部 i3t（i系列平嵌外观、成本优于3S）打造爆款；降本=当地化配置对 1i/3i 1400转降 15~20 元；干衣机升容以大打小提升成本竞争力。</div></div>
+      <div class="imgblock"><img src="/gfk/mea27-img/roadmap-front.png" loading="lazy" alt="滚筒路线原图"><div class="cap"><b>原文图表</b> · 滚筒产品路线 2026→2027→2028~29（7i/5i/3i/3S → i3t 8-13kg / 1i → U9 人感12kg · E7 AutoDosing 12kg · E5 SimpleUI 13kg · E3 LED无界7-13kg；i3t = Colorful display · Double 525mm door）</div></div>
+      <div class="imgblock"><img src="/gfk/mea27-img/roadmap-tl.png" loading="lazy" alt="波轮路线原图"><div class="cap"><b>原文图表</b> · 波轮产品路线 2026→2027→2028~29（7i 22kg/5i 21kg/3i 21-17kg/3K 15-9kg → E3 22-17kg · A3 15-11kg · A1 11/8kg → U7 22kg 686(29年) · E5 22/19kg；平台 650/610/580P/565/545/530）</div></div>
+    </div>
+  </div>
+
+  <!-- ================= 沙特 ================= -->
+  <div class="panel" id="p-sa">
+    <div class="grid4">
+      <div class="kpi"><div class="v">≈100 万台</div><div class="l">市场容量（OEM 与品牌业务约各 50%）</div></div>
+      <div class="kpi"><div class="v red">40%</div><div class="l">双缸占比（最大品类）</div><div class="l">洗烘14% · 滚筒20% · 波轮18% · 干衣机8%</div></div>
+      <div class="kpi"><div class="v teal">25-28 万台</div><div class="l">海信 OEM 可进入空间</div><div class="small">暂无双缸制造能力</div></div>
+      <div class="kpi"><div class="v">↓ 下滑</div><div class="l">25-26年出货下滑</div><div class="small">产品结构老化 + 地区局势</div></div>
+    </div>
+
+    <div class="card">
+      <h2>市场概况</h2>
+      <ul class="plain">
+        <li>Extra 7月 sell-out：<b>10kg、12~13kg 畅销，15kg 相对强势</b>。</li>
+        <li>滚筒策略：Tower 旗舰对标 LG 定价 7599 SR，首年目标 1500 台（LG 同位 Extra 数据 1790 台），27年6月底投产；3i 大容量 13/15kg 对标美的/海尔 3599（促销 3499），洗烘 27.6 / 单洗 27.8 完成；腰部 3S 8/10/13kg 布局 1299~1899；低端 1i 7/9kg 布局 1499 以下。</li>
+        <li>波轮：畅销价 999~1499 SR，畅销容量 10kg/12kg（定频为主）；26.10 补 12kg 变频 A能效（580平台）；27.8 小R角新外观；530升容→10kg（1099~1199）、550升容→12kg（1499~1599）。</li>
+        <li><b>波轮平台二选一决策</b>：550升容 75L 标称 12kg vs 580 平台标称 13kg（成本差 22 元），仅择其一；650 转泰国后标称升至 19kg。规避 11kg（关税＞10kg 为 15%）。</li>
+      </ul>
+      <h3>品类容量结构（万台）</h3>
+      <table>
+        <tr><th>品类</th><th class="num">双缸</th><th class="num">滚筒</th><th class="num">波轮</th><th class="num">洗烘</th><th class="num">干衣机</th></tr>
+        <tr><td class="num">占比 / 容量</td><td class="num"><b>40% / 40</b></td><td class="num">20% / 20</td><td class="num">18% / 18</td><td class="num">14% / 14</td><td class="num">8% / 8</td></tr>
+      </table>
+      <h3>品牌 vs OEM 销售（1-8月累计，台）</h3>
+      <table>
+        <tr><th>分类</th><th class="num">26年1-8月 品牌</th><th class="num">26年1-8月 OEM</th><th class="num">25年1-8月 品牌</th><th class="num">25年1-8月 OEM</th></tr>
+        <tr><td>洗烘</td><td class="num">4,644</td><td class="num">1,906</td><td class="num">3,759</td><td class="num">8,115</td></tr>
+        <tr><td>滚筒</td><td class="num">4,533</td><td class="num"><b>13,120</b></td><td class="num">5,098</td><td class="num">10,616</td></tr>
+        <tr><td>干衣机</td><td class="num">2,598</td><td class="num">2,544</td><td class="num">162</td><td class="num">2,067</td></tr>
+        <tr><td>波轮</td><td class="num"><b>6,873</b></td><td class="num">2,472</td><td class="num">5,465</td><td class="num">5,965</td></tr>
+        <tr><td>双缸</td><td class="num">1,975</td><td class="num">0</td><td class="num">5,851</td><td class="num">0</td></tr>
+        <tr class="hl"><td>小计</td><td class="num"><b>20,623</b></td><td class="num"><b>20,042</b></td><td class="num">20,335</td><td class="num">26,763</td></tr>
+      </table>
+      <div class="small">海信沙特口径：品牌业务 26年1-8月 20,623 台（同比 +1.4%），OEM 20,042 台（同比 -25.1%）——<b>品牌涨、OEM 大跌</b>；滚筒 OEM 13,120 台为最大单类，双缸 OEM 为 0（无双缸制造能力）。干衣机 162→2,598 台爆发增长。</div>
+      <h3>Extra 7月 sell-out 容量结构（台）</h3>
+      <table>
+        <tr><th>标称容量</th><th class="num">10kg</th><th class="num">7kg</th><th class="num">9kg</th><th class="num">12kg</th><th class="num">13kg</th><th class="num">8kg</th><th class="num">15kg</th><th class="num">7.5kg</th><th class="num">11kg</th><th class="num">16kg</th><th class="num">21kg</th><th class="num">14kg</th></tr>
+        <tr><td class="num">7月销量</td><td class="num"><b>1,455</b></td><td class="num">1,166</td><td class="num">904</td><td class="num">758</td><td class="num">654</td><td class="num">568</td><td class="num">525</td><td class="num">471</td><td class="num">426</td><td class="num">199</td><td class="num">198</td><td class="num">196</td></tr>
+      </table>
+      <div class="small">10kg 为绝对主力；12-13-15kg 中大容量合计 1,937 台已超 7-8kg 合计；21kg+ 高端亦有 198 台。11kg 仅 426 台印证关税规避策略。</div>
+    </div>
+
+    <div class="card">
+      <h2>平台对标</h2>
+      <div class="grid2">
+        <div>
+          <h3>滚筒（代号: kg）</h3>
+          <table>
+            <tr><th>品牌</th><th>平台分布</th></tr>
+            <tr class="hi"><td>Hisense</td><td>43:7 · 54:8/9 · 60:10 · 76:13 · <span class="tag t-new">新 88:15</span> <span class="tag t-new">新 130:22</span></td></tr>
+            <tr><td>Samsung</td><td>46:7 · 56:8 · 61:9 · 72:11 · DD:21(686宽) · 141:24/25(686宽)</td></tr>
+            <tr><td>LG</td><td>42:7 · 55:8/9 · 64:11 · 77:13 · 74:15(650×645×950) · 94:21(700宽)</td></tr>
+            <tr><td>Midea</td><td>53:8 · 64:10.5 · 76:12 · <span class="tag t-new">新 88:15</span></td></tr>
+          </table>
+          <div class="small">海信 7-13kg 布局完整，缺 15kg+；27年补 88L（15kg，标靶美的）+ 美式 22kg（标靶三星），实现 7-22kg。</div>
+        </div>
+        <div>
+          <h3>波轮（平台: 标称kg）</h3>
+          <table>
+            <tr><th>品牌</th><th>平台分布</th></tr>
+            <tr class="hi"><td>Hisense 2026</td><td>530:7 · 550/530升容:9 · 550升容(580泰国):11 · 610:13 · 650:16</td></tr>
+            <tr><td>Samsung</td><td>610:10-13 · 637:14-18 · 700:21-24</td></tr>
+            <tr><td>LG</td><td>540:7-8 · 590:9-12 · 632:13-14 · 651:15-20 · 686:21-24</td></tr>
+            <tr><td>Midea</td><td>540:7 · 565:8 · 601:11/13 · 640:16/18</td></tr>
+            <tr><td>Haier</td><td>520:6 · 550:7 · 580:8-9 · 610:10-11 · 640:12</td></tr>
+          </table>
+          <div class="small">关税限制 ≤10kg（30%关税）未布局；对标缺大容量 686 平台（24kg+）。530 升容后 11kg 对标美的 550（尺寸劣势）；550 升容 13kg 对标 LG 590（略劣势）。</div>
+        </div>
+      </div>
+      <div class="imgblock"><img src="/gfk/mea27-img/sa-tl-competitor.png" loading="lazy" alt="沙特波轮竞品原图"><div class="cap"><b>原文图表</b> · 沙特波轮竞品平台+外观（Samsung 610/637/700 · LG 540/590/632/651/686 · Midea 540/565/601/640 · Haier 520/550/580/610/640 · Hisense 530/550升容/580泰国/610/650）</div></div>
+    </div>
+
+    <div class="card">
+      <h2>价格地图（SR）</h2>
+      <div class="grid2">
+        <div>
+          <h3>滚筒</h3>
+          <table>
+            <tr><th>品牌</th><th>代表型号 · kg · 价格</th></tr>
+            <tr><td>LG</td><td>WFNF1310BST 13kg 6500(渠道份额38%) · 同13kg 3799/3699 · 10.5kg 3099 · 8kg 2559</td></tr>
+            <tr><td>三星</td><td>13/10kg 7999 · 11kg 3199/6699 · 8kg 1849</td></tr>
+            <tr><td>海尔</td><td>15kg 3499 · 10kg 2459/2599/1599 · 8kg 1459</td></tr>
+            <tr><td>美的&东芝</td><td>13.5kg 3109 · 12kg 2759 · 10.5kg 2779 · 8kg 1889</td></tr>
+            <tr class="hi"><td>Hisense</td><td><b>Tower 13/9kg 7599（份额34%）</b> · US-WF 22kg 4800（33%）· <b>3i 15kg 3399（41%）</b> · 3i 13kg 2499 · 3S 10kg 1899/1599 · 8kg 1599/1299 · 1i 7kg 1259</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>波轮</h3>
+          <table>
+            <tr><th>品牌</th><th>代表容量 · 价格</th></tr>
+            <tr><td>LG</td><td>22kg 4699 · 19kg 4099 · 18kg 3199 · 11.5kg 2199 · 8kg 1799（变频为主）</td></tr>
+            <tr><td>三星</td><td>8kg 3099/2399 · 7kg 3149? · 11kg 1999</td></tr>
+            <tr><td>海尔</td><td>14kg 2249 · 11kg 1999 · 10kg 1795/1399 · 8kg 999 · 7kg 999</td></tr>
+            <tr><td>美的</td><td>15kg 2628 · 13kg 1990 · 10kg 1531 · 8kg 1296</td></tr>
+            <tr class="hi"><td>Hisense</td><td>18kg 2499 · 13kg 2089 · 14kg 1599 · 12kg 1599 · 10kg 1599/1499 · 8kg 1399/1099 · <span class="tag t-main">A3 550升容 12kg 1499/1399</span> <span class="tag t-main">A3 530升容 10kg 1099/1199</span></td></tr>
+          </table>
+          <div class="small">注：个别三星型号价格图中清晰度有限，标 "?" 待核对。</div>
+        </div>
+      </div>
+      <div class="imgblock"><img src="/gfk/mea27-img/sa-front-price.png" loading="lazy" alt="沙特滚筒价格地图原图"><div class="cap"><b>原文图表</b> · 沙特前开滚筒价格地图（LG/三星/海尔/美的&东芝/Hisense，含型号外观+SR价格；Hisense Tower 22kg 7999 顶部、3i 13kg 3399 份额41%）</div></div>
+      <div class="imgblock"><img src="/gfk/mea27-img/sa-tl-price.png" loading="lazy" alt="沙特波轮价格地图原图"><div class="cap"><b>原文图表</b> · 沙特波轮价格地图（LG/三星/海尔/美的/Hisense 全型号外观+价格；绿字 A3 变频 10kg 1099/1399、A5 550 变频 14kg 1499-1599 = 27年新品）</div></div>
+      <div class="grid2">
+        <div class="imgblock"><img src="/gfk/mea27-img/sa-tl-hmh-price.png" loading="lazy" alt="波轮HM/H价格图"><div class="cap">波轮 Haier/美的/Hisense 对位（MKI 8/10/12kg 999/1149/1349 · SH125N 18kg 1999 vs 美的 17/19kg 1849/1999）</div></div>
+        <div class="imgblock"><img src="/gfk/mea27-img/sa-front-hmh-price1.jpg" loading="lazy" alt="滚筒HM/H价格图1"><div class="cap">前开滚筒 LG/三星/海尔/美的&东芝/Hisense 对位（Tower/US-WF/3i 全谱系）</div></div>
+      </div>
+      <div class="imgblock"><img src="/gfk/mea27-img/sa-front-hmh-price2.jpg" loading="lazy" alt="滚筒HM/H价格图2"><div class="cap">前开滚筒 Haier GSFL 系/美的 GSFL 系/Hisense WFNS-WDMT-WFMT（海尔 1169~4199 · 美的 1169~3099 · 海信 1599~3899）</div></div>
+    </div>
+
+    <div class="card">
+      <h2>27年规划阵容（沙特）</h2>
+      <table>
+        <tr><th style="width:100px">品类</th><th>2026 现行</th><th>2027 规划（红框=主推）</th></tr>
+        <tr><td>洗烘 WD</td><td>3S 8/10/13+5/8kg(54,60,76) · 3i 13/8(76) · 5S 12/8(76)<span class="tag t-del">下市</span> · 7S 13/8(76)</td><td><span class="tag t-main">3S 8/10/13+5/8kg</span> · 3i 13/8 + 15/10kg(76,88) · Tower 12/10 · <span class="tag t-new">US-WD 22/13kg</span></td></tr>
+        <tr><td>滚筒 WF</td><td>1i 7/9kg(43,54) · 3S 8/10/13(54,60,76) · 3i 13-15(76,88)<span class="tag t-del">26.5/26.12</span> · 5S 12kg<span class="tag t-del">下市</span></td><td><span class="tag t-main">1i 7/9kg</span> <span class="tag t-main">3S 8/10/13kg</span> · 3i 13/15kg(76,88) · <span class="tag t-new">US-WF 22kg</span></td></tr>
+        <tr><td>干衣机 TD</td><td>1W 7.5kg(EXT) · 3S 8kg(100) · 5S 10kg(125)</td><td><span class="tag t-main">1i 7.5kg(102)</span> · 3S 8kg(100) · 3i 10kg(110)（100L→9kg / 110L→10kg 升容）</td></tr>
+        <tr><td>波轮 TL</td><td>3K 8-12kg(530,550,580p) · 5i 14/16/18kg(610,650) · 7i 18kg(650)</td><td><span class="tag t-main">3K 8-12kg</span> <span class="tag t-main">A5 10/12kg(530,550) 27.10 主推</span> · 5i 14/16/18kg(610,650) · 7i 18kg(650)</td></tr>
+        <tr><td>双缸 TT</td><td>WSB.新乐 8/9/10/12/14kg<span class="tag t-del">26.3 下市</span> · WST.韩上 8/10kg</td><td>WSB.新乐 12/14kg · WST.韩上 8/10kg</td></tr>
+      </table>
+      <div class="imgblock"><img src="/gfk/mea27-img/sa-lineup-2627.png" loading="lazy" alt="沙特阵容对比原图"><div class="cap"><b>原文图表</b> · 沙特 2026 vs 2027 全品类阵容（红框=27年主推：3S 8/10/13+5/6/8kg 洗烘、1i 7/9kg · 3S 8/10/13kg 滚筒、1i 7.5kg 干衣机、A5 10/12kg 波轮；Tower 12/10kg 27.4 · US-WD/US-WF 27.6-27.8 年度重磅，含产品外观照）</div></div>
+    </div>
+
+    <div class="card">
+      <h2>OEM 专题：50万台市场，目标头部6客户</h2>
+      <div class="grid2">
+        <div id="c_sa_oem" class="chart sm"></div>
+        <div>
+          <ul class="plain">
+            <li>26年 OEM 整体容量 <b>50 万台</b>；主要中国供应商：美的 8万、海信 5万、海尔 3-4万、创维 2-3万、美菱 2万、新乐。</li>
+            <li>客户约二三十家（IR 市场为主）；聚焦头部 6 家合计约 22 万台，<b>海信可操作空间 12-14 万台</b>。</li>
+            <li>海信暂无双缸制造能力，可进入份额 25-28 万台。</li>
+          </ul>
+          <h3>客户对标</h3>
+          <table>
+            <tr><th>客户</th><th>25年量</th><th>现状与切入</th></tr>
+            <tr><td><b>Al Manea</b> 滚筒</td><td class="num">33,400</td><td>26年 MA 10kg 单洗洗干 + ME 7kg 进入采买；竞品新品主要来自海尔；缺高端彩膜→推 NS；中低端用 MT</td></tr>
+            <tr><td><b>Al Manea</b> 波轮</td><td class="num">24,200</td><td>海信现有 2000 台大波轮；缺 14kg 外观；需 8-12kg 小容积段补位（Tamkeen 波轮已转向海尔美的）</td></tr>
+            <tr><td><b>Tamkeen</b> 滚筒</td><td class="num">27,000</td><td>前期美的深度绑定，25年底转购海尔中端并已销 15kg；以 15kg 大容量切入，MT 10/13/15kg，高端 NS 彩膜标靶海尔</td></tr>
+            <tr><td><b>Tamkeen</b> 波轮</td><td class="num">19,000</td><td>美的老品+海尔前控；8-12kg 用 MK 速赢外观快切，大容量 MA 降本对标美的</td></tr>
+          </table>
+        </div>
+      </div>
+      <h3>OEM 价格地图要点（SR）</h3>
+      <div class="grid2">
+        <table>
+          <tr><th>Al Manea 滚筒</th><th>海尔</th><th>美的</th><th class="num">Hisense（绿=在售）</th></tr>
+          <tr><td>8kg</td><td class="num">1399</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>10kg</td><td class="num">1549/1699</td><td class="num">WFMA 1599</td><td class="num">ME 1549 · NS 1799</td></tr>
+          <tr><td>12kg</td><td class="num">1999</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>13/8kg</td><td class="num">—</td><td class="num">2699</td><td class="num">WDMA 2799 · NS 2099</td></tr>
+          <tr><td>7~9kg</td><td class="num">HMFL8 1629</td><td class="num">WFME 1199</td><td class="num">ME 9kg 1299 · NS 8kg 1699</td></tr>
+        </table>
+        <table>
+          <tr><th>Tamkeen 滚筒</th><th>海尔</th><th>美的</th><th class="num">Hisense</th></tr>
+          <tr><td>15kg</td><td class="num">3699（15/10 4199）</td><td class="num">—</td><td class="num">WFMT 3699 · WDMT 15/10 3899</td></tr>
+          <tr><td>13/8kg</td><td class="num">12/8 2899</td><td class="num">3099</td><td class="num">WDMT 2699</td></tr>
+          <tr><td>10kg</td><td class="num">1899（10/6 2599）</td><td class="num">10.5/7 2849</td><td class="num">WFNS 1799 · WFMT 1599</td></tr>
+          <tr><td>18kg</td><td class="num">—</td><td class="num">—</td><td class="num">WFNS 2599</td></tr>
+          <tr><td>8~6kg</td><td class="num">1469~2249</td><td class="num">1169~1599</td><td class="num">WFNS 8kg 1699? 9kg 1599</td></tr>
+        </table>
+      </div>
+      <div class="grid2">
+        <table>
+          <tr><th>Al Manea 波轮</th><th>海尔/美的</th><th class="num">Hisense</th></tr>
+          <tr><td>18kg</td><td class="num">—</td><td class="num">SH125N 1999</td></tr>
+          <tr><td>19kg / 17kg</td><td class="num">美的 1999 / 1849</td><td class="num">—</td></tr>
+          <tr><td>15kg</td><td class="num">海尔 HMTL 1699</td><td class="num">—</td></tr>
+          <tr><td>10~12kg</td><td class="num">海尔 1119~1402</td><td class="num">MK 12kg 1349 · MK 10kg 1149</td></tr>
+          <tr><td>7~8kg</td><td class="num">海尔 949~1147 / 美的 892~1034</td><td class="num">MK 8kg 949</td></tr>
+        </table>
+        <table>
+          <tr><th>Tamkeen 波轮</th><th>海尔</th><th>美的</th><th class="num">Hisense</th></tr>
+          <tr><td>18kg</td><td class="num">—</td><td class="num">—</td><td class="num">WTMA 2199</td></tr>
+          <tr><td>12~13kg</td><td class="num">1402</td><td class="num">1359</td><td class="num">MK 1349</td></tr>
+          <tr><td>10kg</td><td class="num">1274</td><td class="num">1199</td><td class="num">MK 1149</td></tr>
+          <tr><td>7~8kg</td><td class="num">1147</td><td class="num">892~1034</td><td class="num">MK 999</td></tr>
+        </table>
+      </div>
+      <h3>OEM 客户全景（头部 6 家，含 25 年海信出货）</h3>
+      <table>
+        <tr><th>客户</th><th class="num">数量（万台）</th><th>客户概述</th><th>中国合作商</th><th class="num">25年海信出货（台）</th></tr>
+        <tr class="hi"><td><b>Al Manea</b></td><td class="num">5-6</td><td>沙特综合渠道，白电能力第一，批发强，IR 有众多 dealer；LG/SS/HS/MD/Haier 寄售；OEM 供方美的→海信，25 底采海尔（海尔型号占其滚筒第一）</td><td>海尔、海信、美的</td><td class="num"><b>14,766</b></td></tr>
+        <tr><td><b>Tamkeen</b></td><td class="num">5</td><td>西部白电主渠道，自有品牌 General Supreme，份额约 6%，价格敏感；24 年从海信采 7/9/11 三个 TL 销售缓慢；美的主供 25 年大缩，与海尔关系升温</td><td>海尔、美的</td><td class="num">0</td></tr>
+        <tr><td><b>Super General</b></td><td class="num">4</td><td>沙特西部 IR 品牌商，中部 OR、lulu OEM 定位低端；目前与美的合作，和 Tamkeen 有渠道产品冲突</td><td>美的</td><td class="num">0</td></tr>
+        <tr><td><b>Basic</b></td><td class="num">3</td><td>沙特最大空调代理，聚焦 IR 市场，极度价格敏感无忠诚度；集中在波轮、滚筒产品少</td><td>美的、美菱</td><td class="num">0</td></tr>
+        <tr class="hi"><td><b>Extra</b></td><td class="num">2</td><td>综合渠道 51 门店+近 30 家 panda clix 低端渠道，黑电第一，自有品牌 class pro；24 年采 1.7 万台洗衣机消化缓慢，OEM 库存水位偏高且产品老旧，急需新品</td><td>海信、美菱</td><td class="num">4,496</td></tr>
+        <tr><td><b>Arabian</b></td><td class="num">3</td><td>批发商，聚焦西部 IR（Hail/Qasim/Makka），70 家 dealer（25 家较大）；主要竞争对手 Alessa/Juffali/Basic/Dora；通过旗下四个品牌出同一产品规避价格冲突，风格"短平快"</td><td>海信、美的、美菱</td><td class="num">12,988</td></tr>
+      </table>
+      <div class="small">25 年海信出货前二：Al Manea 14,766 + Arabian 12,988 ≈ 2.8 万台（头部 6 客户基本盘）；Tamkeen / Super General / Basic 三家为 0，是 26-27 年 OEM 攻坚的增量空间。</div>
+      <div class="imgblock"><img src="/gfk/mea27-img/sa-tier-matrix.png" loading="lazy" alt="沙特产品分层矩阵原图"><div class="cap"><b>原文图表</b> · 沙特产品分层矩阵（滚筒/干衣机/洗干/波轮 × Flagship/Advanced/Essential：MA 钛晶灰旗舰 · MT 中端 · ME 入门 · NS 彩膜高端，含产品外观照）</div></div>
+      <h3>OEM 阵容矩阵（Flagship / Advanced / Essential）</h3>
+      <table>
+        <tr><th>层级</th><th>滚筒</th><th>干衣机</th><th>洗干</th><th>波轮</th></tr>
+        <tr><td>Flagship</td><td>MA 10kg/13kg 钛晶灰/白</td><td>NS 9/10/13kg 深色</td><td>MA 9kg 白 · 10kg 钛晶灰（110L平台）</td><td>MA 10/6kg 钛晶灰 · 13/8kg</td></tr>
+        <tr><td>Advanced</td><td>MT 10/13/15kg</td><td>MT 10kg</td><td>MT 15/10 · 13/8 · 10/6kg</td><td>MA 18kg 钛晶灰 · 3i 18kg</td></tr>
+        <tr><td>Essential</td><td>ME 7/9/10kg 钛晶灰/白</td><td>—</td><td>—</td><td>ME 8/10/12kg</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ================= 印度 ================= -->
+  <div class="panel" id="p-in">
+    <div class="grid4">
+      <div class="kpi"><div class="v">1078.4 万台</div><div class="l">27年市场容量预测 · +5.8%</div><div class="c">22.78 亿美金 · +3.4%</div></div>
+      <div class="kpi"><div class="v teal">&lt;50%</div><div class="l">LG+SS 合计份额（2025）</div><div class="c up">双寡头松动 · 多品牌竞争</div></div>
+      <div class="kpi"><div class="v red">22%</div><div class="l">洗衣机渗透率</div><div class="small">农村仅 9% · 城市化 35-40%</div></div>
+      <div class="kpi"><div class="v">7-9kg</div><div class="l">海信切入容量段</div><div class="small">LG 标杆 · WPL 标靶 · 定价低 3~7%</div></div>
+    </div>
+
+    <div class="card">
+      <h2>市场容量与趋势</h2>
+      <div class="grid2">
+        <div id="c_in_vol" class="chart"></div>
+        <div>
+          <h3>27年分品类</h3>
+          <table>
+            <tr><th>品类</th><th class="num">容量（万台）</th><th class="num">金额（亿美金）</th><th class="num">量占比</th><th class="num">额占比</th></tr>
+            <tr><td>双缸 SA</td><td class="num">549.8</td><td class="num">7.55</td><td class="num">51.0%</td><td class="num">33.1%</td></tr>
+            <tr><td>波轮 TL</td><td class="num">350.1</td><td class="num">7.99</td><td class="num">32.5%</td><td class="num">35.1%</td></tr>
+            <tr><td>滚筒 FL</td><td class="num">178.5</td><td class="num">7.24</td><td class="num">16.6%</td><td class="num">31.8%</td></tr>
+          </table>
+          <h3>宏观要点</h3>
+          <ul class="plain">
+            <li>"印度制造"高关税 → <b>本地化生产是成本竞争力前提</b>。</li>
+            <li>健康意识觉醒（除菌需求）；价格敏感 + 高性价比耐造主流；"高配置+低价格"竞争模式。</li>
+            <li>变频/智能渗透率低但中高端心智初成；一键智洗降低使用门槛。</li>
+            <li>差距：对比 SS/LG/Haier，<b>海信当地制造资源薄弱，初步进入，潜力大</b>；机会=以 LG 为标杆、WPL 为标靶从 7-9kg 切入，双缸/波轮借当地成熟制造高举高打，滚筒与当地制造深化合作。</li>
+          </ul>
+        </div>
+      </div>
+      <h3>分品类容量段结构迁移（2023 → 2027）</h3>
+      <div class="grid3">
+        <div id="c_in_kgfl" class="chart sm"></div>
+        <div id="c_in_kgtl" class="chart sm"></div>
+        <div id="c_in_kgsa" class="chart sm"></div>
+      </div>
+      <div class="small">滚筒 11kg+ 从 3%→30%；波轮 8kg 从 17%→43%；双缸 11kg+ 从 7%→16% —— <b>三大品类一致向大容量迁移</b>。</div>
+      <div class="imgblock"><img src="/gfk/mea27-img/in-kg-migration.png" loading="lazy" alt="印度容量迁移原图"><div class="cap"><b>原文图表</b> · 滚筒/波轮/双缸 容量段迁移 2023→2027（滚筒 8kg 34%→37% 企稳+9-11kg 扩张；波轮 7kg 66%→26%、8kg 升至 33%+；双缸 7kg 44%→26%、10-11kg 快速上升）</div></div>
+      <div class="imgblock"><img src="/gfk/mea27-img/in-income.png" loading="lazy" alt="印度收入结构原图"><div class="cap"><b>原文图表</b> · 印度家庭收入结构变迁（219M→293M→386M 户；Upper-Mid 7%→21%→<b>44%</b>，2030F 中产主导经济 = 洗衣机渗透率核心驱动）</div></div>
+    </div>
+
+    <div class="card">
+      <h2>品牌与渠道</h2>
+      <div class="grid2">
+        <div>
+          <h3>品牌格局</h3>
+          <ul class="plain">
+            <li>双寡头（LG、SS）统治力减弱：至 2025 年 <b>LG+SS 份额低于 50%</b>，转向多品牌竞争。</li>
+            <li>腰部稳固：惠而浦（中端波轮）、IFB（本土中高端滚筒）锚定细分市场。</li>
+            <li>快速增长：Beko、海尔，定位相似、贴"高性价比"标签。</li>
+          </ul>
+          <div class="small">注：原文品牌格局图（image 31）文件损坏不可读，此处为正文结论。</div>
+        </div>
+        <div>
+          <h3>渠道结构（2022→2027）与打法</h3>
+          <div id="c_in_chan" class="chart sm"></div>
+          <table>
+            <tr><th>品牌渠道结构</th><th class="num">线上</th><th class="num">经销商/独立</th><th class="num">连锁</th></tr>
+            <tr><td>LG</td><td class="num">15%</td><td class="num">55%</td><td class="num">30%</td></tr>
+            <tr><td>SS（三星）</td><td class="num">30%</td><td class="num">35%</td><td class="num">35%</td></tr>
+            <tr class="hi"><td>Hisense 计划</td><td class="num"><b>35%</b></td><td class="num">30%</td><td class="num">35%</td></tr>
+          </table>
+          <div class="small">分销商适合高性价比走量；电商大促驱动、适合入门走量+线上专供中高端溢价；卖场集中一二线、适合中高端高毛利。<b>海信计划线上占比 35%，高于 LG/SS 现状</b>。</div>
+          <div class="imgblock"><img src="/gfk/mea27-img/in-income.png" loading="lazy" alt="渠道结构原图"><div class="cap"><b>原文图表</b> · 渠道结构变迁 2022→2027（连锁 22%→35% · 经销商 44%→37% · 线上 23%→28%）及 LG/SS/Hisense 渠道对比</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>平台对标</h2>
+      <div class="grid3">
+        <div>
+          <h3>波轮</h3>
+          <table>
+            <tr><th>品牌</th><th>平台（型号数最多）</th></tr>
+            <tr><td>LG</td><td>540（9-11kg 集中，540 为主 + 565）</td></tr>
+            <tr><td>三星</td><td>540（8kg 型号最多）</td></tr>
+            <tr><td>惠而浦</td><td>540/550/570 三平台（7、7.5kg 最多）</td></tr>
+            <tr><td>海尔</td><td>520/550（8、9kg）</td></tr>
+            <tr class="hi"><td>海信</td><td>542（WT530，8kg 最多）+ 605（WT550）</td></tr>
+          </table>
+          <div class="small">主推：惠而浦 7&7.5kg/540&550 · 三星 8kg/540 · LG 9-11kg/540&565 · 海尔 8&9kg/550 · 海信 8kg/542。平台能力排序：LG＞Haier＞SS≈海信D外购＞惠而浦（自制：LG＞海信自制＞Haier＞SS＞惠而浦）。</div>
+        </div>
+        <div>
+          <h3>双缸</h3>
+          <table>
+            <tr><th>品牌</th><th>平台（最多型号）</th></tr>
+            <tr><td>LG</td><td>810W/795W/905W（8kg）</td></tr>
+            <tr><td>三星</td><td>750W/830W/915W（7kg）</td></tr>
+            <tr><td>惠而浦</td><td>795W/840W（7.5kg）</td></tr>
+            <tr><td>BEKO</td><td>5 平台 745-920W（7kg）</td></tr>
+            <tr><td>海尔</td><td>780W~905W 4 平台</td></tr>
+            <tr class="hi"><td>海信</td><td>830W（7/7.5kg 型号也多）+ 875W + 915W（主推 8kg/830）</td></tr>
+          </table>
+          <div class="small"><b>分歧点：7~7.5kg 产品平台选择 750 还是 830</b>（方案 vs 优化后）。除 Haier 较激进外各品牌布局相当；海尔同容量尺寸最小、平台能力最强。</div>
+        </div>
+        <div>
+          <h3>滚筒（宽×深 mm）</h3>
+          <table>
+            <tr><th>品牌</th><th>宽</th><th>深（7→12/13kg）</th></tr>
+            <tr><td>LG</td><td>600</td><td>440 · 550 · 550 · 565 · — · 565</td></tr>
+            <tr><td>SS</td><td>600</td><td>440 · 550 · 550 · — · — · 600</td></tr>
+            <tr><td>惠而浦</td><td>600</td><td>600 · 600 · 600</td></tr>
+            <tr><td>海尔</td><td>600</td><td>— · 500 · 500 · 600 · — · 620</td></tr>
+            <tr class="hi"><td>海信</td><td>600</td><td>— · 540 · 540 · 540(Pending) · 610 · 610 · 610(Pending)</td></tr>
+          </table>
+          <div class="small">海信平台为主流成熟平台，能力与 SS 相当、弱于 LG/Haier；10kg 与 13kg 深度 Pending。</div>
+        </div>
+      </div>
+      <div class="grid3">
+        <div class="imgblock"><img src="/gfk/mea27-img/in-tl-platform.png" loading="lazy" alt="印度波轮平台原图"><div class="cap"><b>波轮</b> · 平台及型号分布（LG 540 · 三星 540/610 · 惠而浦 570 · 海尔 520/550 · 海信 542/605，底部=各品牌主推结论）</div></div>
+        <div class="imgblock"><img src="/gfk/mea27-img/in-tt-platform.png" loading="lazy" alt="印度双缸平台原图"><div class="cap"><b>双缸</b> · 平台及型号分布（LG 810/905W · 三星 750/830/915W · 惠而浦 795/840W · BEKO 5平台 · 海尔 4平台 · 海信 830/875/915W）</div></div>
+        <div class="imgblock"><img src="/gfk/mea27-img/in-front-platform.png" loading="lazy" alt="印度滚筒平台原图"><div class="cap"><b>滚筒</b> · 宽×深平台分布（LG/SS 600宽 440-600深 · 海尔 500-620 · 海信 540/610 深，10kg/13kg Pending）</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>价格地图（INR）</h2>
+      <div class="grid3">
+        <div>
+          <h3>波轮（13790~39029）</h3>
+          <table>
+            <tr><th>品牌</th><th>价格带（主力平台）</th></tr>
+            <tr><td>LG</td><td class="num">19900~38990（540/565）</td></tr>
+            <tr><td>三星</td><td class="num">19200~32990（540）</td></tr>
+            <tr><td>惠而浦</td><td class="num">16740~27390（540/570）</td></tr>
+            <tr><td>海尔</td><td class="num">13790~28890（520/550）</td></tr>
+            <tr class="hi"><td>海信 W7L</td><td class="num">19400~44000（540）：7kg 19400 · 7.5kg 19700 · 8kg 22000 · 10kg 41500 · 12kg 44000</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>双缸（9790~20990）</h3>
+          <table>
+            <tr><th>品牌</th><th>价格带（平台）</th></tr>
+            <tr><td>LG</td><td class="num">14190~20690（810/905）</td></tr>
+            <tr><td>三星</td><td class="num">9990~19910（750/830/915）</td></tr>
+            <tr><td>惠而浦</td><td class="num">9790~15290（795/840）</td></tr>
+            <tr><td>海尔</td><td class="num">12190~22300（780~905）</td></tr>
+            <tr class="hi"><td>海信</td><td class="num">12190~22300（830/875/915，优化后）</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>滚筒（24490~68440）</h3>
+          <table>
+            <tr><th>品牌</th><th>定位</th></tr>
+            <tr><td>LG / 三星</td><td class="num">标杆 · 主力 25000~51000</td></tr>
+            <tr><td>IFB / 惠而浦</td><td class="num">32000~50000</td></tr>
+            <tr><td>海尔</td><td class="num">标靶 · 18990~39490</td></tr>
+            <tr class="hi"><td>海信</td><td class="num">约 15000~55000（图中多型号，个别读数待核对）</td></tr>
+          </table>
+        </div>
+      </div>
+      <h3>定价策略</h3>
+      <ul class="plain">
+        <li><b>波轮</b>：以 Whirlpool 为标靶、稍高于 WLP 定价切入；线上优先，7~9kg 为主、黑色为主；对标 SS/LG <b>低 3~7%</b>、价格指数＞1；卖点=高端黑/多彩配色/电镀旋钮/多重滚动筋/大线屑过滤器/玻璃阻尼门盖。</li>
+        <li><b>双缸</b>：线上线下同步，约 23 SKU；7~9kg 为主，10kg+ 标配加热；同样对标 SS/LG 低 3~7%；卖点=加热杀菌/变频节能/玻璃后控。</li>
+        <li><b>滚筒</b>：三星、LG 为标杆，海尔为标靶；1i 基础款走电商+批发，3i 中高端走电商+线下连锁。</li>
+      </ul>
+      <div class="imgblock"><img src="/gfk/mea27-img/in-tl-price.png" loading="lazy" alt="印度波轮价格地图原图"><div class="cap"><b>原文图表</b> · 印度波轮价格地图（LG/三星/Whirlpool/海尔/Hisense 全型号外观+INR 价格+平台标注 540/550/565/570，红H=海信）</div></div>
+      <div class="imgblock"><img src="/gfk/mea27-img/in-front-price.png" loading="lazy" alt="印度滚筒价格地图原图"><div class="cap"><b>原文图表</b> · 印度滚筒价格地图（LG/三星/IFB/Whirlpool/海尔/Hisense 全品牌 ₹30000~50000 全谱系，密度高、个别读数待核对）</div></div>
+      <div class="imgblock"><img src="/gfk/mea27-img/in-tt-price.png" loading="lazy" alt="印度双缸价格地图原图"><div class="cap"><b>原文图表</b> · 印度双缸价格地图（₹10000~22500；右侧 = 印度公司方案 vs 优化后对比；<b>黄底标注分歧点：7~7.5kg 产品平台选择 750/830</b>）</div></div>
+    </div>
+
+    <div class="card">
+      <h2>27年规划阵容（印度）</h2>
+      <table>
+        <tr><th style="width:100px">品类</th><th>2026 现行</th><th>2027 规划（红字=新增）</th></tr>
+        <tr><td>滚筒 WF</td><td>1i 8/9kg(54) · 3i 8/9kg(54)</td><td>1i 8/9/<b style="color:#c0392b">11/13</b>kg(54,66) · 3i 8/9/<b style="color:#c0392b">11/13</b>kg(54,66)</td></tr>
+        <tr><td>波轮 WT</td><td>J3 7/7.5kg(542-47) · H3 7/7.5/8/8.5/9/10/12kg(542-47,51,605-63,70)</td><td>与 2026 相同（本地整机采购→逐步自制）</td></tr>
+        <tr><td>双缸 WS</td><td>P-Lid 7/7.5/8/9kg(830) · G-Lid 8/8.5/9/11/12/14kg(830,875,915)</td><td>P-Lid 7/7.5/8/9kg(<b style="color:#c0392b">780</b>,830) · G-Lid 8~14kg(830,875,915)</td></tr>
+      </table>
+      <div class="small">WT 印度为本地整机采购模式（平台竞争力受供方影响），后期转当地自制；WF 为当地制造。</div>
+      <div class="imgblock"><img src="/gfk/mea27-img/in-lineup-2627.png" loading="lazy" alt="印度阵容对比原图"><div class="cap"><b>原文图表</b> · 印度 2026 vs 2027 阵容（WF 滚筒 1i/3i 8,9kg→+11/13kg(54,66)；WT 波轮 J3/H3 7-12kg(542-47,51,605-63,70)；WS 双缸 P-Lid/G-Lid 830/875/915→P-Lid 加 780 平台，红字=27年新增/变更）</div></div>
+    </div>
+  </div>
+
+  <!-- ================= 新品大纲 ================= -->
+  <div class="panel" id="p-np">
+    <div class="card">
+      <h2>27年中东非新品规划大纲</h2>
+      <div class="grid3">
+        <div class="kpi"><div class="v red">98 项</div><div class="l">整体新品项目（含印度和迪拜转口 40 项）</div></div>
+        <div class="kpi"><div class="v teal">9·17</div><div class="l">明确需求项目立项截止</div><div class="small">均与研发排期完成</div></div>
+        <div class="kpi"><div class="v">5 项待定</div><div class="l">转口/印度/双缸/沙特OEM</div></div>
+      </div>
+      <table style="margin-top:12px">
+        <tr><th>事项</th><th>结论时点</th></tr>
+        <tr><td>迪拜转口 M 客户</td><td>2026年9月底</td></tr>
+        <tr><td>沙特 OEM ME / MT 系列</td><td>2026年10月</td></tr>
+        <tr><td>迪拜转口 Z 客户</td><td>2026年10月底</td></tr>
+        <tr><td>印度滚筒</td><td>2026年11月</td></tr>
+        <tr><td>双缸</td><td>2026年12月</td></tr>
+      </table>
+      <div class="small" style="margin-top:8px">关联外链：<a href="https://hisense.feishu.cn/wiki/EakwwO6Bwi40s4k8xegcv7AgnWf?from=from_copylink" target="_blank">2027年中东非规划大纲（飞书 Wiki）</a> · <a href="https://hisense.feishu.cn/wiki/Dn9Nwm2FgiV8vYk2TRoclwZXnLg?from=from_copylink&sheet=U3nj6o" target="_blank">中东非大区核心国家上下市表（飞书 Wiki）</a></div>
+    </div>
+
+    <div class="card">
+      <h2>双缸 WS 全 lineup（5→24kg，含供方）</h2>
+      <div class="imgblock"><img src="/gfk/mea27-img/ws-lineup.png" loading="lazy" alt="双缸全lineup原图"><div class="cap"><b>原文图表</b> · 双缸 5kg韩电 · 7kg新乐 · 7.5kg韩电 · 8kg韩上 · 9kg韩电 · 10kg新乐/韩上 · 11kg韩电 · 12kg新乐 · 14kg韩电/新乐 · 16kg韩上/韩电/新乐 · 20kg韩上 · 24kg新乐（供方全景：新乐/韩电/韩上三分）</div></div>
+      <div class="small">双缸 12 个容量段全覆盖，供方三角（新乐/韩电/韩上）分布均衡；南非 16kg 26.11 切韩电后形成"新乐+韩电+韩上"三供方互备格局。</div>
+    </div>
+  </div>
+
+<script>
+(function(){
+  // Tabs
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('on')});
+      document.querySelectorAll('.panel').forEach(function(x){x.classList.remove('on')});
+      b.classList.add('on');
+      document.getElementById('p-'+b.dataset.t).classList.add('on');
+      window.dispatchEvent(new Event('resize'));
+    });
+  });
+
+  var AX = {axisLine:{lineStyle:{color:'#c9d2e3'}}, axisLabel:{color:'#5a6577',fontSize:11}};
+  function base(o){
+    o = o||{};
+    o.textStyle = {fontFamily:'Microsoft YaHei'};
+    o.tooltip = o.tooltip || {trigger:'axis'};
+    o.grid = o.grid || {left:50,right:24,top:40,bottom:36};
+    return o;
+  }
+  var C = {defy:'#0e9488', his:'#e6212b', sam:'#123a7a', lg:'#d9822b', mid:'#8a93a5', blue:'#2456d6', br:'#7c5cbf'};
+  var chartIds = ['c_ov_mix','c_ov_size','c_za_total','c_za_cat','c_za_tt','c_za_wfprice','c_za_wfkg','c_sa_oem','c_in_vol','c_in_kgfl','c_in_kgtl','c_in_kgsa','c_in_chan'];
+  var charts = {};
+
+  // 总览：品类结构
+  charts.c_ov_mix = echarts.init(document.getElementById('c_ov_mix')).setOption(base({
+    tooltip:{trigger:'item',formatter:'{b}: {c}%'},
+    series:[{type:'pie',radius:['40%','68%'],center:['50%','52%'],
+      data:[{name:'滚筒',value:35},{name:'双缸',value:34},{name:'波轮',value:23},{name:'单缸',value:6},{name:'洗烘',value:3}],
+      label:{formatter:'{b}\n{d}%'.replace('{d}','{c}'),color:'#5a6577',fontSize:12},
+      itemStyle:{borderColor:'#fff',borderWidth:2},
+      color:[C.blue,C.defy,C.his,C.mid,'#b26a00']}]
+  }));
+
+  // 总览：三国容量
+  charts.c_ov_size = echarts.init(document.getElementById('c_ov_size')).setOption(base({
+    tooltip:{trigger:'axis',valueFormatter:function(v){return v+' 万台'}},
+    xAxis:Object.assign({type:'category',data:['南非','沙特','印度']},AX),
+    yAxis:Object.assign({type:'value',name:'万台'},AX),
+    series:[{type:'bar',data:[72,100,1078.4],barWidth:'40%',
+      itemStyle:{color:C.blue,borderRadius:[4,4,0,0]},
+      label:{show:true,position:'top',color:C.blue,fontWeight:600,
+        formatter:function(p){return p.value>=1000?'1,078':p.value}}}]
+  }));
+
+  // 南非：整体品牌份额
+  charts.c_za_total = echarts.init(document.getElementById('c_za_total')).setOption(base({
+    title:{text:'整体份额 Jan-May（%）',left:'center',textStyle:{fontSize:12,color:'#1c2433'}},
+    legend:{top:24,textStyle:{fontSize:10}}, grid:{left:40,right:16,top:56,bottom:28},
+    xAxis:Object.assign({type:'category',data:['DEFY','Hisense','SAMSUNG','LG','MIDEA','BENNENTT']},AX),
+    yAxis:Object.assign({type:'value',max:50},AX),
+    series:[
+      {name:'Jan-May25',type:'bar',data:[43.2,20.5,15.3,6.3,6.2,2.8],itemStyle:{color:'#b9c6e8'},barWidth:'30%'},
+      {name:'Jan-May26',type:'bar',data:[40.3,23.1,11.8,5.9,6.4,4.1],itemStyle:{color:C.his},barWidth:'30%'}
+    ]
+  }));
+
+  // 南非：分品类我司 vs DEFY
+  charts.c_za_cat = echarts.init(document.getElementById('c_za_cat')).setOption(base({
+    title:{text:'Hisense vs DEFY 分品类（Jan-May26 %）',left:'center',textStyle:{fontSize:12,color:'#1c2433'}},
+    legend:{top:24,textStyle:{fontSize:10}}, grid:{left:40,right:16,top:56,bottom:34},
+    xAxis:Object.assign({type:'category',data:['波轮','滚筒','洗烘','双缸'],axisLabel:{color:'#5a6577',fontSize:10,interval:0}},AX),
+    yAxis:Object.assign({type:'value',max:70},AX),
+    series:[
+      {name:'Hisense 25',type:'bar',data:[24.8,19.8,29.9,15.1],itemStyle:{color:'#f5b5b9'},barWidth:'22%'},
+      {name:'Hisense 26',type:'bar',data:[29.9,18.8,23.7,19.1],itemStyle:{color:C.his},barWidth:'22%'},
+      {name:'DEFY 26',type:'bar',data:[30.0,28.9,10.5,60.2],itemStyle:{color:C.defy},barWidth:'22%'}
+    ]
+  }));
+
+  // 南非：双缸月度
+  charts.c_za_tt = echarts.init(document.getElementById('c_za_tt')).setOption(base({
+    title:{text:'双缸月度份额（MAT25-May26, %）',left:'center',textStyle:{fontSize:12,color:'#1c2433'}},
+    legend:{top:24,textStyle:{fontSize:10}}, grid:{left:40,right:20,top:56,bottom:44},
+    xAxis:Object.assign({type:'category',data:['5月','6月','7月','8月','9月','10月','11月','12月','1月','2月','3月','4月','5月'],axisLabel:{color:'#5a6577',fontSize:10,rotate:30}},AX),
+    yAxis:Object.assign({type:'value',max:80},AX),
+    series:[
+      {name:'DEFY',type:'line',smooth:true,data:[66.2,68.8,72.4,70.9,67.4,69.2,64.7,59.5,60.1,56.3,60,62.7,60.8],itemStyle:{color:C.defy},lineStyle:{width:2.5}},
+      {name:'Hisense',type:'line',smooth:true,data:[20.3,18.2,13,20.1,23.2,20,27.2,23.5,15.2,20,18.7,17.6,22.7],itemStyle:{color:C.his},lineStyle:{width:2.5},areaStyle:{opacity:.08,color:C.his}}
+    ],
+    tooltip:{trigger:'axis'}
+  }));
+
+  // 南非：滚筒价格段
+  charts.c_za_wfprice = echarts.init(document.getElementById('c_za_wfprice')).setOption(base({
+    tooltip:{trigger:'axis',valueFormatter:function(v){return v+'%'}},
+    xAxis:Object.assign({type:'category',data:['≤2999','3999','4999','5999','6999','7999','≥9999'],axisLabel:{fontSize:10,color:'#5a6577'}},AX),
+    yAxis:Object.assign({type:'value'},AX),
+    series:[{type:'bar',data:[16.5,17.2,25.7,12.3,9.2,13.9,5.2],barWidth:'46%',
+      itemStyle:{color:C.blue,borderRadius:[3,3,0,0]},
+      label:{show:true,position:'top',fontSize:10,color:C.blue,formatter:'{c}%'},
+      markPoint:{}}]
+  }));
+
+  // 南非：滚筒KG结构
+  charts.c_za_wfkg = echarts.init(document.getElementById('c_za_wfkg')).setOption(base({
+    legend:{top:0,textStyle:{fontSize:10}}, grid:{left:44,right:16,top:44,bottom:28},
+    xAxis:Object.assign({type:'category',data:['6-7kg','7-8kg','8-9kg','9-10kg','10-11kg','≥11kg'],axisLabel:{fontSize:10,color:'#5a6577'}},AX),
+    yAxis:Object.assign({type:'value',max:100},AX),
+    series:[
+      {name:'MAT25',type:'bar',stack:'a',data:[14.2,21.5,16.7,28.0,5.7,12.6],itemStyle:{color:'#b9c6e8'},barWidth:'34%'},
+      {name:'MAT26',type:'bar',stack:'b',data:[18.9,15.8,19.2,23.8,5.4,13.8],itemStyle:{color:C.his},barWidth:'34%'}
+    ],
+    tooltip:{trigger:'axis',valueFormatter:function(v){return v+'%'}}
+  }));
+
+  // 沙特：OEM 供应商
+  charts.c_sa_oem = echarts.init(document.getElementById('c_sa_oem')).setOption(base({
+    title:{text:'沙特 OEM 中国供应商格局（万台/年）',left:'center',textStyle:{fontSize:12,color:'#1c2433'}},
+    xAxis:Object.assign({type:'category',data:['美的','海信','海尔','创维','美菱'],axisLabel:{fontSize:10,color:'#5a6577'}},AX),
+    yAxis:Object.assign({type:'value',name:'万台'},AX),
+    series:[{type:'bar',data:[{value:8,itemStyle:{color:'#b9c6e8'}},{value:5,itemStyle:{color:C.his}},{value:3.5,itemStyle:{color:'#b9c6e8'}},{value:2.5,itemStyle:{color:'#b9c6e8'}},{value:2,itemStyle:{color:'#b9c6e8'}}],
+      barWidth:'46%',label:{show:true,position:'top',fontSize:10,color:'#5a6577'}}],
+    tooltip:{trigger:'axis',valueFormatter:function(v){return v+' 万台'}}
+  }));
+
+  // 印度：容量趋势
+  charts.c_in_vol = echarts.init(document.getElementById('c_in_vol')).setOption(base({
+    title:{text:'印度市场容量趋势（千台）',left:'center',textStyle:{fontSize:12,color:'#1c2433'}},
+    legend:{top:24,textStyle:{fontSize:10}}, grid:{left:50,right:16,top:56,bottom:28},
+    xAxis:Object.assign({type:'category',data:['2023','2024','2025','2026','2027E']},AX),
+    yAxis:Object.assign({type:'value'},AX),
+    series:[
+      {name:'双缸 SA',type:'bar',stack:'v',data:[4454,4651,4987,5236,5498],itemStyle:{color:C.defy},barWidth:'44%'},
+      {name:'波轮 TL',type:'bar',stack:'v',data:[3007,3033,3146,3303,3501],itemStyle:{color:C.his},barWidth:'44%'},
+      {name:'滚筒 FL',type:'bar',stack:'v',data:[1449,1447,1559,1653,1785],itemStyle:{color:C.blue},barWidth:'44%'},
+      {name:'合计增速',type:'line',data:[null,2.5,6.1,5.2,5.8],yAxisIndex:0,itemStyle:{color:'#b26a00'},lineStyle:{type:'dashed',width:1.5},symbolSize:5,
+       tooltip:{valueFormatter:function(v){return v? v+'%':'-'}}},
+      {name:'合计',type:'bar',stack:'v',data:[0,0,0,0,0],tooltip:{show:false},label:{show:false}}
+    ],
+    tooltip:{trigger:'axis',formatter:function(ps){
+      var tot={2023:8910,2024:9131,2025:9692,2026:10192,'2027E':10784};
+      var s = ps[0].axisValue+' · 合计 '+ (tot[ps[0].axisValue]||'').toLocaleString() +' 千台<br>';
+      ps.forEach(function(p){ if(p.seriesName!=='合计' && p.value!=null) s += p.marker+p.seriesName+' '+p.value.toLocaleString()+'<br>';});
+      return s;
+    }}
+  }));
+
+  // 印度：kg 趋势
+  function kgLine(id,title,cats,s7,s8,s9,s10,s11){
+    echarts.init(document.getElementById(id)).setOption(base({
+      title:{text:title,left:'center',textStyle:{fontSize:12,color:'#1c2433'}},
+      legend:{top:22,textStyle:{fontSize:9},itemWidth:14}, grid:{left:38,right:12,top:52,bottom:26},
+      xAxis:Object.assign({type:'category',data:cats,axisLabel:{fontSize:10,color:'#5a6577'}},AX),
+      yAxis:Object.assign({type:'value',max:70,axisLabel:{formatter:'{value}%'}},AX),
+      series:[
+        {name:'7kg',type:'line',data:s7,itemStyle:{color:'#b26a00'},lineStyle:{width:2}},
+        {name:'8kg',type:'line',data:s8,itemStyle:{color:C.blue},lineStyle:{width:2}},
+        {name:'9kg',type:'line',data:s9,itemStyle:{color:C.his},lineStyle:{width:2}},
+        {name:'10kg',type:'line',data:s10,itemStyle:{color:C.defy},lineStyle:{width:1.5}},
+        {name:'11kg+',type:'line',data:s11,itemStyle:{color:'#123a7a'},lineStyle:{width:2,type:'dashed'}}
+      ],
+      tooltip:{trigger:'axis',valueFormatter:function(v){return v==null?'-':v+'%'}}
+    }));
+  }
+  var yrs=['2023','2024','2025','2026','2027E'];
+  kgLine('c_in_kgfl','滚筒容量结构（%）',yrs,[40,32,22,14,9],[34,32,31,35,37],[17,21,22,17,13],[6,7,9,10,11],[3,8,16,23,30]);
+  kgLine('c_in_kgtl','波轮容量结构（%）',yrs,[66,54,45,36,29],[17,26,33,39,43],[7,10,10,11,11],[2,7,8,9,11],[2,2,4,5,6]);
+  kgLine('c_in_kgsa','双缸容量结构（%）',yrs,[44,39,34,30,26],[35,35,34,33,32],[9,9,12,13,14],[5,7,9,11,13],[7,9,11,13,16]);
+
+  // 印度：渠道
+  charts.c_in_chan = echarts.init(document.getElementById('c_in_chan')).setOption(base({
+    title:{text:'渠道占比迁移（2022 vs 2027E, %）',left:'center',textStyle:{fontSize:12,color:'#1c2433'}},
+    legend:{top:22,textStyle:{fontSize:10}}, grid:{left:40,right:16,top:52,bottom:26},
+    xAxis:Object.assign({type:'category',data:['2022','2027E']},AX),
+    yAxis:Object.assign({type:'value',max:60},AX),
+    series:[
+      {name:'分销商',type:'bar',stack:'c',data:[44,37],itemStyle:{color:C.blue},barWidth:'40%',label:{show:true,position:'inside',color:'#fff',fontSize:10}},
+      {name:'线上',type:'bar',stack:'c',data:[33,35],itemStyle:{color:C.his},barWidth:'40%',label:{show:true,position:'inside',color:'#fff',fontSize:10}},
+      {name:'卖场',type:'bar',stack:'c',data:[22,28],itemStyle:{color:C.defy},barWidth:'40%',label:{show:true,position:'inside',color:'#fff',fontSize:10}}
+    ],
+    tooltip:{trigger:'axis',valueFormatter:function(v){return v+'%'}}
+  }));
+
+  window.addEventListener('resize', function(){
+    Object.keys(charts).forEach(function(k){
+      try{ echarts.getInstanceByDom(document.getElementById(k)) && echarts.getInstanceByDom(document.getElementById(k)).resize(); }catch(e){}
+    });
+    ['c_in_kgfl','c_in_kgtl','c_in_kgsa'].forEach(function(id){
+      var inst = echarts.getInstanceByDom(document.getElementById(id));
+      if(inst) inst.resize();
+    });
+  });
+})();
+</script>
+</div>
+</body>
+</html>

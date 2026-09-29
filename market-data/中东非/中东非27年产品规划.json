@@ -1,0 +1,33 @@
+{
+  "region": "中东非",
+  "country": "27年产品规划",
+  "market": "洗衣机 Washers（区域产品规划）",
+  "sourceType": "内部规划",
+  "source": "《27年中东非区域产品规划》（Leo 2026-09 提供归档，2026-09-14 PDF 50图全读增强：16国全景/生产基地/价格地图/新品贴图）；引用：欧睿2025、GfK Panelmarket South Africa、Saudi Extra 7月 sell-out",
+  "period": "2027规划",
+  "statWindow": "大盘=欧睿2025（不含印度）；南非份额=GfK Jan-May25 vs Jan-May26；印度=欧睿2027预测；价格币种 ZAR/SR/INR",
+  "reportUrl": "/gfk/mea27-plan.html",
+  "updated": "2026-09-14",
+  "headline": "27年挑战 sell-in 150万台（Top3→Top1）；滚筒补15/22kg+降本、波轮升容+变频、双缸下排水应对尼日利亚LG转移；新品98项9·17立项。",
+  "kpis": [
+    { "label": "中东非大盘（欧睿2025）", "value": "854 万台", "usd": "", "change": "" },
+    { "label": "27年 sell-in 挑战目标", "value": "150 万台", "usd": "", "change": "26年预测100万 · Top3→Top1" },
+    { "label": "27年新品项目", "value": "98 项", "usd": "", "change": "9月17日前立项完成" },
+    { "label": "南非容量", "value": "≈72 万台", "usd": "", "change": "+14.6% · Hisense 整体 23.1% 第2" },
+    { "label": "沙特容量", "value": "≈100 万台", "usd": "", "change": "双缸40% · OEM占50%" },
+    { "label": "印度容量（27E）", "value": "1,078.4 万台", "usd": "22.78亿美金", "change": "+5.8% · 渗透率仅22%" }
+  ],
+  "insights": [
+    { "n": 1, "title": "南非双缸：差距在渠道不在产品", "detail": "GfK Jan-May26 双缸 DEFY 60.2% vs Hisense 19.1%；剔除Defy 9kg后仍差22.7pp。家具专营FS占双缸市场76.3%，我司未进Lewis、Game线上未进，是主要抓手。" },
+    { "n": 2, "title": "南非波轮登顶、滚筒承压", "detail": "波轮 29.9% 升至第1（Samsung 15.1%大跌）；滚筒 18.8% 同比下滑，13kg以上平台断层，27年以88L 15kg+美式22kg补全6-22kg阵容。" },
+    { "n": 3, "title": "沙特：波轮平台二选一待决策", "detail": "550升容标称12kg vs 580标称13kg（成本差22元）仅择其一；规避11kg高关税段；OEM可操作空间12-14万台聚焦头部6客户（Al Manea/Tamkeen等）。" },
+    { "n": 4, "title": "印度：大容量迁移+双寡头松动", "detail": "滚筒11kg+份额 3%→30%（23→27E）、波轮8kg 17%→43%；LG+SS份额2025跌破50%；海信计划线上占比35%高于LG/SS现状，以7-9kg切入、定价低3~7%。" },
+    { "n": 5, "title": "供应链切换", "detail": "南非双缸16kg 26年11月切换韩电供方；波轮650平台26年11月转产泰国；双缸全球一体化外观+尼日利亚下排水布局应对LG供应链转移。" }
+  ],
+  "suggestions": [
+    { "id": "mea27-plan-p0-1", "level": "P0", "title": "盯9·17立项与5项待定结论", "detail": "98项新品9月17日前立项；迪拜转口M客户9月底、沙特OEM ME/MT 10月、Z客户10月底、印度滚筒11月、双缸12月——按月跟踪结论并回填上下市表。" },
+    { "id": "mea27-plan-p0-2", "level": "P0", "title": "南非双缸渠道突破", "detail": "推动Lewis进场与Game线上开店，OK渠道4出样（14/16/20/24kg）；16kg韩电切换（26.11）锁定成本竞争力。" },
+    { "id": "mea27-plan-p1-1", "level": "P1", "title": "沙特波轮平台决策", "detail": "550升容12kg vs 580标称13kg二选一（成本差22元），需在26Q4前定案以保27年排产。" },
+    { "id": "mea27-plan-p1-2", "level": "P1", "title": "印度本地化与线上打法", "detail": "波轮标靶Whirlpool稍高定价、线上优先7-9kg；滚筒与当地制造深化合作（11月有进一步进展）；双缸7-7.5kg平台选750/830待定。" }
+  ]
+}

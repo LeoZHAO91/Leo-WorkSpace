@@ -1,0 +1,37 @@
+{
+  "region": "东盟",
+  "country": "马来",
+  "market": "洗衣机 Washers",
+  "sourceType": "GfK",
+  "source": "GfK 马来 Panelmarket 全品类报告 WM 段（Online+Offline）, May 2026, PRJ 79311。注：非 WM 专项报告，仅 WM 大盘趋势与渠道品牌，量化精度受限",
+  "period": "2026-05",
+  "statWindow": "Jan25-May25 vs Jan26-May26 对比；月度趋势 May25-May26",
+  "fx": { "base": "MYR", "note": "马来林吉特；USD 未做精确折算（源报告无清晰美元口径）", "currency": "MYR", "currencyName": "马来西亚林吉特" },
+  "reportUrl": "/gfk/gfk-my-may26.html",
+  "updated": "2026-09-09",
+  "headline": "马来 WM 大盘平稳略降：全渠道 Jan-May26 销额约较同期小幅收缩(Offline约-1至-2%)，月度销额量级 Offline 约6,000-7,900万MYR/月、Online 约900-1,400万MYR/月，Online 渠道占比约15-18%。Hisense 马来『线上强、线下弱』——Online 渠道品牌排名第3(TOSHIBA/MIDEA之后)，Offline 仅第9，电商是 Hisense 马来最突出的现实强项。",
+  "kpis": [
+    { "label": "马来 WM Online 渠道占比", "value": "约 15-18%", "usd": "", "change": "据月度趋势估算" },
+    { "label": "Offline 月度销额量级", "value": "约 6,000-7,900万 MYR", "usd": "", "change": "" },
+    { "label": "Online 月度销额量级", "value": "约 900-1,400万 MYR", "usd": "", "change": "" },
+    { "label": "Hisense Online 排名", "value": "第3", "usd": "", "change": "TOSHIBA/MIDEA 之后" },
+    { "label": "Hisense Offline 排名", "value": "第9", "usd": "", "change": "明显弱于线上" },
+    { "label": "大盘 Jan-May26 销额", "value": "微降", "usd": "", "change": "Offline 约-1~-2%" }
+  ],
+  "insights": [
+    { "n": 1, "title": "马来 WM 大盘平稳偏弱，Online 结构性成长", "detail": "全渠道 Jan-May26 销额较同期略降(Offline主导大盘，Jan-May同比约-1至-2%)。分渠道看 Offline 是绝对主力(月销额6,000-7,900万MYR)，Online 体量较小(900-1,400万MYR)但占比约15-18%，是结构性增量渠道。"
+      ,"evid": "slide43 Offline/Online 分渠道大盘；slide39 月度趋势(单位 x1,000,000 MYR)" },
+    { "n": 2, "title": "Hisense 马来『线上第3、线下第9』，电商是现实强项", "detail": "马来 WM 分渠道品牌榜：Online 渠道 Hisense 排第3(仅次于 TOSHIBA、MIDEA)，Offline 仅排第9。Hisense 在马来的电商卡位显著强于线下，是少数 Online 排名大幅领先线下的品牌——电商应作为马来主攻阵地。"
+      ,"evid": "slide43 May26 Sales Value 分渠道品牌榜：Online第3/Offline第9" },
+    { "n": 3, "title": "马来品类结构与越南不同：有双缸(半自动)存量", "detail": "马来 WM 含 SEMI AUTO(半自动双缸)、TOP LOAD(顶开)、FRONT LOAD(滚筒)、WASHER DRYER(洗烘)等多品类，与越南(已告别双缸、单缸+滚筒主导)结构不同。滚筒(FRONT LOAD)为高价值主力品类之一。"
+      ,"evid": "slide41/42 品类标签 FRONT LOAD/TOP LOAD/SEMI AUTO/WASHER DRYER" },
+    { "n": 4, "title": "数据局限：此源非 WM 专项，无法做越南/泰国同款深挖", "detail": "该文件为马来全品类 GfK 报告，WM 仅7张大图(趋势/价格/渠道结构/分渠道品牌)，无 WM 专项的品牌份额表格、型号 Hitlist、价格段/容量/区域细分。因此本档案为『大盘级方向判断』，精确份额与细分需专项 WM 源或海信内部数据补。"
+      ,"evid": "mys_emf_text.json 仅 slide39-45 为 WM；无 WM Hitlist 页" }
+  ],
+  "suggestions": [
+    { "id": "my-2026-05-p0-1", "level": "P0", "title": "把马来电商优势做成份额转化", "detail": "Hisense Online 第3 是马来最现实的增长抓手。建议聚焦电商平台(重点平台旗舰店+大促)放量，用线上份额带动品牌认知，再向线下渗透。线上第3的位次说明 Hisense 电商运营是有效资产，应加码而非分散到薄弱的线下。" },
+    { "id": "my-2026-05-p1-1", "level": "P1", "title": "线下第9是短板也是空间，需专项WM源评估", "detail": "Offline 仅第9，受限于渠道货架与线下品牌力。但当前源无法量化 Hisense 线下短板的具体原因，建议用 WM 专项源或海信内部铺货数据(货架/分销)补线下差距诊断，再定是否投入线下。" },
+    { "id": "my-2026-05-p1-2", "level": "P1", "title": "关注大盘走弱，别在存量市场打价格战", "detail": "马来 WM 大盘 Jan-May 略降、存量竞争。Hisense 应靠结构与电商效率抢份额，避免在总量收缩的市场带头降价侵蚀价值。" },
+    { "id": "my-2026-05-p2-1", "level": "P2", "title": "需WM专项源以支持Hisense型号/细分分析", "detail": "本档案基于全品类报告WM段，无法到型号/容量/价格段。若马来是重点市场，建议获取 WM 专项 GfK(类似越南LOCALCHARTS)以支撑 Hisense 马来完整档案。" }
+  ]
+}

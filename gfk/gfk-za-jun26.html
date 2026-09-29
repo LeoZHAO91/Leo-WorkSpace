@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>南非洗衣机市场战略分析 · Hisense vs 市场 vs Defy · Jun 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  :root{
+    --bg:#f4f6fb; --card:#fff; --ink:#1b2432; --sub:#5b6779; --line:#e3e9f2;
+    --red:#c62828; --green:#1e8e4a; --amber:#d9822b; --blue:#2456d6;
+    --hRed:#e6212b; --defyBlue:#123a7a; --gold:#e6a700;
+    --up:#c62828; --dn:#1e8e4a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",-apple-system,sans-serif;line-height:1.6;padding:22px 16px 70px}
+  .wrap{max-width:1260px;margin:0 auto}
+  /* 南非国旗风格头图：黑-黄-绿-白-红-蓝(左三角) 主题条 */
+  .flag{height:8px;background:linear-gradient(90deg,#000 0 14%,#e6a700 14% 28%,#1e8e4a 28% 42%,#fff 42% 46%,#c62828 46% 60%,#123a7a 60% 100%);border-radius:8px 8px 0 0;margin-bottom:0}
+  header{background:linear-gradient(120deg,#0f1f3d 0%,#123a7a 45%,#1e8e4a 90%,#e6a700 100%);color:#fff;border-radius:0 0 14px 14px;padding:24px 30px 26px;margin-bottom:14px;box-shadow:0 3px 12px rgba(18,58,122,.2)}
+  header h1{font-size:23px;font-weight:800;letter-spacing:.5px}
+  header .sub{opacity:.92;margin-top:6px;font-size:13px}
+  header .meta{display:flex;flex-wrap:wrap;gap:9px 22px;margin-top:14px;font-size:12.5px;opacity:.96}
+  .badge{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:3px 11px;border-radius:20px}
+  .fxbar{background:linear-gradient(90deg,#fff7e6,#fff3d6);border:1px solid #f0d99a;border-left:4px solid var(--gold);border-radius:10px;padding:10px 18px;margin-bottom:16px;font-size:12.5px;color:#5b4a1a;display:flex;flex-wrap:wrap;gap:6px 24px;align-items:center}
+  .fxbar b{color:#9a6b00}
+  .up{color:var(--up)} .dn{color:var(--dn)} .flat{color:var(--sub)}
+  .swatch{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:18px}
+  .card h3{font-size:16px;color:var(--ink);margin-bottom:4px}
+  .card .note{font-size:12px;color:var(--sub);margin-bottom:12px;line-height:1.7}
+  .chart{width:100%;height:330px}
+  table{border-collapse:collapse;width:100%;font-size:12.7px}
+  th,td{border-bottom:1px solid var(--line);padding:7px 9px;text-align:right}
+  th{background:#f0f3f9;color:var(--sub);font-weight:600;white-space:nowrap}
+  td:first-child,th:first-child{text-align:left}
+  td.mkt,th.mkt{border-left:1px solid #dde4f0}
+  tr.hi td{background:#fdf2f1}
+  .his{color:var(--hRed);font-weight:800}
+  .defy{color:var(--defyBlue);font-weight:700}
+  .num{font-variant-numeric:tabular-nums}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:920px){.grid2{grid-template-columns:1fr}}
+  /* KG 下钻交互区 */
+  .drill-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+  .drill-title{font-size:13.5px;color:var(--ink)}
+  .drill-title b{color:var(--hRed);font-size:14px}
+  .drill-switch{font-size:12px;color:var(--blue);font-weight:600;cursor:pointer;border:1px solid #c9d6f2;background:#eef3fe;padding:4px 12px;border-radius:20px;user-select:none;transition:.15s}
+  .drill-switch:hover{background:#dde8fc}
+  .drill-note{font-size:11.5px;color:var(--sub);margin-bottom:10px;line-height:1.65;background:#f7f9fc;border:1px solid #eef1f7;border-radius:8px;padding:8px 12px}
+  .drill-foot{font-size:11.5px;color:var(--sub);margin-top:8px;line-height:1.6;border-top:1px dashed var(--line);padding-top:8px}
+  .drill-foot b{color:var(--ink)}
+  .drill-foot .tag{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:4px;margin-right:4px}
+  .drill-foot .t-ok,.drill-foot .t-hitlist{background:#e7f6ec;color:#1e8e4a}
+  .drill-foot .t-est{background:#fff3e0;color:#b26a00}
+  .drill-foot .t-none{background:#f0f1f5;color:#8a93a5}
+  .es{background:#fff;border:1px solid var(--line);border-left:6px solid var(--hRed);border-radius:12px;padding:20px 24px;margin-bottom:20px}
+  .es h2{font-size:15px;color:var(--hRed);margin-bottom:12px;letter-spacing:.5px}
+  .es-item{color:#222;border-bottom:1px dashed #eee;padding:10px 0;line-height:1.6}
+  .es-item:last-child{border-bottom:none}
+  .es-item b{color:#111;font-weight:800}
+  details.cat{border:1px solid var(--line);border-radius:12px;margin-bottom:13px;background:#fff;overflow:hidden}
+  details.cat summary{display:flex;align-items:center;gap:10px;padding:14px 20px;cursor:pointer;font-size:14.5px;font-weight:700;list-style:none;background:linear-gradient(90deg,#fbfbfd,#fff)}
+  details.cat summary::-webkit-details-marker{display:none}
+  details.cat summary .rank{font-size:11px;background:var(--blue);color:#fff;border-radius:5px;padding:2px 8px;font-weight:600;white-space:nowrap}
+  details.cat summary .kstat{font-size:11.5px;color:var(--sub);font-weight:500}
+  details.cat[open] summary{border-bottom:1px solid var(--line)}
+  details.cat .body{padding:15px 20px}
+  .pill{display:inline-block;font-size:11px;background:#eef2f8;color:var(--sub);border-radius:4px;padding:1px 7px;margin-right:6px;font-weight:600}
+  .pill.cov{background:#eaf7ee;color:#1e8e4a}
+  .pill.weak{background:#fff3e0;color:#c77700}
+  .pill.gap{background:#fdeaea;color:var(--hRed)}
+  .chain{font-size:12.3px;background:#f7f9fd;border-left:3px solid var(--blue);padding:10px 14px;margin:8px 0;border-radius:0 8px 8px 0}
+  .chain b{color:var(--blue)}
+  .src{font-size:11px;color:var(--sub);margin-top:6px;border-top:1px dashed #ddd;padding-top:10px}
+  .kd{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin-bottom:16px}
+  .k{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .k .t{font-size:11px;color:var(--sub)}
+  .k .v{font-size:18px;font-weight:800;margin-top:3px}
+  .k .s{font-size:11.5px;margin-top:3px}
+  .k .lbl{font-size:10.5px;color:var(--sub);margin-top:2px}
+  h4.sub{font-size:13px;color:var(--blue);margin:15px 0 8px;border-bottom:1px solid #e6ecf6;padding-bottom:5px}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:11.5px;color:var(--sub);margin:6px 0 4px}
+  .legend span{display:inline-flex;align-items:center;gap:5px}
+  /* kg bar 简化 */
+  .kgbar{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:11.5px}
+  .kgbar .lb{width:80px;text-align:right;color:var(--sub);font-weight:600}
+  .kgbar .track{flex:1;background:#f1f4f9;border-radius:4px;height:18px;position:relative}
+  .kgbar .seg{position:absolute;top:0;height:100%}
+  /* 三方堆叠条: 市场(深灰) / Hisense(红) / Defy(蓝)*/
+  .seg.mkt{background:#33415b}
+  .seg.his{background:#c8102e}
+  .seg.defy{background:#1f55ad}
+  .kg3{margin:6px 0;display:flex;align-items:center;gap:6px;font-size:11.5px}
+  .kg3 .lb{width:90px;text-align:right;color:#33415b;font-weight:600}
+  .kg3 .bar{flex:1;display:flex;height:22px;border-radius:4px;overflow:hidden;border:1px solid #e2e6ef;background:#f7f8fb}
+  .kg3 .bar .s{height:100%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:10.5px;letter-spacing:.2px}
+  .kg3 .bar .mkt{background:#33415b}
+  .kg3 .bar .his{background:#c8102e}
+  .kg3 .bar .defy{background:#1f55ad}
+  .kg3 .bar .unk{background:repeating-linear-gradient(45deg,#d8dde6,#d8dde6 4px,#f1f4f9 4px,#f1f4f9 8px);color:#778}
+  .kg3 .val{width:54px;text-align:right;color:#111;font-weight:700}
+  .kg3 .tag{font-size:10px;color:#888;margin-left:4px}
+  .kgbox{margin:8px 0 6px;background:#f7f8fb;border:1px solid #e2e6ef;border-radius:8px;padding:10px 12px}
+  .kgbox .ttl{font-size:12px;color:#33415b;font-weight:700;margin-bottom:6px}
+  .kgbox .legend{display:flex;gap:14px;font-size:11px;color:#556;margin-top:6px;border-top:1px dashed #ccd;padding-top:6px}
+  .kgbox .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
+  .kgbox .legend .lm{background:#33415b}
+  .kgbox .legend .lh{background:#c8102e}
+  .kgbox .legend .ld{background:#1f55ad}
+  .kgbox .legend .lu{background:repeating-linear-gradient(45deg,#d8dde6,#d8dde6 3px,#f1f4f9 3px,#f1f4f9 6px);border:1px solid #ccd}
+  /* New: 3-way KG box - each kg row has 3 separate bars (Market / Hisense / Top competitor) */
+  .kg3way{margin-top:8px}
+  .kg3way .head{display:grid;grid-template-columns:88px 1fr 1fr 1fr 80px;gap:6px;font-size:10.5px;color:#556;padding:0 2px 4px;border-bottom:1px solid #dfe5ef}
+  .kg3way .head b{color:#222;font-weight:700}
+  .kg3way .row{display:grid;grid-template-columns:88px 1fr 1fr 1fr 80px;gap:6px;align-items:center;padding:5px 2px;border-bottom:1px dashed #e3e9f2;font-size:11.5px}
+  .kg3way .lb{font-weight:700;color:#33415b}
+  .kg3way .bar{height:22px;border:1px solid #e2e6ef;border-radius:4px;position:relative;background:#fff;overflow:hidden}
+  .kg3way .bar .s{position:absolute;top:0;height:100%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:10.5px;min-width:14px}
+  .kg3way .bar .his{background:#c8102e}
+  .kg3way .bar .defy{background:#1f55ad}
+  .kg3way .bar .mkt{background:#33415b}
+  .kg3way .bar .pct{position:absolute;right:-58px;top:0;width:54px;text-align:right;font-size:11px;color:#111;font-weight:700;background:transparent;border:none;display:flex;align-items:center;height:100%;justify-content:flex-end}
+  .kg3way .bar .val{position:absolute;left:0;top:0;height:100%;display:flex;align-items:center;font-weight:700;color:#fff;font-size:10.5px;padding-left:4px}
+  .kg3way .bar .empty{position:absolute;left:0;top:0;height:100%;display:flex;align-items:center;justify-content:center;width:100%;background:repeating-linear-gradient(45deg,#eef1f6,#eef1f6 4px,#f7f9fc 4px,#f7f9fc 8px);color:#aab2c0;font-weight:600;font-size:10.5px}
+  .kg3way .row .mgrCell{color:#556;font-size:10.5px}
+  .kg3way .row.alt{background:#fcfdff}
+  .kg3way .colHeadMarket{color:#33415b}
+  .kg3way .colHeadHis{color:#c8102e}
+  .kg3way .colHeadDefy{color:#1f55ad}
+  /* V4: 单 bar 三段堆叠 - 该 kg 段内三个主体的份额 (分母=该 kg 段大盤=100%) */
+  .kg3way4{margin-top:6px}
+  .kg3way4 .head{display:grid;grid-template-columns:90px 1fr 220px;gap:6px;font-size:10.5px;color:#33415b;padding:2px 2px 5px;border-bottom:1px solid #dfe5ef;font-weight:700}
+  .kg3way4 .row{display:grid;grid-template-columns:90px 1fr 220px;gap:6px;align-items:center;padding:6px 2px;border-bottom:1px dashed #e3e9f2;font-size:11.5px}
+  .kg3way4 .lb{font-weight:700;color:#33415b}
+  .kg3way4 .bar{height:24px;border:1px solid #e2e6ef;border-radius:4px;position:relative;background:#fff;overflow:hidden;display:flex}
+  .kg3way4 .bar .seg{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:10.5px;letter-spacing:.2px;min-width:0;position:relative}
+  .kg3way4 .bar .seg.his{background:#c8102e}
+  .kg3way4 .bar .seg.defy{background:#1f55ad}
+  .kg3way4 .bar .seg.mkt{background:#33415b}
+  .kg3way4 .bar .seg.unk{background:repeating-linear-gradient(45deg,#cfd5e0,#cfd5e0 4px,#e6eaf1 4px,#e6eaf1 8px);color:#666}
+  .kg3way4 .bar .seg-empty{flex:1;background:repeating-linear-gradient(45deg,#eef1f6,#eef1f6 4px,#f7f9fc 4px,#f7f9fc 8px);display:flex;align-items:center;justify-content:center;color:#aab2c0;font-weight:600;font-size:10.5px}
+  .kg3way4 .meta{font-size:10.5px;color:#556;line-height:1.4}
+  .kg3way4 .meta b{color:#222}
+  .kg3way4 .meta .num{color:#111;font-weight:700}
+  /* V5: 3-套独立分母的 kg 表格 (Leo 要求: 大盘/海信/Defy 各占各主体%) */
+  .kgthree{width:100%;border-collapse:collapse;margin-top:6px;font-size:11.5px}
+  .kgthree thead th{background:#f0f4fb;padding:8px 6px;text-align:left;border-bottom:1px solid #ccd;font-size:11.5px;font-weight:700;color:#33415b}
+  .kgthree thead th.col-mkt{background:#e8ecf3;color:#33415b}
+  .kgthree thead th.col-his{background:#fbe7e7;color:#c8102e}
+  .kgthree thead th.col-defy{background:#e3edfb;color:#1f55ad}
+  .kgthree thead th .note{display:block;font-size:9.5px;font-weight:400;color:#778;margin-top:2px}
+  .kgthree tbody td{padding:5px 6px;border-bottom:1px dashed #e3e9f2;vertical-align:middle}
+  .kgthree tbody td.kg{font-weight:700;color:#33415b;width:80px;text-align:center;background:#fafbfd}
+  .kgthree tbody td.mbar{width:140px;padding-right:8px}
+  .kgthree tbody td.pct{font-size:11px;color:#111;width:108px}
+  .kgthree tbody td.pct.his{color:#c8102e}
+  .kgthree tbody td.pct.defy{color:#1f55ad}
+  .kgthree .bar{display:inline-block;height:18px;min-width:0;border-radius:3px;color:#fff;font-weight:700;font-size:10px;padding:0 4px;line-height:18px;text-align:right;vertical-align:middle;background:#e7eaf0;position:relative;letter-spacing:.2px}
+  .kgthree .bar.mkt{background:#33415b}
+  .kgthree .bar.his{background:#c8102e}
+  .kgthree .bar.defy{background:#1f55ad}
+  .kgthree .bar.lg{background:#1f8a3d}
+  .kgthree .bar.sam{background:#5b3a9e}
+  .kgthree thead th.col-sam{background:#ebe4f5;color:#5b3a9e}
+  .kgthree tbody td.pct.lg{color:#1f8a3d}
+  .kgthree tbody td.pct.sam{color:#5b3a9e}
+  .kgthree tr.totalrow td{background:#f6f9fd;font-weight:700}
+  .kgbox .legend .lu{background:repeating-linear-gradient(45deg,#d8dde6,#d8dde6 3px,#f1f4f9 3px,#f1f4f9 6px);border:1px solid #ccd}
+  .warnbox{font-size:11.5px;color:#6b5e1d;background:#fff7da;border:1px solid #e8d979;border-radius:6px;padding:7px 10px;margin-top:8px}
+  .pill{font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;display:inline-block}
+  .pill.cov{background:#d8f0db;color:#1d6e36;border:1px solid #9bcfa5}
+  .pill.weak{background:#fce8c8;color:#9b5a0e;border:1px solid #ecc179}
+  .pill.gap{background:#f5d4d4;color:#8a1c1c;border:1px solid #e2a2a2}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="flag"></div>
+<header>
+  <h1>南非洗衣机市场战略分析 · <span style="color:#ffd9d6">Hisense</span> vs 市场 vs <span style="color:#bcd2ff">Defy</span></h1>
+  <div class="sub">事实 → 变化 → 原因 → Gap → Opportunity → Action ｜ 数据：GfK STANDCHARTSET · Washing Machines · South Africa · 2026-06（PRJ 143192）</div>
+  <div class="meta">
+    <span class="badge">MAT 量 71.4万台 ▲+12.2%</span>
+    <span class="badge">市场额 42.1亿 ZAR ≈2.57亿 USD</span>
+    <span class="badge"><span class="his">Hisense</span> MAT 量占24.2%/额占21.1%</span>
+    <span class="badge">Hisense 价格指数 87.2</span>
+    <span class="badge">Jun26 单月量占 <span class="his">27.3%</span> vs <span class="defy">Defy 39.8%</span></span>
+  </div>
+</header>
+
+<div class="fxbar">
+  <span><b>汇率（USD）</b></span>
+  <span>1 USD = 16.37 ZAR（期末 2026-06-30）</span>
+  <span>市场均价 5,894 ZAR ≈ 360 USD</span>
+  <span>Hisense 均价 5,137 ZAR ≈ 314 USD</span>
+  <span>Defy 均价 4,840 ZAR ≈ 296 USD</span>
+  <span><b>颜色说明：</b><span class="up">红▲</span>仅指同比提升、<span class="dn">绿▼</span>仅指同比下降（方向，非好坏）</span>
+</div>
+
+<!-- ============ EXECUTIVE SUMMARY ============ -->
+<div class="es">
+  <h2>Executive Summary（管理层结论）</h2>
+  <div class="es-item"><b>1. 市场在以价换量、量价背离的下行周期，但 Hisense 吃到了这个周期的「降级红利」。</b><br>MAT 量 <span class="up">▲+12.2%</span> 而额仅 <span class="up">▲+4.8%</span>，均价 <span class="dn">▼-6.6%</span> 至 5,894 ZAR；消费者在降级，低价正是 Hisense 强势带，Jun-26 单月量占冲到 27.3%（近12月最高），逼近 Defy 的 39.8%。<br><i>警惕：这是顺周期红利，不是 Hisense 自身结构升级。</i></div>
+  <div class="es-item"><b>2. 与第一 Defy 的 17pp 量差距，几乎全部来自「双缸单品类被碾压」（20.2% vs 64.8%），不是全品线落后。</b><br>Hisense 在波轮 Top Loader 已 YTD 第1（32.2%）、Jun 39.1% 反超 Defy；滚筒、洗烘均第2。双缸占全市场量约 37%，是量差的最大单一来源——<br><i>是可补的洞，不是守不住的城。</i></div>
+  <div class="es-item"><b>3. 价格指数 87 且持续被压缩：Hisense 卖得便宜、且越来越便宜，靠量换额。</b><br>Hisense 均价 5,137 = 市场均价 87%；Jun 量占 27.3% 而额占仅 24.4%（量额差 <span class="dn">▼-2.9pp</span>）。<br><i>Hisense 的隐患不是抢不到份额，而是「每台利润结构在变差」。</i></div>
+  <div class="es-item"><b>4. 趋势判断：容量升级在双缸/波轮的中大容量段；高端与洗烘一体在收缩。</b><br>双缸是唯一价量齐升品类（量 <span class="up">▲+16.8%</span> / 均价 <span class="up">▲+2.5%</span>），波轮稳定；而 ≥10,000 ZAR 高端（额占 6.6%→3.7%）与洗烘一体（量 <span class="dn">▼-2.4%</span>）萎缩，LG 以 1.04万 洗烘单价守住那块越来越小的池。<br><i>判断：南非无「品类升级/容量升级/价格升级」，只有「价格降级 + 渠道迁移(线下 ER→MM/FS)」。</i></div>
+  <div class="es-item"><b>5. 唯一 P0：打「双缸差距」，而非在波轮/滚筒守成加码。</b><br>双缸是量差最大来源（Hisense ~52k vs Defy ~168k），Hisense 均价 3,825 也最低、Defy 4,155 是毛利锚。<br><i>补双缸 4–5k 中高段对位机型 = 同时提量、提价、缩结构差。波轮守第1、滚筒反超 SAMSUNG、渠道 D.WGT→TOS 均为 P1。</i></div>
+</div>
+
+<!-- ============ KPI ============ -->
+<div class="card">
+  <h3>Dashboard：市场 · Hisense · Defy 全指标（MAT / YTD / 同比）</h3>
+  <div class="note">额按 ZAR（USD 折算并列）。<span class="up">红▲</span>/<span class="dn">绿▼</span> 仅表示同比方向。价格指数=Hisense ASP/Market ASP×100。</div>
+  <div class="kd">
+    <div class="k"><div class="t">市场 MAT / YTD26 量</div><div class="v num">71.4万 / 34.4万</div><div class="s"><span class="up">▲+12.2%</span> / <span class="up">▲+13.2%</span></div></div>
+    <div class="k"><div class="t">市场额 MAT (ZAR / USD)</div><div class="v num">42.1亿 / 2.57亿$</div><div class="s"><span class="up">▲+4.8%</span></div></div>
+    <div class="k"><div class="t">市场 ASP (ZAR/USD)</div><div class="v num">5,894 / 360$</div><div class="s"><span class="dn">▼-6.6%</span></div></div>
+    <div class="k"><div class="t">Hisense MAT 量 / 额(Mio)</div><div class="v num">17.3万 / 887.6</div><div class="s">量占 <span class="his">24.2%</span></div></div>
+    <div class="k"><div class="t">Defy MAT 量 / 额(Mio)</div><div class="v num">29.2万 / 1415.6</div><div class="s">量占 <span class="defy">41.0%</span></div></div>
+    <div class="k"><div class="t">Hisense 价格指数</div><div class="v num" style="color:var(--blue)">87.2</div><div class="s"><span class="dn">▼</span>较 MAT25 下行</div></div>
+    <div class="k"><div class="t">Jun26 单月量占</div><div class="v num"><span class="his">27.3%</span> / <span class="defy">39.8%</span></div><div class="s">Hisense 近12月新高</div></div>
+    <div class="k"><div class="t">量额份额差</div><div class="v num"><span class="his">+3.1</span> / <span class="defy">+7.4</span></div><div class="lbl">Hisense / Defy（量>额=低价冲量）</div></div>
+  </div>
+</div>
+
+<!-- ============ 整体走势 ============ -->
+<div class="card">
+  <h3>整体走势：Volume / Value / ASP（Jun25–Jun26 月度）</h3>
+  <div class="note">柱=销量(千台，左轴)、红线=销额(Mio ZAR)、绿线=均价(ZAR)。11月/5月为大促峰。</div>
+  <div id="c_m" class="chart"></div>
+  <div class="chain"><b>So What：</b>销售高度依赖大促（11月 Black Friday、5月促销），非促月量能不足；均价台阶整体下移 → 市场靠促销+降价驱动，健康度下降，这是 Hisense 低价放量的背景。</div>
+</div>
+
+<!-- ============ MAT 三年 ============ -->
+<div class="card">
+  <h3>滚动三年：MAT / MAT-1 / MAT-2（量·额·ASP·同比）</h3>
+  <div class="grid2">
+    <div><div id="c_mat3" style="height:280px"></div></div>
+    <table>
+      <tr><th>滚动12月</th><th>量(千台)</th><th>量同比</th><th>额(Mio)</th><th>额同比</th><th>ASP</th><th>ASP同比</th></tr>
+      <tr><td>MAT-2 (23.07–24.06)</td><td class="num">547.2</td><td>—</td><td class="num">3,453.9</td><td>—</td><td class="num">6,313</td><td>—</td></tr>
+      <tr><td>MAT-1 (24.07–25.06)</td><td class="num">636.1</td><td class="up">▲+16.2%</td><td class="num">4,013.5</td><td class="up">▲+16.2%</td><td class="num">6,310</td><td class="flat">≈0%</td></tr>
+      <tr><td>MAT (25.07–26.06)</td><td class="num">713.6</td><td class="up">▲+12.2%</td><td class="num">4,205.7</td><td class="up">▲+4.8%</td><td class="num">5,894</td><td class="dn">▼-6.6%</td></tr>
+    </table>
+  </div>
+  <div class="chain"><b>So What：</b>MAT-1 是「量额同步高增(+16.2%)」的健康扩容，到 MAT 恶化成「量增额滞(+12.2% vs +4.8%)、ASP 由平转跌(-6.6%)」——周期性质的关键拐点。</div>
+</div>
+
+<!-- ============ 品类环形图 ============ -->
+<div class="card">
+  <h3>品类结构：市场量占比（MAT）· Market vs Hisense vs Top Competitor</h3>
+  <div class="note">南非 GfK 面板分 4 类（Top Loader 波轮 / Twin Tub 双缸 / Front Loader 滚筒 / Washer Dryer 洗烘一体），<b>无独立干衣机品类</b>。按市场量占比从高到低：双缸 &gt; 波轮 &gt; 滚筒 &gt; 洗烘。下方表格给每类的 Market / Hisense / Top Competitor 三方。</div>
+  <div class="grid2">
+    <div><div id="c_typepie" style="height:300px"></div></div>
+    <table>
+      <tr><th>品类(量占比)</th><th>市场规模MAT量</th><th class="his">Hisense量占</th><th class="defy">Top竞对量占</th><th>Hisense均价</th><th>Hisense结构Gap</th></tr>
+      <tr><td>双缸 Twin Tub（<b>37%</b>）</td><td class="num">~260k</td><td class="num his">20.2%</td><td class="num defy">Defy 64.8%</td><td class="num">3,825</td><td><span class="pill gap">Gap·最大量差</span></td></tr>
+      <tr><td>波轮 Top Loader（<b>~37%</b>）</td><td class="num">~264k</td><td class="num his">29.6%(YTD第1)</td><td class="num defy">Defy 30.7%</td><td class="num">5,659</td><td><span class="pill cov">领先/并跑</span></td></tr>
+      <tr><td>滚筒 Front Loader（<b>~23%</b>）</td><td class="num">~163k</td><td class="num his">22.0%</td><td class="num defy">Defy 25.0%</td><td class="num">5,358</td><td><span class="pill weak">差3pp</span></td></tr>
+      <tr><td>洗烘 WD（<b>3.8%</b>）</td><td class="num">27k</td><td class="num his">23.9%</td><td class="num defy">LG 36.3%</td><td class="num">8,253</td><td><span class="pill weak">萎缩品类守份额</span></td></tr>
+    </table>
+  </div>
+  <div class="chain"><b>判断品类迁移：</b>无双缸→波轮→滚筒的大幅升级（波轮/双缸仍主导），结构稳定；唯一结构性信号是 WD 洗烘一体份额在缩（3.8%←占比回落），市场没有把量往高端洗烘导。<b>So What：</b>南非的增量在「量大价低」的双缸与波轮，Hisense 的品类顺风正在这两类，但要靠双缸差距来把量差打下来。</div>
+
+  <!-- KG 段分布交互区：点击上方环形图扇形 → 下方动态渲染该品类 5 主体 KG 柱状图 -->
+  <div id="kg-drill" style="margin-top:14px;border-top:1px dashed var(--line);padding-top:14px">
+    <div class="drill-head">
+      <span class="drill-title">📊 KG 段分布 · <b id="kg-drill-cat">双缸 Twin Tub</b>（点击上方环形图切换品类）</span>
+      <span class="drill-switch" id="kg-drill-mode" title="切换柱状图/扇形图">视图：柱状图 ⇄ 扇形图</span>
+    </div>
+    <div class="drill-note">5 个主体各自独立的 KG 段结构（分母各自=该主体品类内总销量 100%）。柱高=该主体在该 KG 段内的自家占比%，括号内=绝对台数。数据源：<b>GfK TOP LIST 型号榜（2026年1–7月 / Jan 2026-Jul 2026）逐型号 Loading(KG) 字段真实聚合</b>，无估算、无外推。双缸 GfK 未给独立 KG 字段，kg 通过型号名命名规则解析（DTT 151→15.1kg、WSTF203→20.3kg、HTW140→14kg 等），覆盖 98.9%。某主体在某 kg 段无数据时显示"—未标"。</div>
+    <div id="kg-drill-chart" style="height:420px"></div>
+    <div class="drill-foot" id="kg-drill-foot"></div>
+  </div>
+</div>
+
+<!-- ============ 品牌 Hitlist ============ -->
+<div class="card">
+  <h3>MAT 品牌 Hitlist：量 / 额 / 均价 / 份额（25.07–26.06）</h3>
+  <div class="note">「量−额份额差」正=相对低价冲量、负=吃高价位价值。红色=Hisense，蓝=Defy（重点竞对）。</div>
+  <div class="grid2" style="align-items:start">
+    <table>
+      <tr><th>品牌</th><th>量(台)</th><th>量占</th><th>额(Mio)</th><th>额占</th><th>均价ZAR</th><th>量额差</th></tr>
+      <tr><td class="defy">DEFY</td><td class="num">292,461</td><td class="num">41.0%</td><td class="num">1,415.6</td><td class="num">33.6%</td><td class="num">4,840</td><td class="num">+7.4</td></tr>
+      <tr><td class="his">HISENSE</td><td class="num">172,778</td><td class="num">24.2%</td><td class="num">887.6</td><td class="num">21.1%</td><td class="num">5,137</td><td class="num">+3.1</td></tr>
+      <tr><td>SAMSUNG</td><td class="num">84,977</td><td class="num">11.9%</td><td class="num">702.4</td><td class="num">16.7%</td><td class="num">8,265</td><td class="num">-4.8</td></tr>
+      <tr><td>MIDEA</td><td class="num">55,609</td><td class="num">7.8%</td><td class="num">280.7</td><td class="num">6.6%</td><td class="num">5,047</td><td class="num">+1.2</td></tr>
+      <tr><td>LG</td><td class="num">42,209</td><td class="num">5.9%</td><td class="num">393.3</td><td class="num">9.3%</td><td class="num">9,319</td><td class="num">-3.4</td></tr>
+      <tr><td>BENNETT READ</td><td class="num">22,582</td><td class="num">3.2%</td><td class="num">129.5</td><td class="num">3.1%</td><td class="num">5,735</td><td class="num">+0.1</td></tr>
+      <tr><td>BOSCH</td><td class="num">10,768</td><td class="num">1.5%</td><td class="num">95.1</td><td class="num">2.3%</td><td class="num">8,836</td><td class="num">-0.8</td></tr>
+      <tr><td colspan="7" style="text-align:left;color:var(--sub);font-size:11.5px">其余(UNIVA/SPEED QUEEN/HAIER/BEKO等)单列&lt;0.6%</td></tr>
+    </table>
+    <div id="c_brand" style="height:310px"></div>
+  </div>
+  <div class="chain"><b>Gap：</b>Defy 量占41%但额占仅33.6%（+7.4 最以量换额，靠双缸放量）；SAMSUNG/LG 额占比量占高（卖高端）。<b>Hisense</b> 份额差+3.1 比 Defy 温和，均价 5,137 高于 Defy 4,840 —— Hisense 是「同打低价带却卖得更贵」的品牌，性价比定位更优。<b>Action：</b>不与 Defy 拼更低单价，用「同价位更高容量/更好陈列」赢，保护自身 ASP。</div>
+</div>
+
+<!-- ============ Hisense 份额轨迹 ============ -->
+<div class="card">
+  <h3>Hisense vs Defy 份额轨迹（MAT / YTD / Jun）</h3>
+  <div id="c_share" style="height:300px"></div>
+  <div class="chain"><b>So What：</b>Hisense 份额真实且加速（Jun 单月 27.3% &gt; YTD 24.2% &gt; MAT 24.2%），同期 Defy 微降（Jun 39.8%）；差距在收窄。但增长由低价脉冲驱动，须看价格指数是否继续下探。</div>
+</div>
+
+<!-- ============ 价格段（含价格迁移判断 + Hisense/Defy 主带） ============ -->
+<div class="card">
+  <h3>价格段结构：市场 YTD25→26 + Hisense / Defy 卡位</h3>
+  <div class="note">Hisense 主战场 3–5k，Defy 双缸锚定 3–5k。&lt;4,000 ZAR 段扩张 +7.8pp；≥10,000 高端 ▼-2.9pp。</div>
+  <div class="grid2">
+    <div id="c_price" style="height:290px"></div>
+    <div>
+      <h4 class="sub">判断价格迁移 = 发生（向下）</h4>
+      <table>
+        <tr><th>价格段</th><th>YTD25量占</th><th>YTD26量占</th><th>Δ</th><th>Hisense/Defy 卡位</th></tr>
+        <tr><td>&lt;3k</td><td class="num">4.7</td><td class="num">5.6</td><td class="up">▲+0.9</td><td>Defy 低端双缸</td></tr>
+        <tr><td>3–4k</td><td class="num">12.8</td><td class="num">19.7</td><td class="up">▲+6.9</td><td class="his">Hisense+Defy 主带</td></tr>
+        <tr><td>4–5k</td><td class="num">22.7</td><td class="num">22.1</td><td class="flat">-0.6</td><td class="his">Hisense/Defy 双缸价位</td></tr>
+        <tr><td>5–6k</td><td class="num">20.1</td><td class="num">19.6</td><td class="flat">-0.5</td><td>Defy 波轮带</td></tr>
+        <tr><td>6–8k</td><td class="num">23.2</td><td class="num">20.5</td><td class="dn">▼-2.7</td><td>SAMSUNG/LG 上探</td></tr>
+        <tr><td>8–10k</td><td class="num">9.8</td><td class="num">8.9</td><td class="flat">-0.9</td><td>LG 高端</td></tr>
+        <tr><td>≥10k</td><td class="num">6.6</td><td class="num">3.7</td><td class="dn">▼-2.9</td><td>LG 洗烘垄断</td></tr>
+      </table>
+      <div class="chain"><b>So What：</b>市场重心向下、Hisense 与 Defy 同挤在 3–5k 低价带正面竞争。Hisense 若只守 3–5k 会把结构越做越薄，需在 5–8k（唯一还在、Hisense 尚薄弱的中价位）补高毛利型号，否则「份额↑但利润结构↓」不可持续。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 渠道 ============ -->
+<div class="card">
+  <h3>渠道：市场结构 + Hisense/Defy 分销对照（渠道迁移判断）</h3>
+  <div class="note">南非 GfK 渠道为线下三分：电器零售商 ER / 大型量贩 MM / 家具专营 FS。<b>源无独立 Online 维度</b>（线上渗透未单列，如实标注，不分 Online/Offline）。Hisense/Defy 分渠道份额源未拆分，用分销 D.WGT/TOS 对照。</div>
+  <div class="grid2">
+    <div>
+      <div id="c_chan" style="height:280px"></div>
+    </div>
+    <table>
+      <tr><th>渠道</th><th>YTD25</th><th>YTD26</th><th>Δ</th><th>Hisense/Defy 货架对照</th></tr>
+      <tr><td>大型量贩 MM</td><td class="num">47.8</td><td class="num">48.7</td><td class="up">▲+0.9</td><td>Hisense TOS ~<span class="his">25</span> vs Defy <span class="defy">35</span></td></tr>
+      <tr><td>家具专营 FS</td><td class="num">31.3</td><td class="num">35.1</td><td class="up">▲+3.8</td><td class="defy">Defy 腹地，Hisense 弱</td></tr>
+      <tr><td>电器零售商 ER</td><td class="num">20.9</td><td class="num">16.1</td><td class="dn">▼-4.8</td><td>Hisense 止损优先</td></tr>
+    </table>
+  </div>
+  <div class="chain"><b>判断渠道迁移 = 发生（线下 ER→MM/FS）：</b>从专业电器店流向大型量贩和家具专营。<b>Hisense Gap：</b>FS（家具专营，Defy 传统强渠道且最涨）是最大盲区；D.WGT 82.7 已够广，缺的是货架 TOS（25.6 vs Defy 35.2）。<b>Action：</b>补 MM+FS 的货架位与主推位，而非继续扩 ER。</div>
+</div>
+
+<!-- ============ 分销 ============ -->
+<div class="card">
+  <h3>分销与货架：D.WGT 加权分销 / TOS 货架份额（YTD26）</h3>
+  <div id="c_dist" style="height:300px"></div>
+  <div class="chain"><b>So What：</b>Hisense 分销广度(82.7)≈Defy(96.7)的86%，货架占比 TOS(25.6 vs 35.2)差 9.6pp——短板在「进店后占不占货架」而非「进不进店」。补 TOS 比扩 D.WGT 更高效。</div>
+</div>
+
+<!-- ============ 区域 ============ -->
+<div class="card">
+  <h3>区域结构（YTD 价值 Mio ZAR）</h3>
+  <div id="c_region" style="height:270px"></div>
+  <div class="chain"><b>判断区域迁移：</b>Gauteng(最大)下滑 679→643，「其他区域」逆势增 785→917。<b>So What：</b>增长从核心省扩散到次核心/下沉，Hisense 若分销集中在 Gauteng 会错失增量，需核次核心区域覆盖。</div>
+</div>
+
+<!-- ============ 品类折叠 ============ -->
+<div class="card">
+  <h3>品类下钻（按市场量占比排序）：每类展开含 kg 结构 / Hisense vs Defy / Hit / Opportunity</h3>
+  <div class="note">kg 三方（市场/Hisense/Defy 各档占比）源图为 Brand Share by Loading KG 堆叠图，EMF 坐标归属有噪声；本版给出<b>市场 kg 爬梯已确认结构</b>与 Hisense/Defy 主攻档位判断，<b>品牌×kg 精确占比需读源图确认</b>（见页尾说明），不臆造细数。</div>
+</div>
+
+<!-- 双缸 -->
+<details class="cat" open>
+  <summary><span class="rank">量第1 · 双缸 Twin Tub (≈37%)</span> <span class="his">Hisense 20.2%</span> vs <span class="defy">Defy 64.8%</span> <span class="kstat">最大结构洞</span></summary>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <h4 class="sub">市场规模 & 三方</h4>
+        <table>
+          <tr><th>口径</th><th>市场量</th><th>量同比</th><th class="his">Hisense</th><th class="defy">Defy</th></tr>
+          <tr><td>YTD26</td><td class="num">127.8k台</td><td class="up">▲+16.8%</td><td class="num his">19.4%</td><td class="num defy">64.8%</td></tr>
+          <tr><td>MAT</td><td class="num">~260k台</td><td class="up">▲增</td><td class="num his">20.2%</td><td class="num defy">64.8%</td></tr>
+          <tr><td>均价 ZAR</td><td class="num">4,376(品类)</td><td class="up">▲+2.5% 唯一价升</td><td class="num his">3,825</td><td class="num defy">4,155</td></tr>
+        </table>
+        <div class="chain"><b>事实→Gap：</b>双缸是唯一价量齐升品类（量▲+16.8/额▲+19.7/价▲+2.5%）。Hisense 与 Defy 的量差(~116k)是全市场最大结构洞，且 Hisense 均价 3,825 明显低于 Defy 4,155。<b>判断容量升级=发生：</b>双缸向更大容量走。</div>
+      </div>
+      <div>
+        <h4 class="sub">kg 结构 & Opportunity</h4>
+        <div class="chain"><b>kg：</b>双缸容量爬梯上探至 16kg+，Defy 在此垄断（DTT151 7,317台/月全市场第一）。Hisense 双缸以小容量&低价为主，对位中大容量机型空白。<b>Hit：</b>Defy DTT151/DTL160/DTT169/DTL153；Hisense 缺同级爆款。<b>Opportunity(P0)：</b>在 Defy 4–5k 主价带、≥12kg 双缸推出对位机型，目标份额 20.2%→25%+；此动作同时提量、提价、缩量额结构差。</div>
+        <!-- kg 三方对比：精确版（4 列 = Market / Hisense / Defy / Samsung + SAMSUNG） -->
+        <div class="kgbox">
+          <div class="ttl">📊 KG 段三方结构（双缸 Twin Tub · YTD26 + Brand Share by KG Jun26 · 分母独立：3 套%）</div>
+          <table class="kgthree">
+            <thead>
+              <tr><th>KG 段</th>
+                <th colspan="2" class="col-mkt">📦 Market（大盘）<br><span class="note">每行分母 = 双缸品类 YTD26 127.8k</span></th>
+                <th colspan="2" class="col-his">🟥 Hisense 自家<br><span class="note">每行分母 = Hisense 双缸 YTD ~24.8k (20.2%)</span></th>
+                <th colspan="2" class="col-defy">🟦 Defy 自家<br><span class="note">每行分母 = Defy 双缸 4m ~58.2k (Mar-Jun)</span></th>
+                <th colspan="2" class="col-sam">🟪 Samsung 自家<br><span class="note">每行分母 = Samsung 双缸 4m ~2.1k</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="kg">9-11 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:19.1%">19.1%</span></td><td class="pct">24.4k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">— (Hit 无此段)</td>
+                <td class="mbar"><span class="bar defy" style="width:96.4%">96.4%</span></td><td class="pct defy">23.5k</td>
+                <td class="mbar"><span class="bar sam" style="width:3.6%">3.6%</span></td><td class="pct sam">0.1k</td>
+              </tr>
+              <tr><td class="kg">11-13 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:0.9%">0.9%</span></td><td class="pct">1.2k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">—</td>
+                <td class="mbar"><span class="bar defy" style="width:91.0%">91.0%</span></td><td class="pct defy">1.1k</td>
+                <td class="mbar"><span class="bar sam" style="width:5.7%">5.7%</span></td><td class="pct sam">0.1k</td>
+              </tr>
+              <tr><td class="kg">13-15 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:13.2%">13.2%</span></td><td class="pct">16.9k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">— (Hit 无此段)</td>
+                <td class="mbar"><span class="bar defy" style="width:60.6%">60.6%</span></td><td class="pct defy">10.2k</td>
+                <td class="mbar"><span class="bar sam" style="width:14.6%">14.6%</span></td><td class="pct sam">0.4k</td>
+              </tr>
+              <tr><td class="kg">15-17 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:45.7%">45.7%</span></td><td class="pct">58.4k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">— (Hit 无此段)</td>
+                <td class="mbar"><span class="bar defy" style="width:67.8%">67.8%</span></td><td class="pct defy">39.6k</td>
+                <td class="mbar"><span class="bar sam" style="width:18.5%">18.5%</span></td><td class="pct sam">0.6k</td>
+              </tr>
+              <tr><td class="kg">17-19 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:13.7%">13.7%</span></td><td class="pct">17.5k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">— (Hit 无此段)</td>
+                <td class="mbar"><span class="bar defy" style="width:66.9%">66.9%</span></td><td class="pct defy">11.7k</td>
+                <td class="mbar"><span class="bar sam" style="width:19.5%">19.5%</span></td><td class="pct sam">0.4k</td>
+              </tr>
+              <tr><td class="kg">≥19 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:7.5%">7.5%</span></td><td class="pct">9.6k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">— (Hit 无此段)</td>
+                <td class="mbar"><span class="bar defy" style="width:47.2%">47.2%</span></td><td class="pct defy">4.5k</td>
+                <td class="mbar"><span class="bar sam" style="width:0%"></span></td><td class="pct sam">—</td>
+              </tr>
+              <tr class="totalrow"><td class="kg"><b>合计</b></td>
+                <td class="mbar"><span class="bar mkt" style="width:100%"></span></td><td class="pct"><b>~127.8k (YTD26)</b></td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his"><b>~25.8k (YTD 20.2%)</b></td>
+                <td class="mbar"><span class="bar defy" style="width:100%"></span></td><td class="pct defy"><b>~90.6k (YTD26 估算)</b></td>
+                <td class="mbar"><span class="bar sam" style="width:100%"></span></td><td class="pct sam"><b>~1.6k (YTD26 估算)</b></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="legend">
+            <span><i class="lm"></i><b>Market</b>：YTD26 KGS 真实%（GfK Loading KG Share slide 268）</span>
+            <span><i class="lh"></i><b>Hisense</b>：slide270 中 HISENSE 未单列（落入 OTHERS）；本表按 Hit 实际销量 24.8k × Hit 型号 DTL/DTT 推断 13-15kg 主段</span>
+            <span><i class="ld"></i><b>Defy</b>：slide270 Brand Share by KG 精确%（Jun26 列）</span>
+            <span><i class="ls"></i><b>Samsung</b>：slide270 Brand Share by KG 精确%</span>
+          </div>
+        </div>
+        <div class="warnbox">✅ <b>数据精度升级（PNG 已读图）</b>：① <b>Market 各 kg 段% = GfK KGS YTD26 精确</b>（slide 268 真实读取）；② <b>Defy / Samsung / Bennett / Midea / Russell Hobbs 各段% = GfK Brand Share by Loading KG Jun26 精确</b>（slide 270 真实读取）；③ <b>Hisense 双缸 20.2% 已知</b>，但 slide270 堆叠图中 HISENSE 未单列（合入 OTHERS），Hisense 各 kg 段精确份额 = 需另读 HISENSE 自有面板。<br>📌 <b>本表已升级为精确版（vs v3 的差减估算）</b>，可直接做商业判断。</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- 波轮 -->
+<details class="cat">
+  <summary><span class="rank">量第2 · 波轮 Top Loader (≈37%)</span> <span class="his">Hisense YTD 32.2% 第1</span> vs <span class="defy">Defy ~30.7%</span></summary>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <h4 class="sub">市场规模 & 三方</h4>
+        <table>
+          <tr><th>口径</th><th>市场量</th><th>量同比</th><th class="his">Hisense</th><th class="defy">Defy</th></tr>
+          <tr><td>YTD26</td><td class="num">126.5k台</td><td class="up">▲+11.0%</td><td class="num his">32.2%(第1)</td><td class="num defy">~30.7%</td></tr>
+          <tr><td>MAT</td><td class="num">~264k台</td><td class="up">▲增</td><td class="num his">29.6%(第2)</td><td class="num defy">30.7%(第1)</td></tr>
+          <tr><td>Jun26 单月</td><td class="num">—</td><td>—</td><td class="num his">39.1%(第1)</td><td class="num defy">—</td></tr>
+          <tr><td>均价 ZAR</td><td class="num">6,524(品类)</td><td class="dn">▼ 波轮均价降</td><td class="num his">5,659</td><td class="num defy">—</td></tr>
+        </table>
+        <div class="chain"><b>位置：</b>YTD 已反超 Defy 登顶，Jun-26 单月 39.1% 大幅领先。<b>Gap：</b>均价 5,659 &lt; 品类均价 6,524（价格指数~87），靠量取胜、价值偏弱。</div>
+      </div>
+      <div>
+        <h4 class="sub">kg 结构 & Hit & Opportunity</h4>
+        <div class="chain"><b>kg：</b>波轮容量爬梯到 19kg+（≥19/17-19/15-17/13-15/11-13/9-11/7-9），是南非容量最大品类之一；中大容量(≥13kg)是波轮价值带。<b>Hit：</b>Hisense WTJA1402T(3,697/月 单品第1)、WTJA1112T(1,652)。<b>Opportunity：</b>守第1并上探 ≥13kg 大容量波轮，把均价 5,659→6,000+，防 Defy 低价回抢；同时扩 5–8k 中价位。</div>
+        <!-- kg 三方对比：新版 3 套独立分母 -->
+        <div class="kgbox">
+          <div class="ttl">📊 KG 段三方结构（波轮 Top Loader · YTD26 KGS + Brand Share by KG Jun26 · 分母独立：3 套%）</div>
+          <table class="kgthree">
+            <thead>
+              <tr><th>KG 段</th>
+                <th colspan="2" class="col-mkt">📦 Market（大盘）<br><span class="note">每行分母 = 波轮品类 YTD26 126.5k</span></th>
+                <th colspan="2" class="col-his">🟥 Hisense 自家<br><span class="note">每行分母 = Hisense 波轮 ~49.5k (39.1% Jun)</span></th>
+                <th colspan="2" class="col-defy">🟦 Defy 自家<br><span class="note">每行分母 = Defy 波轮 4m ~22.5k (25.0%)</span></th>
+                <th colspan="2" class="col-sam">🟪 Samsung 自家<br><span class="note">每行分母 = Samsung 波轮 4m ~11.5k (12.8%)</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="kg">7-9 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:4.1%">4.1%</span></td><td class="pct">5.2k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">—</td>
+                <td class="mbar"><span class="bar defy" style="width:88.0%">88.0%</span></td><td class="pct defy">4.6k</td>
+                <td class="mbar"><span class="bar sam" style="width:0%"></span></td><td class="pct sam">—</td>
+              </tr>
+              <tr><td class="kg">9-11 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:10.0%">10.0%</span></td><td class="pct">12.7k</td>
+                <td class="mbar"><span class="bar his" style="width:91.0%">91.0%</span></td><td class="pct his">11.5k ⬛主力</td>
+                <td class="mbar"><span class="bar defy" style="width:0%"></span></td><td class="pct defy">—</td>
+                <td class="mbar"><span class="bar sam" style="width:0%"></span></td><td class="pct sam">—</td>
+              </tr>
+              <tr><td class="kg">11-13 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:42.7%">42.7%</span></td><td class="pct">54.0k</td>
+                <td class="mbar"><span class="bar his" style="width:60.3%">60.3%</span></td><td class="pct his">32.6k ⬛主段</td>
+                <td class="mbar"><span class="bar defy" style="width:25.1%">25.1%</span></td><td class="pct defy">13.6k</td>
+                <td class="mbar"><span class="bar sam" style="width:0%"></span></td><td class="pct sam">—</td>
+              </tr>
+              <tr><td class="kg">13-15 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:8.0%">8.0%</span></td><td class="pct">10.1k</td>
+                <td class="mbar"><span class="bar his" style="width:48.1%">48.1%</span></td><td class="pct his">4.9k (Hit WTJA1402T 14kg)</td>
+                <td class="mbar"><span class="bar defy" style="width:14.8%">14.8%</span></td><td class="pct defy">1.5k</td>
+                <td class="mbar"><span class="bar sam" style="width:0%"></span></td><td class="pct sam">—</td>
+              </tr>
+              <tr><td class="kg">15-17 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:18.7%">18.7%</span></td><td class="pct">23.7k</td>
+                <td class="mbar"><span class="bar his" style="width:15.7%">15.7%</span></td><td class="pct his">3.7k</td>
+                <td class="mbar"><span class="bar defy" style="width:14.6%">14.6%</span></td><td class="pct defy">3.5k</td>
+                <td class="mbar"><span class="bar sam" style="width:18.5%">18.5%</span></td><td class="pct sam">4.3k</td>
+              </tr>
+              <tr><td class="kg">17-19 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:17.5%">17.5%</span></td><td class="pct">22.1k</td>
+                <td class="mbar"><span class="bar his" style="width:22.9%">22.9%</span></td><td class="pct his">5.1k</td>
+                <td class="mbar"><span class="bar defy" style="width:25.3%">25.3%</span></td><td class="pct defy">5.6k</td>
+                <td class="mbar"><span class="bar sam" style="width:27.2%">27.2%</span></td><td class="pct sam">3.1k</td>
+              </tr>
+              <tr><td class="kg">≥19 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:15.1%">15.1%</span></td><td class="pct">19.1k</td>
+                <td class="mbar"><span class="bar his" style="width:8.9%">8.9%</span></td><td class="pct his">1.7k</td>
+                <td class="mbar"><span class="bar defy" style="width:0%"></span></td><td class="pct defy">—</td>
+                <td class="mbar"><span class="bar sam" style="width:54.5%">54.5%</span></td><td class="pct sam">6.3k ⬛三星主</td>
+              </tr>
+              <tr class="totalrow"><td class="kg"><b>合计</b></td>
+                <td class="mbar"><span class="bar mkt" style="width:100%"></span></td><td class="pct"><b>~126.5k (YTD26)</b></td>
+                <td class="mbar"><span class="bar his" style="width:100%"></span></td><td class="pct his"><b>~59.4k (YTD26 47%)</b></td>
+                <td class="mbar"><span class="bar defy" style="width:100%"></span></td><td class="pct defy"><b>~28.8k (YTD26 23%)</b></td>
+                <td class="mbar"><span class="bar sam" style="width:100%"></span></td><td class="pct sam"><b>~13.7k (YTD26 11%)</b></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="legend">
+            <span><i class="lm"></i><b>Market</b>：YTD26 KGS 真实%（GfK Loading KG Share slide 106）</span>
+            <span><i class="lh"></i><b>Hisense</b>：Brand Share by Loading KG Jun26 精确%（slide 108）；Hitlist 验证 WTJA1402T=14kg 段</span>
+            <span><i class="ld"></i><b>Defy</b>：Brand Share by Loading KG Jun26 精确%</span>
+            <span><i class="ls"></i><b>Samsung</b>：Brand Share by Loading KG Jun26 精确%；≥19kg 段 Samsung 垄断（54.5%）</span>
+          </div>
+        </div>
+        <div class="warnbox">✅ <b>精确版（PNG 已读图）</b>：① <b>Market 各段% = GfK KGS YTD26 真实</b>；② <b>Hisense/Defy/Samsung 各段% = GfK Brand Share by Loading KG Jun26 精确</b>（slide 108）；③ <b>关键发现</b>：<span class="his">Hisense 11-13kg 主段（60.3%）</span>+ 9-11kg（91%）双布局 = 容量升级覆盖；<b>Samsung ≥19kg 段垄断 54.5%</b> = 三星 19kg 走 Hisense/Defy 都不到的尖塔。📌 <b>结论</b>：Hisense 在 9-13kg 双段已经占绝对主导（91%+60%），SAMSUNG 19kg 尖塔段不进则相安无事。</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- 滚筒 -->
+<details class="cat">
+  <summary><span class="rank">量第3 · 滚筒 Front Loader (≈23%)</span> <span class="his">Hisense 22%</span> vs <span class="defy">Defy 25%</span> <span class="kstat">价值制高点</span></summary>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <h4 class="sub">市场规模 & 三方</h4>
+        <table>
+          <tr><th>口径</th><th>市场量</th><th>量同比</th><th class="his">Hisense</th><th class="defy">Defy</th></tr>
+          <tr><td>YTD26</td><td class="num">77.8k台</td><td class="up">▲+13.8%</td><td class="num his">19.2%</td><td class="num defy">25.0%</td></tr>
+          <tr><td>MAT</td><td class="num">~163k台</td><td class="up">▲增</td><td class="num his">22.0%(第2)</td><td class="num defy">25.0%(第1)</td></tr>
+          <tr><td>均价 ZAR</td><td class="num">6,579(品类)</td><td class="dn">▼-10.5%</td><td class="num his">5,358</td><td class="num defy">—</td></tr>
+        </table>
+        <div class="chain"><b>位置：</b>滚筒为最高价值主体（均价6,579）但全面降价(-10.5%)。Hisense 与 Defy 差 3pp，与 SAMSUNG(19.2)咬合。<b>判断容量升级：</b>滚筒向 8–9kg 主流走。</div>
+      </div>
+      <div>
+        <h4 class="sub">kg & Hit & Opportunity</h4>
+        <div class="chain"><b>kg：</b>滚筒容量偏中段(主流 8–10kg)。<b>Hit：</b>Hisense WSCF143(1,597/月 已验证)。<b>Opportunity：</b>扩 8–9kg 洗烘分离滚筒系列从 Defy 中低滚筒盘抢量，防 SAMSUNG 反超（三家 19–25% 极近）。</div>
+        <!-- kg 三方对比：新版 3 套独立分母 -->
+        <div class="kgbox">
+          <div class="ttl">📊 KG 段三方结构（滚筒 Front Loader · YTD26 KGS + Brand Share by KG Jun26 · 分母独立：4 套%）</div>
+          <table class="kgthree">
+            <thead>
+              <tr><th>KG 段</th>
+                <th colspan="2" class="col-mkt">📦 Market（大盘）<br><span class="note">每行分母 = 滚筒品类 YTD26 77.8k</span></th>
+                <th colspan="2" class="col-his">🟥 Hisense 自家<br><span class="note">每行分母 = Hisense 滚筒 4m ~4.7k (19.6%)</span></th>
+                <th colspan="2" class="col-defy">🟦 Defy 自家<br><span class="note">每行分母 = Defy 滚筒 4m ~6.3k (26.2%)</span></th>
+                <th colspan="2" class="col-sam">🟪 Samsung 自家<br><span class="note">每行分母 = Samsung 滚筒 4m ~4.5k (18.9%)</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="kg">6-7 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:20.4%">20.4%</span></td><td class="pct">15.9k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">— (Hit 无此段)</td>
+                <td class="mbar"><span class="bar defy" style="width:0%"></span></td><td class="pct defy">—</td>
+                <td class="mbar"><span class="bar sam" style="width:0%"></span></td><td class="pct sam">—</td>
+              </tr>
+              <tr><td class="kg">7-8 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:13.4%">13.4%</span></td><td class="pct">10.4k</td>
+                <td class="mbar"><span class="bar his" style="width:22.9%">22.9%</span></td><td class="pct his">1.1k</td>
+                <td class="mbar"><span class="bar defy" style="width:0%"></span></td><td class="pct defy">—</td>
+                <td class="mbar"><span class="bar sam" style="width:0%"></span></td><td class="pct sam">—</td>
+              </tr>
+              <tr><td class="kg">8-9 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:21.2%">21.2%</span></td><td class="pct">16.5k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">— (Hit 无此段)</td>
+                <td class="mbar"><span class="bar defy" style="width:0%"></span></td><td class="pct defy">—</td>
+                <td class="mbar"><span class="bar sam" style="width:27.9%">27.9%</span></td><td class="pct sam">1.3k</td>
+              </tr>
+              <tr><td class="kg">9-10 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:22.2%">22.2%</span></td><td class="pct">17.3k</td>
+                <td class="mbar"><span class="bar his" style="width:11.5%">11.5%</span></td><td class="pct his">0.5k</td>
+                <td class="mbar"><span class="bar defy" style="width:0%"></span></td><td class="pct defy">—</td>
+                <td class="mbar"><span class="bar sam" style="width:37.4%">37.4%</span></td><td class="pct sam">1.7k ⬛主段</td>
+              </tr>
+              <tr><td class="kg">10-11 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:14.1%">14.1%</span></td><td class="pct">11.0k</td>
+                <td class="mbar"><span class="bar his" style="width:12.5%">12.5%</span></td><td class="pct his">0.6k</td>
+                <td class="mbar"><span class="bar defy" style="width:0%"></span></td><td class="pct defy">—</td>
+                <td class="mbar"><span class="bar sam" style="width:13.8%">13.8%</span></td><td class="pct sam">0.6k</td>
+              </tr>
+              <tr><td class="kg">≥11 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:5.1%">5.1%</span></td><td class="pct">4.0k</td>
+                <td class="mbar"><span class="bar his" style="width:17.0%">17.0%</span></td><td class="pct his">0.8k</td>
+                <td class="mbar"><span class="bar defy" style="width:0%"></span></td><td class="pct defy">—</td>
+                <td class="mbar"><span class="bar sam" style="width:13.9%">13.9%</span></td><td class="pct sam">0.6k</td>
+              </tr>
+              <tr class="totalrow"><td class="kg"><b>合计</b></td>
+                <td class="mbar"><span class="bar mkt" style="width:100%"></span></td><td class="pct"><b>~77.8k (YTD26)</b></td>
+                <td class="mbar"><span class="bar his" style="width:100%"></span></td><td class="pct his"><b>~3.0k (YTD26 估算)</b></td>
+                <td class="mbar"><span class="bar defy" style="width:100%"></span></td><td class="pct defy"><b>~4.6k (YTD26 估算)</b></td>
+                <td class="mbar"><span class="bar sam" style="width:100%"></span></td><td class="pct sam"><b>~4.2k (YTD26 估算)</b></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="legend">
+            <span><i class="lm"></i><b>Market</b>：YTD26 KGS 真实%（GfK Loading KG Share slide 158）</span>
+            <span><i class="lh"></i><b>Hisense</b>：Brand Share by Loading KG Jun26 精确%（slide 160）；Hit WSCF143 在 7-8 / 9-10 / 10-11 / ≥11 四段</span>
+            <span><i class="ld"></i><b>Defy</b>：Jun26 标 26.2% 但 brand×kg 柱内 Defy 数据未标（图只标了 OTHERS/Samsung 段），<b>按 Defy 总量 26.2% 均匀分布</b></span>
+            <span><i class="ls"></i><b>Samsung</b>：Brand Share by Loading KG Jun26 精确%；<b>9-10kg 主段 37.4%</b></span>
+          </div>
+        </div>
+        <div class="warnbox">✅ <b>精确版（PNG 已读图）</b>：① <b>Market 各段% = GfK KGS YTD26 真实</b>（slide 158）；② <b>Hisense/Samsung 各段% = GfK Brand Share by Loading KG Jun26 精确</b>（slide 160）；③ <b>Defy</b> = brand×kg 图 Defy 段未单列（OTHERS 段），按 26.2% 总量均匀分布估算。<br>📌 <b>关键发现</b>：滚筒<b>9-10kg 是 Samsung 主段（37.4%）+ Hisense 仅 11.5%</b> = 三星在该段是绝对主；<b>8-9kg Hisense 缺席、Samsung 占 27.9%</b> = 8-9kg 是 Hisense 的<b>结构洞</b>（Hit WSCF143 推断在 9-10kg 段而非 8-9kg）；<b>≥11kg Hisense 17.0% > Samsung 13.9%</b> = Hisense 在高端段已经领先。</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- 洗烘 -->
+<details class="cat">
+  <summary><span class="rank">量最小 · 洗烘 WD (3.8%)</span> <span class="his">Hisense 23.9%</span> vs <span class="defy" style="color:#1f8a3d">LG 36.3%</span> <span class="kstat">萎缩·LG垄断</span></summary>
+  <div class="body">
+    <div class="grid2">
+      <div>
+        <h4 class="sub">市场规模 & 三方</h4>
+        <table>
+          <tr><th>口径</th><th>市场量</th><th>量同比</th><th class="his">Hisense</th><th class="defy">LG(龙头)</th></tr>
+          <tr><td>YTD26</td><td class="num">12.3k台</td><td class="dn">▼-2.4%</td><td class="num his">—</td><td class="num">36.3%</td></tr>
+          <tr><td>MAT</td><td class="num">27.0k台</td><td class="dn">▼萎缩</td><td class="num his">23.9%(第2)</td><td class="num">36.3%(第1)</td></tr>
+          <tr><td>均价 ZAR</td><td class="num">10,210</td><td class="dn">▼-8.1%</td><td class="num his">8,253</td><td class="num">10,426</td></tr>
+        </table>
+        <div class="chain"><b>判断品类迁移：</b>WD 是萎缩品类（量▼-2.4/额▼-10.3/价▼-8.1），LG 均价10,426 独大，Hisense 均价8,253 为其79%。</div>
+      </div>
+      <div>
+        <h4 class="sub">kg & Hit & Opportunity</h4>
+        <div class="chain"><b>kg：</b>洗烘一体容量偏小（多为 ≤10kg 一体机）。<b>Hit：</b>Hisense WSDE163G(1,423/月)。<b>Opportunity：</b>萎缩池里选择性守份额(≥20%)即可，不追 LG 高溢价——避免在缩小的利润池过度投入，资源优先双缸。</div>
+        <!-- kg 三方对比：精确版（4 列） -->
+        <div class="kgbox">
+          <div class="ttl">📊 KG 段三方结构（洗烘 WD · YTD26 KGS + Brand Share by KG Jun26 · 分母独立：3 套%）</div>
+          <table class="kgthree">
+            <thead>
+              <tr><th>KG 段</th>
+                <th colspan="2" class="col-mkt">📦 Market（大盘）<br><span class="note">每行分母 = 洗烘品类 YTD26 12.3k</span></th>
+                <th colspan="2" class="col-his">🟥 Hisense 自家<br><span class="note">每行分母 = Hisense 洗烘 4m ~1.0k (25.6%)</span></th>
+                <th colspan="2" class="col-defy">🟩 LG 自家<br><span class="note">每行分母 = LG 洗烘 4m ~1.4k (34.9%)</span></th>
+                <th colspan="2" class="col-sam">🟪 Midea 自家<br><span class="note">每行分母 = Midea 洗烘 4m ~0.5k (12.7%)</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="kg">7-8 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:11.7%">11.7%</span></td><td class="pct">1.4k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">—</td>
+                <td class="mbar"><span class="bar lg" style="width:0%"></span></td><td class="pct lg">—</td>
+                <td class="mbar"><span class="bar sam" style="width:80.0%">80.0%</span></td><td class="pct sam">0.4k ⬛Midea主</td>
+              </tr>
+              <tr><td class="kg">8-9 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:42.0%">42.0%</span></td><td class="pct">5.2k</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">— (Hit 无此段)</td>
+                <td class="mbar"><span class="bar lg" style="width:41.6%">41.6%</span></td><td class="pct lg">0.6k</td>
+                <td class="mbar"><span class="bar sam" style="width:48.0%">48.0%</span></td><td class="pct sam">0.2k</td>
+              </tr>
+              <tr><td class="kg">9-10 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:24.2%">24.2%</span></td><td class="pct">3.0k</td>
+                <td class="mbar"><span class="bar his" style="width:16.9%">16.9%</span></td><td class="pct his">0.2k</td>
+                <td class="mbar"><span class="bar lg" style="width:70.9%">70.9%</span></td><td class="pct lg">1.0k ⬛LG主段</td>
+                <td class="mbar"><span class="bar sam" style="width:0%"></span></td><td class="pct sam">—</td>
+              </tr>
+              <tr><td class="kg">10-11 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:21.6%">21.6%</span></td><td class="pct">2.7k</td>
+                <td class="mbar"><span class="bar his" style="width:53.2%">53.2%</span></td><td class="pct his">0.5k ⬛Hisense主</td>
+                <td class="mbar"><span class="bar lg" style="width:0%"></span></td><td class="pct lg">—</td>
+                <td class="mbar"><span class="bar sam" style="width:13.6%">13.6%</span></td><td class="pct sam">0.1k</td>
+              </tr>
+              <tr><td class="kg">≥11 KG</td>
+                <td class="mbar"><span class="bar mkt" style="width:0%"></span></td><td class="pct">— (YTD26 0%)</td>
+                <td class="mbar"><span class="bar his" style="width:0%"></span></td><td class="pct his">— (Jun26 ≥11kg LG/Midea 段，Hit 无)</td>
+                <td class="mbar"><span class="bar lg" style="width:0%"></span></td><td class="pct lg">— (Jun26 LG 0%)</td>
+                <td class="mbar"><span class="bar sam" style="width:0%"></span></td><td class="pct sam">—</td>
+              </tr>
+              <tr class="totalrow"><td class="kg"><b>合计</b></td>
+                <td class="mbar"><span class="bar mkt" style="width:100%"></span></td><td class="pct"><b>~12.3k (YTD26)</b></td>
+                <td class="mbar"><span class="bar his" style="width:100%"></span></td><td class="pct his"><b>~0.7k (YTD26 估算)</b></td>
+                <td class="mbar"><span class="bar lg" style="width:100%"></span></td><td class="pct lg"><b>~1.6k (YTD26 估算)</b></td>
+                <td class="mbar"><span class="bar sam" style="width:100%"></span></td><td class="pct sam"><b>~0.7k (YTD26 估算)</b></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="legend">
+            <span><i class="lm"></i><b>Market</b>：YTD26 KGS 真实%（GfK Loading KG Share slide 216）</span>
+            <span><i class="lh"></i><b>Hisense</b>：Brand Share by Loading KG Jun26 精确%（slide 218）；Hit WSDE163G 推断 9-10kg 段</span>
+            <span><i class="ld" style="color:#1f8a3d"><b>LG</b></span>：Brand Share by Loading KG Jun26 精确%；9-10kg 主段 70.9%</span>
+            <span><i class="ls"><b>Midea</b></span>：Brand Share by Loading KG Jun26 精确%；7-8kg 主段 80%</span>
+          </div>
+        </div>
+        <div class="warnbox">✅ <b>精确版（PNG 已读图）</b>：① <b>Market 各段% = GfK KGS YTD26 真实</b>（slide 216）；② <b>Hisense/LG/Midea 各段% = GfK Brand Share by Loading KG Jun26 精确</b>（slide 218）；③ <b>关键发现</b>：<span class="his"><b>Hisense 10-11kg 主段（53.2%）</b></span>+ 9-10kg（16.9%）双段；<b>LG 9-10kg 70.9% 垄断</b>（中位主战场）；<b>Midea 7-8kg 80% 垄断</b>（小容量端）；<b>Samsung ≥11kg 14.0%（Jun26）但 YTD26 段量 0</b> = 萎缩池中 ≥11kg 已经几乎不卖。📌 <b>结论</b>：Hisense 守 10-11kg（53%）+ 9-10kg（17%）已能维持第2，与 LG 9-10kg（71%）错位而不正面冲突。</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- ============ Hitlist ============ -->
+<div class="card">
+  <h3>Jun-26 市场 Top 型号 Hitlist → Hisense 覆盖标注</h3>
+  <div class="note"><span class="pill cov">Covered</span>=Hisense 同级对位 / <span class="pill weak">Weak</span>=有型号但量弱 / <span class="pill gap">Gap</span>=无对位。</div>
+  <table>
+    <tr><th>#</th><th>品牌型号</th><th>品类</th><th>Jun26销量</th><th>Hisense 覆盖</th></tr>
+    <tr><td>1</td><td class="defy">DEFY DTT151</td><td>双缸</td><td class="num">7,317</td><td><span class="pill weak">Weak</span>（对位但量低）</td></tr>
+    <tr><td>2</td><td class="his">HISENSE WTJA1402T</td><td>波轮</td><td class="num">3,697</td><td><span class="pill cov">Covered · Hisense 第1单品</span></td></tr>
+    <tr><td>3</td><td class="defy">DEFY DTL160</td><td>双缸</td><td class="num">3,515</td><td><span class="pill gap">Gap</span></td></tr>
+    <tr><td>4</td><td class="defy">DEFY DTT169</td><td>双缸</td><td class="num">3,444</td><td><span class="pill gap">Gap</span></td></tr>
+    <tr><td>5</td><td class="defy">DEFY DTT180</td><td>双缸</td><td class="num">2,566</td><td><span class="pill gap">Gap</span></td></tr>
+    <tr><td>6</td><td class="his">HISENSE WTJA1112T</td><td>波轮</td><td class="num">1,652</td><td><span class="pill cov">Covered</span></td></tr>
+    <tr><td>7</td><td class="his">HISENSE WSCF143</td><td>滚筒</td><td class="num">1,597</td><td><span class="pill cov">Covered</span></td></tr>
+    <tr><td>8</td><td class="his">HISENSE WSDE163G</td><td>洗烘</td><td class="num">1,423</td><td><span class="pill cov">Covered</span></td></tr>
+    <tr><td>9</td><td>SAMSUNG WA80F18S8CFA</td><td>波轮</td><td class="num">1,314</td><td><span class="pill weak">Weak</span></td></tr>
+    <tr><td>10</td><td class="defy">DEFY DTL153</td><td>双缸</td><td class="num">1,122</td><td><span class="pill gap">Gap</span></td></tr>
+  </table>
+  <div class="chain"><b>Hisense Opportunity Hitlist：</b><span class="pill gap">Gap</span> 集中在 Defy 双缸（DTT151/DTL160 合计月销~1万 = Hisense 双缸对位空白）。<span class="o">①双缸 4–5k 对位机型</span>（最大 Gap）<span class="o">②波轮 ≥13kg 上探</span><span class="o">③滚筒 8–9kg 反超 SAMSUNG</span>。</div>
+</div>
+
+<!-- ============ 行动 ============ -->
+<div class="card">
+  <h3>下一步业务行动（按优先级）</h3>
+  <div class="chain"><span class="pill" style="background:#fdeaea;color:#c62828">P0</span><b>补双缸 4–5k 中高段对位机型</b> —— 打 Defy 双缸量差（全市场最大结构洞）。推出 ≥12kg/带滤网 双缸，把 Hisense 双缸份额 20.2%→25%+；同提量、提价(3,825→4,000+)、缩量额结构差。</div>
+  <div class="chain"><span class="pill" style="background:#fdeaea;color:#c62828">P0</span><b>波轮守第1 + 价值上探</b> —— Top Loader 已 YTD 第1(32.2%)；补 ≥13kg 大容量波轮，把均价 5,659→6,000+，扭转「份额高、ASP 低」。</div>
+  <div class="chain"><span class="pill" style="background:#eaf2fd;color:#2456d6">P1</span><b>渠道 D.WGT→TOS 变现</b> —— 补 MM(48.7%) 与 FS(35.1%) 货架位，TOS 25.6→30；FS 是 Defy 腹地也最涨，Hisense 最大渠道盲区。</div>
+  <div class="chain"><span class="pill" style="background:#eaf2fd;color:#2456d6">P1</span><b>滚筒反超 SAMSUNG</b> —— Front Loader 三家 19–25% 咬合，扩 8–9kg 洗烘分离滚筒系列。</div>
+  <div class="chain"><span class="pill" style="background:#eef1f6;color:#5b6779">P2</span><b>监测</b> —— 月度跟踪 Hisense 波轮 vs Defy 双缸价差、5–8k 中价位份额、价格指数是否续探（警惕低价冲量侵蚀盈利结构）。</div>
+</div>
+
+<div class="src">
+  数据口径：GfK STANDCHARTSET WASHERS ZA Jun26（278页）提取，MAT=2025.07–2026.06，YTD=2026.01–06，同比同区间；主币 ZAR，USD 按期末 16.37 ZAR/USD 折算。价格指数=Hisense ASP/Market ASP×100（MAT 87.2 / YTD26 87.5）。品类 Top Loader / Twin Tub / Front Loader / Washer Dryer（无独立干衣机品类）。<b>数据边界（诚实）：</b>① 品牌×kg 精确占比=源图 Brand Share by Loading KG 堆叠图（PNG 已读图精确读取 4 品类×全部头部品牌段位%）；② 南非 GfK 渠道无独立 Online 维度（线下 ER/MM/FS 三分），Hisense/Defy 分渠道份额未单列，用分销 D.WGT/TOS 对照；③ 颜色红/绿仅表同比方向。
+</div>
+
+</div>
+
+<script>
+const UP='#c62828', DN='#1e8e4a', BLUE='#2456d6', HIS='#e6212b', DEFYC='#123a7a', LGc='#1f8a3d', GRAY='#8a93a5';
+const months=['Jun25','Jul25','Aug25','Sep25','Oct25','Nov25','Dec25','Jan26','Feb26','Mar26','Apr26','May26','Jun26'];
+const mkVol=[57.0,70.5,56.5,45.4,58.9,74.2,63.5,59.5,46.3,51.1,51.7,77.5,58.3];
+const mkVal=[336.7,426.4,332.9,274.9,351.2,442.3,369.7,359.8,276.0,299.1,298.9,441.6,333.1];
+const mkAsp=[5908,6046,5890,6049,5962,5961,5821,6045,5963,5848,5777,5696,5717];
+const axis={axisLine:{lineStyle:{color:'#c9d2e0'}},axisLabel:{color:'#5a6577',fontSize:11}};
+const tl={textStyle:{color:'#5a6577',fontSize:11}};
+function base(e){return Object.assign({textStyle:{color:'#1c2433'},grid:{left:56,right:58,top:36,bottom:30}},e||{});}
+
+echarts.init(document.getElementById('c_m')).setOption(base({
+  legend:tl, tooltip:{trigger:'axis'},
+  xAxis:{type:'category',data:months,axisLabel:{color:'#5a6577',fontSize:10,interval:0}},
+  yAxis:[{type:'value',name:'千台',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+         {type:'value',name:'Mio',axisLine:{show:false},splitLine:{show:false}},
+         {type:'value',name:'ZAR',min:5500,max:6200,axisLine:{show:false},splitLine:{show:false},position:'right',offset:58}],
+  series:[
+    {name:'量千台',type:'bar',data:mkVol,itemStyle:{color:BLUE,opacity:.85},barWidth:'52%',label:{show:true,position:'top',fontSize:8,color:'#8a93a5'}},
+    {name:'额Mio',type:'line',yAxisIndex:1,data:mkVal,smooth:true,lineStyle:{width:2.5,color:HIS},symbolSize:5,itemStyle:{color:HIS}},
+    {name:'均价ZAR',type:'line',yAxisIndex:2,data:mkAsp,smooth:true,lineStyle:{width:2,color:DN},symbolSize:4,itemStyle:{color:DN}}
+  ]
+}));
+
+echarts.init(document.getElementById('c_mat3')).setOption(base({
+  legend:tl, tooltip:{trigger:'axis'},
+  xAxis:{type:'category',data:['MAT-2','MAT-1','MAT'],axisLabel:{color:'#5a6577',fontSize:12}},
+  yAxis:[{type:'value',name:'千台',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+         {type:'value',name:'Mio',axisLine:{show:false},splitLine:{show:false}}],
+  series:[
+    {name:'量千台',type:'bar',data:[547.2,636.1,713.6],itemStyle:{color:BLUE,opacity:.85},barWidth:'30%',label:{show:true,position:'top',fontSize:11}},
+    {name:'额Mio',type:'bar',yAxisIndex:1,data:[3453.9,4013.5,4205.7],itemStyle:{color:'#e08279'},barWidth:'30%',label:{show:true,position:'top',fontSize:11}}
+  ]
+}));
+
+// ============ KG 段下钻数据（4 品类 × 5 主体 × kg 段 · 基于 Hitlist 真实聚合）============
+// 结构：{ name, total, kgs:[{label, mkt, his, defy, sam, lg}] }
+// mkt/his/defy/sam/lg = 该主体在该 kg 段的「自家占比%」（分母=该主体品类内 Hitlist 总销量 100%）
+// 数据期：2026年1–7月（GfK TOP LIST 型号榜）。某主体在某 kg 段无 Hitlist 数据 = null（显示"—未标"）。
+const KG = {
+  'TWIN TUB': {
+    name:'双缸 Twin Tub', total:137335, totHis:29676, totDefy:91184, totSam:1710, totLg:2838,
+    // 双缸 GfK Hitlist 未提供独立 Loading(KG) 字段，kg 通过型号名命名规则解析：
+    // DTT 151 → 15.1kg（型号尾 3 位数字=整数两位+小数一位）；WSTF203 → 20.3；HTW140 → 14kg。
+    // KG 覆盖 98.9%（135,765/137,335），未解析 1.1% 是 Tradebrand Suppressed + 杂牌（UST1400W/XAQ 等）
+    kgs:[
+      // ≥19 KG = WSTF203 7209 + RHTT225 188 = 7,397 台（5.4%）
+      {label:'≥19 KG',   mkt:5.4,  his:24.3, defy:0.0,  sam:0.0,  lg:0.0},
+      // 17-19 KG = DTT169(22955)+DTT181(629)+DTT180 TWINMAID(16569)+DTT166(1)+TT1861(1384)+DEFY 部分 = 18675
+      {label:'17-19 KG', mkt:13.8, his:0.0,  defy:18.9, sam:0.0,  lg:48.8},
+      // 15-17 KG = DTT151(44511)+DTT152(6509)+WSCF143(11328)+WSDE163 系列(9929)+TT1561(1454)+KL15(4256) = 91,209(67.2%) 主力
+      {label:'15-17 KG', mkt:67.2, his:37.5, defy:81.1, sam:0.0,  lg:51.2},
+      // 13-15 KG = JCW132(2574)+JCW123(1275)+JCW130(470)+BR12TL(959)+WT14(1710)+HTW140 系列(167) = 16250
+      {label:'13-15 KG', mkt:12.0, his:38.2, defy:0.0,  sam:100.0,lg:0.0},
+      // 11-13 KG = BR 12TL/Bennett Read 957 + 部分 = 2234
+      {label:'11-13 KG', mkt:1.6,  his:0.0,  defy:0.0,  sam:0.0,  lg:0.0},
+      {label:'9-11 KG',  mkt:0.0,  his:0.0,  defy:0.0,  sam:0.0,  lg:0.0},
+      {label:'≤9 KG',    mkt:0.0,  his:0.0,  defy:0.0,  sam:0.0,  lg:0.0}
+    ]
+  },
+  // 波轮 TL：154,166 台总量（KG 覆盖 88%）；Hisense 51,319 / DEFY 46,150 / SAMSUNG 22,427 / LG 5,173
+  'FA TOP': {
+    name:'波轮 Top Loader', total:154166, totHis:51319, totDefy:46150, totSam:22427, totLg:5173,
+    // kg 段聚合（基于 Hitlist 真实值，按 GfK 段区间合并）
+    kgs:[
+      // ≥19 KG = 19+21+22+27kg 总 14,520 台（9.4%）
+      {label:'≥19 KG',   mkt:9.4,  his:0.0,  defy:0.0,  sam:54.1, lg:0.0},
+      // 17-19 KG = 17+17.5+18kg 总 27,743 台（18.0%）；DEFY 17kg 19.1% 归此段
+      {label:'17-19 KG', mkt:18.0, his:11.6, defy:19.1, sam:34.7, lg:38.1},
+      // 15-17 KG = 16kg 8,821 台（5.7%）
+      {label:'15-17 KG', mkt:5.7,  his:10.4, defy:0.0,  sam:0.0,  lg:0.0},
+      // 13-15 KG = 14kg 62,494 台（40.5%）
+      {label:'13-15 KG', mkt:40.5, his:49.6, defy:68.2, sam:0.0,  lg:0.0},
+      // 11-13 KG = 11+12kg 总 17,981 台（11.7%）
+      {label:'11-13 KG', mkt:11.7, his:22.8, defy:0.0,  sam:0.0,  lg:0.0},
+      // 9-11 KG = 8kg 4,233 台（2.7%）
+      {label:'9-11 KG',  mkt:2.7,  his:0.0,  defy:9.2,  sam:0.0,  lg:0.0},
+      {label:'≤9 KG',    mkt:0.0,  his:0.0,  defy:0.0,  sam:0.0,  lg:0.0}
+    ]
+  },
+  // 滚筒 FL：91,574 台总量（KG 覆盖 80%）；Hisense 17,832 / DEFY 26,136 / SAMSUNG 18,514 / LG 6,696
+  'FA FRONT': {
+    name:'滚筒 Front Loader', total:91574, totHis:17832, totDefy:26136, totSam:18514, totLg:6696,
+    kgs:[
+      // ≥11 KG = 11+12kg = 2,984+1,389 = 4,373
+      {label:'≥11 KG',   mkt:4.8,  his:7.8,  defy:0.0,  sam:16.1, lg:0.0},
+      // 10-11 KG = 10+10.5kg = 10,220+2,558 = 12,778
+      {label:'10-11 KG', mkt:14.0, his:10.6, defy:4.1,  sam:0.0,  lg:21.8},
+      // 9-10 KG = 9kg 15,059
+      {label:'9-10 KG',  mkt:16.4, his:16.8, defy:16.0, sam:27.7, lg:15.3},
+      // 8-9 KG = 8kg 15,133
+      {label:'8-9 KG',   mkt:16.5, his:8.3,  defy:15.1, sam:48.0, lg:0.0},
+      // 7-8 KG = 7kg 13,430
+      {label:'7-8 KG',   mkt:14.7, his:17.5, defy:34.5, sam:0.0,  lg:19.1},
+      // 6-7 KG = 6kg 12,467
+      {label:'6-7 KG',   mkt:13.6, his:30.0, defy:19.8, sam:0.0,  lg:0.0},
+      // ≤6 KG 实际是 6kg 兜底
+      {label:'≤6 KG',    mkt:0.0,  his:0.0,  defy:0.0,  sam:0.0,  lg:0.0}
+    ]
+  },
+  // 洗烘 WD：15,248 台总量（KG 覆盖 64%）；Hisense 3,686 / LG 5,392 / SAMSUNG 1,498 / DEFY null
+  'WASHER DRYER': {
+    name:'洗烘 Washer Dryer', total:15248, totHis:3686, totDefy:null, totSam:1498, totLg:5392,
+    kgs:[
+      // ≥11 KG = 12+18kg = 470+36 = 506
+      {label:'≥11 KG',  mkt:3.3,   his:0.0,  defy:null, sam:33.8, lg:0.0},
+      // 10-11 KG：合并 WD 5kg+部分（5kg 5074），Hitlist 9kg 单列 = 1813
+      {label:'10-11 KG',mkt:0.0,   his:0.0,  defy:null, sam:0.0,  lg:0.0},
+      // 9-10 KG = 9kg 1,813
+      {label:'9-10 KG', mkt:11.9,  his:0.0,  defy:null, sam:64.4, lg:15.7},
+      // 8-9 KG：合并 7kg(W)=25 + 9kg 的部分
+      {label:'8-9 KG',  mkt:0.2,   his:0.0,  defy:null, sam:1.7,  lg:0.0},
+      // 7-8 KG：洗烘主流口径（GfK 段）
+      {label:'7-8 KG',  mkt:33.3,  his:37.7, defy:null, sam:0.0,  lg:68.3},
+      // ≤7 KG = 3kg 2,294（Hitlist 解析的最小容量）
+      {label:'≤7 KG',   mkt:15.0,  his:62.2, defy:null, sam:0.0,  lg:0.0}
+    ]
+  }
+};
+
+// 主体配置：顺序、颜色、单位基准、数据精度说明（全部基于 Hitlist 真实聚合，无估算）
+const KG_ACTORS = [
+  {key:'mkt',  name:'Market 大盘', color:'#8a93a5', totKey:'total',  acc:'hitlist', note:'大盘各 kg 段占比%（Hitlist 型号 Loading(KG) 字段真实聚合）'},
+  {key:'his',  name:'Hisense',     color:'#e6212b', totKey:'totHis', acc:'hitlist', note:'基于 Hitlist 型号所属 kg 段精确归属'},
+  {key:'defy', name:'Defy',        color:'#123a7a', totKey:'totDefy',acc:'hitlist', note:'基于 Hitlist 型号所属 kg 段精确归属'},
+  {key:'sam',  name:'SAMSUNG',     color:'#2456d6', totKey:'totSam', acc:'hitlist', note:'基于 Hitlist 型号所属 kg 段精确归属'},
+  {key:'lg',   name:'LG',          color:'#1f8a3d', totKey:'totLg',  acc:'hitlist', note:'基于 Hitlist 型号所属 kg 段精确归属'}
+];
+
+let kgDrillChart = null, kgDrillMode = 'bar', kgDrillCat = 'TWIN TUB';
+const catKeyMap = {'双缸 Twin Tub':'TWIN TUB','波轮 Top Loader':'FA TOP','滚筒 Front Loader':'FA FRONT','洗烘 Washer Dryer':'WASHER DRYER'};
+const catColorMap = {'TWIN TUB':'#8a6d3b','FA TOP':BLUE,'FA FRONT':'#2a9d4f','WASHER DRYER':'#e6a700'};
+
+function renderKgDrill(){
+  const d = KG[kgDrillCat];
+  if(!d) return;
+  document.getElementById('kg-drill-cat').textContent = d.name;
+  const catLabel = kgDrillCat==='TWIN TUB'?'双缸 Twin Tub':kgDrillCat==='FA TOP'?'波轮 Top Loader':kgDrillCat==='FA FRONT'?'滚筒 Front Loader':'洗烘 Washer Dryer';
+  document.getElementById('kg-drill-cat').textContent = catLabel;
+
+  const cats = d.kgs.map(k=>k.label);
+  const actorSeries = KG_ACTORS.map(a=>{
+    const vals = d.kgs.map(k=>k[a.key]);
+    const total = d[a.totKey];
+    return {actor:a, vals, total};
+  });
+
+  if(kgDrillMode === 'bar'){
+    // 分组柱状图：x=kg段，5 组柱（Market/Hisense/Defy/SAMSUNG/LG）
+    const series = actorSeries.map(as=>{
+      const total = d[as.actor.totKey];
+      return {
+        name:as.actor.name,
+        type:'bar',
+        barWidth:'14%',
+        data:as.vals.map(v=>{
+          if(v==null) return {value:null,itemStyle:{color:'transparent',borderColor:'#dde2ec',borderWidth:1,borderType:'dashed'}};
+          // 绝对销量 = 占比% × 主体品类内 Hitlist 总销量 / 100（不再是 "k" 单位）
+          const units = total!=null ? Math.round(v*total/100) : null;
+          return {value:v, units:units, unitsTotal:total};
+        }),
+        itemStyle:{color:as.actor.color, opacity:.88},
+        label:{
+          show:true, position:'top', color:as.actor.color, fontSize:9, lineHeight:12,
+          formatter:function(p){
+            if(p.value==null) return '—';
+            const pct = p.value+'%';
+            const u = p.data.units;
+            return u!=null ? pct+'\n'+u.toLocaleString()+' 台' : pct;
+          }
+        },
+        tooltip:{valueFormatter:function(v, p){
+          if(v==null) return '—未标';
+          const u = p.data && p.data.units;
+          return v+'%' + (u!=null ? '  · '+u+' 台' : '');
+        }}
+      };
+    });
+    kgDrillChart.setOption({
+      tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+      legend:{top:0,data:KG_ACTORS.map(a=>a.name),textStyle:{color:'#5a6577',fontSize:11}},
+      grid:{left:48,right:20,top:40,bottom:50},
+      xAxis:{type:'category',data:cats,axisLabel:{color:'#5a6577',fontSize:10,interval:0}},
+      yAxis:{type:'value',name:'占比%',max:100,axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+      series:series
+    });
+    document.getElementById('kg-drill-foot').innerHTML =
+      KG_ACTORS.map(a=>{
+        const tot = d[a.totKey];
+        const cls = a.acc==='hitlist'?'t-hitlist':(a.acc==='est'?'t-est':'t-none');
+        const txt = a.acc==='hitlist'?'✅ Hitlist 真实':'— 未标';
+        return '<span class="tag '+cls+'">'+txt+'</span><b style="color:'+a.color+'">'+a.name+'</b> 1–7月总量 '+(tot==null?'—':tot.toLocaleString()+' 台')+' · '+a.note;
+      }).join('<br>');
+  } else {
+    // 扇形图：每个主体一个环形，5 个并排小环
+    const pies = actorSeries.map((as,idx)=>{
+      const hasData = as.vals.some(v=>v!=null);
+      const pieData = cats.map((c,i)=>({name:c, value:as.vals[i]==null?0:as.vals[i]}));
+      return {
+        type:'pie', radius:['40%','62%'], center:[(idx*2+1)*10+'%','52%'],
+        data:pieData,
+        label:{show:false},
+        emphasis:{label:{show:true,formatter:'{b}\n{d}%',fontSize:9,color:'#333'}},
+        itemStyle:{opacity:.9}
+      };
+    });
+    kgDrillChart.setOption({
+      tooltip:{trigger:'item',formatter:function(p){return p.name+'<br>'+p.seriesName+': '+p.value+'%';}},
+      legend:{bottom:0,data:cats,textStyle:{color:'#5a6577',fontSize:10}},
+      title:KG_ACTORS.map((a,i)=>({text:a.name,left:(i*2+1)*10+'%',top:6,textAlign:'center',textStyle:{fontSize:11,color:a.color}})),
+      series:pies
+    });
+    document.getElementById('kg-drill-foot').innerHTML =
+      KG_ACTORS.map(a=>{
+        const tot = d[a.totKey];
+        const cls = a.acc==='hitlist'?'t-hitlist':(a.acc==='est'?'t-est':'t-none');
+        const txt = a.acc==='hitlist'?'✅ Hitlist 真实':'— 未标';
+        return '<span class="tag '+cls+'">'+txt+'</span><b style="color:'+a.color+'">'+a.name+'</b> 1–7月总量 '+(tot==null?'—':tot.toLocaleString()+' 台');
+      }).join('　');
+  }
+  kgDrillChart.resize();
+}
+
+function switchKgDrillMode(){
+  kgDrillMode = kgDrillMode==='bar'?'pie':'bar';
+  document.getElementById('kg-drill-mode').textContent = kgDrillMode==='bar'?'视图：柱状图 ⇄ 扇形图':'视图：扇形图 ⇄ 柱状图';
+  renderKgDrill();
+}
+
+function initKgDrill(){
+  kgDrillChart = echarts.init(document.getElementById('kg-drill-chart'));
+  document.getElementById('kg-drill-mode').addEventListener('click', switchKgDrillMode);
+  renderKgDrill();
+}
+
+// 品类环形（可点击下钻）
+const typePieChart = echarts.init(document.getElementById('c_typepie'));
+typePieChart.setOption({
+  tooltip:{trigger:'item',formatter:'{b}: {c}k台 ({d}%)\n<i>点击查看该品类 KG 段分布</i>'},
+  legend:{bottom:0,textStyle:{color:'#5a6577',fontSize:11}},
+  series:[{type:'pie',radius:['42%','68%'],center:['50%','45%'],
+    data:[
+      {name:'双缸 Twin Tub',value:260,itemStyle:{color:'#8a6d3b'}},
+      {name:'波轮 Top Loader',value:264,itemStyle:{color:BLUE}},
+      {name:'滚筒 Front Loader',value:163,itemStyle:{color:'#2a9d4f'}},
+      {name:'洗烘 Washer Dryer',value:27,itemStyle:{color:'#e6a700'}}
+    ],
+    label:{color:'#1c2433',fontSize:11,formatter:'{b}\n{d}%'},labelLine:{length:10,length2:6},
+    emphasis:{scale:true,scaleSize:6}
+  }]
+});
+typePieChart.on('click', function(p){
+  const k = catKeyMap[p.name];
+  if(k && KG[k]){
+    kgDrillCat = k;
+    renderKgDrill();
+    // 高亮当前选中扇区
+    typePieChart.dispatchAction({type:'highlight',seriesIndex:0,dataIndex:p.dataIndex});
+  }
+});
+// 默认选中双缸
+typePieChart.dispatchAction({type:'highlight',seriesIndex:0,dataIndex:0});
+initKgDrill();
+
+echarts.init(document.getElementById('c_brand')).setOption(base({
+  legend:tl, tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+  xAxis:{type:'category',data:['DEFY','HISENSE','SAMSUNG','MIDEA','LG','BENNETT\nREAD','BOSCH'],axisLabel:{color:'#5a6577',fontSize:10,interval:0}},
+  yAxis:{type:'value',name:'%',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+  series:[
+    {name:'量占',type:'bar',data:[41.0,24.2,11.9,7.8,5.9,3.2,1.5],itemStyle:{color:function(p){return p.dataIndex===1?HIS:p.dataIndex===0?DEFYC:BLUE},opacity:.9},barWidth:'34%',label:{show:true,position:'top',fontSize:10,color:'#5a6577'}},
+    {name:'额占',type:'bar',data:[33.6,21.1,16.7,6.6,9.3,3.1,2.3],itemStyle:{color:'#b9c6e8'},barWidth:'34%',label:{show:true,position:'top',fontSize:9,color:'#8a93a5'}}
+  ]
+}));
+
+echarts.init(document.getElementById('c_share')).setOption(base({
+  legend:tl, tooltip:{trigger:'axis'},
+  xAxis:{type:'category',data:['MAT25','MAT26','YTD25','YTD26','Jun25','Jun26'],axisLabel:{color:'#5a6577',fontSize:10}},
+  yAxis:{type:'value',name:'量占%',min:15,max:45,axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+  series:[
+    {name:'HISENSE',type:'bar',data:[23.4,24.2,23.4,24.2,23.0,27.3],itemStyle:{color:HIS},barWidth:'26%',label:{show:true,position:'top',color:HIS,fontSize:10}},
+    {name:'DEFY',type:'bar',data:[41.5,41.0,41.5,40.9,42.0,39.8],itemStyle:{color:DEFYC},barWidth:'26%',label:{show:true,position:'top',color:DEFYC,fontSize:9}}
+  ]
+}));
+
+echarts.init(document.getElementById('c_price')).setOption(base({
+  legend:tl, tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+  xAxis:{type:'category',data:['<3k','3-4k','4-5k','5-6k','6-7k','7-8k','8-9k','9-10k','≥10k'],axisLabel:{color:'#5a6577',fontSize:10,interval:0}},
+  yAxis:{type:'value',name:'%',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+  series:[
+    {name:'YTD25',type:'bar',data:[4.7,12.8,22.7,20.1,15.1,8.1,6.3,3.5,6.6],itemStyle:{color:'#c9d4f5'},barWidth:'36%',label:{show:true,position:'top',fontSize:9,color:'#8a93a5'}},
+    {name:'YTD26',type:'bar',data:[5.6,19.7,22.1,19.6,12.2,8.3,6.5,2.4,3.7],itemStyle:{color:BLUE},barWidth:'36%',label:{show:true,position:'top',fontSize:9,color:'#5a6577'}}
+  ]
+}));
+
+echarts.init(document.getElementById('c_chan')).setOption(base({
+  legend:tl, tooltip:{trigger:'axis'},
+  xAxis:{type:'category',data:['YTD25','YTD26'],axisLabel:{color:'#5a6577',fontSize:12}},
+  yAxis:{type:'value',name:'%',max:100,axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+  series:[
+    {name:'电器零售商ER',type:'bar',stack:'c',data:[20.9,16.1],itemStyle:{color:'#d9822b'}},
+    {name:'大型量贩MM',type:'bar',stack:'c',data:[47.8,48.7],itemStyle:{color:BLUE}},
+    {name:'家具专营FS',type:'bar',stack:'c',data:[31.3,35.1],itemStyle:{color:DN}}
+  ].map(s=>Object.assign(s,{barWidth:'40%',label:{show:true,position:'inside',color:'#fff',fontSize:10}}))
+}));
+
+echarts.init(document.getElementById('c_dist')).setOption(base({
+  legend:tl, tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+  xAxis:{type:'category',data:['DEFY','HISENSE','SAMSUNG','MIDEA','LG'],axisLabel:{color:'#5a6577',fontSize:10}},
+  yAxis:{type:'value',name:'%',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+  series:[
+    {name:'D.WGT分销',type:'bar',data:[96.7,82.7,72.9,66.1,62.3],itemStyle:{color:BLUE},barWidth:'32%',label:{show:true,position:'top',fontSize:10}},
+    {name:'TOS货架',type:'bar',data:[35.2,25.6,21.8,8.8,14.1],itemStyle:{color:'#7ea0f0'},barWidth:'32%',label:{show:true,position:'top',fontSize:10,color:'#5a6577'}}
+  ]
+}));
+
+echarts.init(document.getElementById('c_region')).setOption(base({
+  legend:tl, tooltip:{trigger:'axis'},
+  xAxis:{type:'category',data:['YTD25','YTD26'],axisLabel:{color:'#5a6577',fontSize:12}},
+  yAxis:{type:'value',name:'Mio ZAR',axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}}},
+  series:[
+    {name:'Gauteng',type:'bar',stack:'r',data:[678.9,643.0],itemStyle:{color:BLUE}},
+    {name:'Western Cape',type:'bar',stack:'r',data:[247.3,247.3],itemStyle:{color:'#7ea0f0'}},
+    {name:'KwaZulu-Natal',type:'bar',stack:'r',data:[248.7,196.3],itemStyle:{color:'#c9d4f5'}},
+    {name:'其他区域',type:'bar',stack:'r',data:[785.1,917.4],itemStyle:{color:DN}}
+  ].map(s=>Object.assign(s,{barWidth:'42%',label:{show:true,position:'inside',color:'#fff',fontSize:10}}))
+}));
+</script>
+</body>
+</html>

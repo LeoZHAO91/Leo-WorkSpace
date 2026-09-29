@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GfK 马来洗衣机市场 · Hisense 线上/线下卡位 · May 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  :root{--bg:#f4f6fb;--card:#fff;--ink:#1c2433;--sub:#5a6577;--line:#e3e8f0;--blue:#2456d6;--his:#e6212b;--green:#2a9d4f;--amber:#d9822b}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.55;padding:24px 16px 60px}
+  .wrap{max-width:1080px;margin:0 auto}
+  header{background:linear-gradient(120deg,#5a2a8a 0%,#7a3bb8 55%,#9555d6 100%);color:#fff;border-radius:14px;padding:24px 28px;margin-bottom:16px}
+  header h1{font-size:22px;font-weight:700} header .sub{opacity:.92;margin-top:6px;font-size:13px}
+  header .meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:12px;font-size:12.5px;opacity:.92}
+  .badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:2px 10px;border-radius:20px}
+  .limit{background:linear-gradient(90deg,#fff3e6,#ffefdb);border:1px solid #f2cf9f;border-left:4px solid var(--amber);border-radius:10px;padding:11px 16px;margin-bottom:16px;font-size:12.5px;color:#6b4a16}
+  .limit b{color:#b06a08}
+  .resume{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:16px}
+  .resume h2{font-size:15px;color:var(--blue);margin-bottom:8px}.resume p{font-size:13.5px}
+  .kd{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+  .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}.k .t{font-size:11px;color:var(--sub)}.k .v{font-size:19px;font-weight:700;margin-top:4px}.k .u{font-size:11px;color:var(--sub);font-weight:600}.k .d{font-size:11.5px;margin-top:3px}
+  .up{color:var(--green)}.dn{color:var(--red)}.flat{color:var(--sub)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 18px;margin-bottom:16px}
+  .card h3{font-size:15px;color:var(--ink);margin-bottom:4px}.card .note{font-size:12px;color:var(--sub);margin-bottom:10px}
+  .chart{width:100%;height:340px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:900px){.grid2{grid-template-columns:1fr}}
+  table{border-collapse:collapse;width:100%;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:right}th{background:#f4f0fa;color:var(--sub);font-weight:600}td:first-child,th:first-child{text-align:left}
+  tr.hi{background:#fbeef6}.hi b{color:var(--his)}
+  .find{display:flex;gap:12px;border-left:4px solid var(--his);background:#fdf4fa;border-radius:8px;padding:11px 15px;margin-bottom:10px}.find .no{font-weight:800;color:var(--his);min-width:22px;font-size:15px}.find p{font-size:13px}
+  .adv{display:flex;gap:12px;border-left:4px solid var(--blue);background:#f2f6ff;border-radius:8px;padding:11px 15px;margin-bottom:10px}.adv .no{font-weight:800;color:var(--blue);min-width:22px;font-size:15px}.adv p{font-size:13px}
+  .prio{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:4px;margin-right:6px}.prio.p0{background:#fdeaea;color:var(--his)}.prio.p1{background:#fff3e0;color:var(--amber)}.prio.p2{background:#eef1f6;color:var(--sub)}
+  .src{font-size:11px;color:var(--sub);margin-top:12px;border-top:1px dashed var(--line);padding-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>GfK 马来洗衣机市场 · Hisense 线上/线下卡位</h1>
+  <div class="sub">数据来源：GfK 马来 Panelmarket 全品类报告 · 洗衣机(WM)段 · 统计期 2026年5月（PRJ 79311）· Online + Offline 渠道</div>
+  <div class="meta"><span class="badge">Hisense Online 第3</span><span class="badge">Hisense Offline 第9</span><span class="badge">Online 占比 ~15-18%</span><span class="badge">大盘 Jan-May26 微降</span></div>
+</header>
+
+<div class="limit"><b>数据局限提示：</b>此源为马来<b>全品类</b> GfK 报告中的 WM 段（非 WM 专项报告），WM 仅 7 张图（趋势/价格/渠道结构/分渠道品牌），无 WM 专项品牌份额表格、型号榜、价格段/容量/区域细分。本档案为<b>大盘级方向判断</b>，量化值（渠道占比、Hisense 位次）为趋势/排名推算，精确份额需 WM 专项源补充。</div>
+
+<div class="resume">
+  <h2>核心结论</h2>
+  <p><b>Hisense 马来『线上强、线下弱』是最突出的战略事实：</b>分渠道看，Hisense 在 Online 渠道品牌榜排<b>第3</b>（仅次于 TOSHIBA、MIDEA），Offline 仅<b>第9</b>——线上排名大幅领先线下，说明 Hisense 马来电商运营是有效且可放大的现实资产。马来 WM 大盘整体平稳偏弱（Jan-May26 销额较同期略降、存量竞争），Online 渠道占比约 15-18% 是结构性增量。</p>
+</div>
+
+<div class="kd">
+  <div class="k"><div class="t">Online 渠道占比</div><div class="v">~15-18%</div><div class="d flat">结构性增量渠道</div></div>
+  <div class="k"><div class="t">Offline 月销额</div><div class="v">6,000-7,900万 MYR</div><div class="u">大盘主力</div></div>
+  <div class="k"><div class="t">Online 月销额</div><div class="v">900-1,400万 MYR</div><div class="u">体量小但增长</div></div>
+  <div class="k"><div class="t">Hisense Online</div><div class="v">第3</div><div class="up">电商强项</div></div>
+  <div class="k"><div class="t">Hisense Offline</div><div class="v">第9</div><div class="dn">线下短板</div></div>
+</div>
+
+<div class="card">
+  <h3>Hisense 马来分渠道卡位：线上 vs 线下（品牌排名对比）</h3>
+  <div class="note">Hisense 在 Online 排第3、Offline 排第9 —— 线上是现实强项，线下是主要短板</div>
+  <table>
+    <tr><th>排名</th><th>Offline（线下）</th><th>Online（线上）</th></tr>
+    <tr><td>1</td><td>LG</td><td>TOSHIBA</td></tr>
+    <tr><td>2</td><td>TOSHIBA</td><td>MIDEA</td></tr>
+    <tr><td>3</td><td>SAMSUNG</td><td class="hi"><b>HISENSE</b></td></tr>
+    <tr><td>4</td><td>PANASONIC</td><td>LG</td></tr>
+    <tr><td>5</td><td>SHARP</td><td>SHARP</td></tr>
+    <tr><td>6</td><td>MIDEA</td><td>HAIER</td></tr>
+    <tr><td>7</td><td>HAIER</td><td>MIJIA</td></tr>
+    <tr><td>8</td><td>ELECTROLUX</td><td>TCL</td></tr>
+    <tr class="hi"><td>9</td><td><b>HISENSE</b></td><td>PENSONIC</td></tr>
+    <tr><td>10</td><td>BOSCH</td><td>KHIND</td></tr>
+  </table>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <h3>Offline vs Online 品牌第1梯队构成</h3>
+    <div class="note">左=Offline 前5（LG/TOSHIBA/SAMSUNG/PANASONIC/SHARP，传统大牌垄断线下）；右=Online 前5（TOSHIBA/MIDEA/HISENSE/LG/SHARP，Hisense 挤入第3）</div>
+    <div id="c_hl" class="chart"></div>
+  </div>
+  <div class="card">
+    <h3>Hisense 线上线下相对位次</h3>
+    <div class="note">柱越高=排名越靠后(越弱)。Hisense Online 第3 vs Offline 第9，线上位次是线下的 3 倍</div>
+    <div id="c_rank" class="chart"></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>关键发现</h3>
+  <div class="find"><span class="no">1</span><p><b>马来 WM 大盘平稳偏弱、存量竞争。</b>全渠道 Jan-May26 销额较同期略降，Offline 主导大盘。存量市场意味着抢份额靠结构与效率，而非总量增长红利。</p></div>
+  <div class="find"><span class="no">2</span><p><b>Hisense 线上第3 = 马来最现实的增长资产。</b>Online 排第3（仅次 TOSHIBA/MIDEA）说明 Hisense 马来电商运营已见成效，是少数线上排名大幅领先线下的品牌。电商应作为主攻阵地。</p></div>
+  <div class="find"><span class="no">3</span><p><b>线下第9是主要短板。</b>Offline 受限于线下渠道货架与品牌力。线下弱会限制 Hisense 触达更广大众客群，但当前源无法量化具体短板原因。</p></div>
+  <div class="find"><span class="no">4</span><p><b>品类结构与越南不同，含双缸存量。</b>马来有 Twin Tub(半自动双缸)、Top Loader、Front Loader(滚筒)、Washer Dryer 多品类，滚筒是高价值主力品类之一。</p></div>
+</div>
+
+<div class="card">
+  <h3>行动建议</h3>
+  <div class="adv"><span class="prio p0">P0</span><span class="no">1</span><p><b>把电商优势(第3)做成份额转化，作为马来主攻。</b>Hisense Online 第3 是现实强项，建议电商重点平台旗舰店+大促放量，借线上份额与认知向线下渗透——不要把钱平均撒到薄弱的线下。</p></div>
+  <div class="adv"><span class="prio p1">P1</span><span class="no">2</span><p><b>线下第9 需专项源诊断，勿盲目投线下。</b>建议用 WM 专项 GfK 或海信内部铺货/分销数据，量化线下短板(货架/覆盖/品牌)后再定是否投入，避免凭印象加码。</p></div>
+  <div class="adv"><span class="prio p1">P1</span><span class="no">3</span><p><b>存量市场勿带头降价。</b>大盘走弱，Hisense 应靠电商效率与产品结构抢份额，避免在总量收缩的市场用降价侵蚀价值池。</p></div>
+  <div class="adv"><span class="prio p2">P2</span><span class="no">4</span><p><b>若马来是重点市场，建议获取 WM 专项源。</b>当前源无法到型号/容量/价格段深度，专项 GfK(类似越南 LOCALCHARTS)才能支撑 Hisense 马来完整档案。</p></div>
+</div>
+
+<div class="src">数据口径：Hisense 分渠道位次来自 GfK WM May26 Sales Value 分渠道品牌榜(slide43)；渠道占比与月销额量级据 WM 月度趋势(slide39, 单位 x1,000,000 MYR)与分渠道累计估算；大盘 Jan-May 增减据分渠道增长%推算。由于此源为全品类报告 WM 段、非 WM 专项，精确的 WM 品牌份额、型号榜、价格段/容量/区域细分本档案未包含（无此数据）。统计期：Jan25-May25 对比 Jan26-May26；趋势 May25-May26。如需精确，需 WM 专项源。</div>
+
+</div>
+<script>
+const HIS='#e6212b',BLUE='#2456d6',GRAY='#a7adbb',GOLD='#d9822b',GREEN='#2a9d4f';
+const base=e=>Object.assign({textStyle:{color:'#1c2433'},grid:{left:46,right:24,top:30,bottom:34}},e||{});
+const axis={axisLine:{lineStyle:{color:'#c9d2e0'}},axisLabel:{color:'#5a6577',fontSize:11}};
+// Offline vs Online 品牌构成(前5)横向对比
+echarts.init(document.getElementById('c_hl')).setOption(base({
+  tooltip:{trigger:'axis'},legend:{bottom:0,textStyle:{color:'#5a6577',fontSize:11}},
+  xAxis:{type:'value',max:6,axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}},axisLabel:{show:false}},
+  yAxis:{type:'category',data:['LG','TOSHIBA','SAMSUNG/MIDEA','HISENSE','PANASONIC/SHARP'],axisLabel:{color:'#1c2433',fontSize:11}},
+  series:[
+    {name:'Offline 排名',type:'bar',data:[1,2,3,9,4],itemStyle:{color:BLUE,opacity:.85},label:{show:true,position:'right',formatter:'{c}名',color:'#1c2433',fontSize:10}},
+    {name:'Online 排名',type:'bar',data:[4,1,2,3,5],itemStyle:{color:HIS,opacity:.9},label:{show:true,position:'right',formatter:'{c}名',color:'#1c2433',fontSize:10}}
+  ]
+}));
+// Hisense 位次直观
+echarts.init(document.getElementById('c_rank')).setOption(base({
+  tooltip:{trigger:'item',formatter:'{b}: {c}名'},
+  xAxis:{type:'category',data:['Offline','Online'],axisLabel:{color:'#1c2433',fontSize:13}},
+  yAxis:{type:'value',inverse:true,max:10,min:0,axisLine:{show:false},splitLine:{lineStyle:{color:'#eef1f7'}},axisLabel:{formatter:'{value}名',color:'#5a6577'}},
+  series:[{type:'bar',data:[{value:9,itemStyle:{color:'#d9822b'}},{value:3,itemStyle:{color:HIS}}],
+    barWidth:'34%',label:{show:true,position:'top',formatter:p=>'第'+p.value+'名',color:'#1c2433',fontSize:12}}]
+}));
+</script>
+</body>
+</html>
